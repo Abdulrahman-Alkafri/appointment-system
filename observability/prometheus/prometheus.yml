@@ -1,0 +1,112 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    cluster: 'appointment-cluster'
+    environment: 'development'
+
+# Alertmanager configuration (optional - can add later)
+# alerting:
+#   alertmanagers:
+#     - static_configs:
+#         - targets: []
+
+scrape_configs:
+  # Prometheus self-monitoring
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+        labels:
+          service: 'prometheus'
+
+  # Spring Boot Application Metrics
+  - job_name: 'spring-boot-appointment'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['host.docker.internal:8080']
+        labels:
+          application: 'appointment'
+          service: 'spring-boot'
+          env: 'dev'
+    scrape_interval: 10s
+
+  # Blackbox Exporter - HTTP probing for Spring Boot
+  - job_name: 'blackbox-http-spring-boot'
+    metrics_path: /probe
+    params:
+      module: [spring_boot_health]
+    static_configs:
+      - targets:
+          - http://host.docker.internal:8080/actuator/health
+        labels:
+          env: 'dev'
+          service: 'spring-boot'
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: blackbox-exporter:9115
+
+  # Blackbox Exporter - TCP probing for PostgreSQL
+  - job_name: 'blackbox-tcp-postgres'
+    metrics_path: /probe
+    params:
+      module: [tcp_connect]
+    static_configs:
+      - targets:
+          - appointment_db:5432
+        labels:
+          env: 'dev'
+          service: 'postgresql'
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: blackbox-exporter:9115
+
+  # Blackbox Exporter - TCP probing for Redis
+  - job_name: 'blackbox-tcp-redis'
+    metrics_path: /probe
+    params:
+      module: [tcp_connect]
+    static_configs:
+      - targets:
+          - appointment_redis:6379
+        labels:
+          env: 'dev'
+          service: 'redis'
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: blackbox-exporter:9115
+
+  # Node Exporter - System metrics
+  - job_name: 'node-exporter'
+    static_configs:
+      - targets: ['node-exporter:9100']
+        labels:
+          service: 'node-exporter'
+          env: 'dev'
+          instance: 'host-machine'
+
+  # PostgreSQL Exporter - Database metrics
+  - job_name: 'postgres-exporter'
+    static_configs:
+      - targets: ['postgres-exporter:9187']
+        labels:
+          service: 'postgresql'
+          env: 'dev'
+          instance: 'appointment_db'
+    scrape_interval: 10s
+
+  # Redis Exporter (if you add it later)
+  # - job_name: 'redis'
+  #   static_configs:
+  #     - targets: ['redis-exporter:9121']

@@ -1,0 +1,95 @@
+// Alloy configuration for collecting logs from Spring Boot and sending to Loki
+
+// Loki write endpoint
+loki.write "default" {
+  endpoint {
+    url = "http://loki:3100/loki/api/v1/push"
+  }
+}
+
+// Collect logs from Spring Boot application log file
+local.file_match "spring_boot_logs" {
+  path_targets = [{
+    __path__ = "/var/log/spring-boot/*.log",
+  }]
+}
+
+loki.source.file "spring_boot" {
+  targets    = local.file_match.spring_boot_logs.targets
+  forward_to = [loki.process.spring_boot.receiver]
+}
+
+// Process Spring Boot logs
+loki.process "spring_boot" {
+  forward_to = [loki.write.default.receiver]
+
+  stage.regex {
+    expression = "^(?P<timestamp>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}\\+\\d{2}:\\d{2})\\s+(?P<level>\\w+)\\s+(?P<pid>\\d+)\\s+---\\s+\\[(?P<app>[^\\]]+)\\]\\s+\\[(?P<thread>[^\\]]+)\\]\\s+(?P<logger>[^\\s]+)\\s+:\\s+(?P<message>.*)"
+  }
+
+  stage.labels {
+    values = {
+      level  = "",
+      app    = "",
+      thread = "",
+      logger = "",
+    }
+  }
+
+  stage.timestamp {
+    source = "timestamp"
+    format = "2006-01-02T15:04:05.000-07:00"
+  }
+
+  stage.static_labels {
+    values = {
+      environment = "development",
+      service     = "appointment-api",
+    }
+  }
+}
+
+// Collect Docker container logs (for PostgreSQL, Redis, etc.)
+discovery.docker "containers" {
+  host = "unix:///var/run/docker.sock"
+  refresh_interval = "10s"
+}
+
+loki.source.docker "docker_logs" {
+  host    = "unix:///var/run/docker.sock"
+  targets = discovery.docker.containers.targets
+  forward_to = [loki.process.docker.receiver]
+  relabel_rules = loki.relabel.docker.rules
+}
+
+loki.relabel "docker" {
+  forward_to = []
+
+  rule {
+    source_labels = ["__meta_docker_container_name"]
+    target_label  = "container"
+  }
+
+  rule {
+    source_labels = ["__meta_docker_container_id"]
+    target_label  = "container_id"
+  }
+
+  rule {
+    source_labels = ["__meta_docker_container_label_com_docker_compose_service"]
+    target_label  = "service"
+  }
+}
+
+loki.process "docker" {
+  forward_to = [loki.write.default.receiver]
+
+  stage.docker {}
+
+  stage.static_labels {
+    values = {
+      environment = "development",
+      source      = "docker",
+    }
+  }
+}
