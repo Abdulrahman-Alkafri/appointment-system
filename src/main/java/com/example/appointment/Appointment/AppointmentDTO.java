@@ -1,4 +1,4 @@
 package com.example.appointment.Appointment;
 
-public class appointmentDTO {
+public class AppointmentDTO {
 }
