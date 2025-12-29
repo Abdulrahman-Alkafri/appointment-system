@@ -1,0 +1,45 @@
+package com.example.appointment.Appointment;
+
+import com.example.appointment.Services.Service;
+import com.example.appointment.User.UserModel;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name = "appointments")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Appointment {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long id;
+
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private UserModel user;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "customer_id")
+    private UserModel customer;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "employee_id")
+    private UserModel employee;
+
+    private LocalDateTime from;
+
+    private LocalDateTime to;
+
+
+    @ManyToOne
+    @JoinColumn(name = "service_id")
+    private Service service;
+
+
+}

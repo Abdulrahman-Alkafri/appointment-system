@@ -1,4 +1,4 @@
 package com.example.appointment.Appointment;
 
-public class appointmentService {
+public class AppointmentService {
 }
