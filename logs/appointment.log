@@ -1,0 +1,726 @@
+2025-12-29T13:55:59.462+03:00  INFO %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : Starting AppointmentApplication using Java 17.0.17 with PID 6733 (/home/aehamalhaeak/projects/appointment-system/target/classes started by aehamalhaeak in /home/aehamalhaeak/projects/appointment-system)
+2025-12-29T13:55:59.463+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : Running with Spring Boot v4.0.1, Spring v7.0.2
+2025-12-29T13:55:59.464+03:00  INFO %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-12-29T13:55:59.990+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-29T13:55:59.992+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-29T13:56:00.063+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 2 JPA repository interfaces.
+2025-12-29T13:56:00.085+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-29T13:56:00.086+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-29T13:56:00.094+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Auth.UserSessionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-29T13:56:00.094+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.User.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-29T13:56:00.094+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-12-29T13:56:00.487+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2025-12-29T13:56:00.502+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-29T13:56:00.502+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2025-12-29T13:56:00.532+03:00  INFO %PARSER_ERROR[pid] --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1039 ms
+2025-12-29T13:56:01.014+03:00  INFO %PARSER_ERROR[pid] --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-29T13:56:02.048+03:00 ERROR %PARSER_ERROR[pid] --- [           main] t.s.DeferredServletContainerInitializers : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter' defined in file [/home/aehamalhaeak/projects/appointment-system/target/classes/com/example/appointment/Auth/JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userRepository' defined in com.example.appointment.User.UserRepository defined in @EnableJpaRepositories declared on DataJpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+2025-12-29T13:56:02.084+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-12-29T13:56:02.087+03:00  WARN %PARSER_ERROR[pid] --- [           main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [lettuce-eventExecutorLoop-1-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.17/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.17/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.17/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1679)
+ java.base@17.0.17/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+ app//io.netty.util.concurrent.SingleThreadEventExecutor.takeTask(SingleThreadEventExecutor.java:330)
+ app//io.netty.util.concurrent.DefaultEventExecutor.run(DefaultEventExecutor.java:64)
+ app//io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1195)
+ app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+ app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+ java.base@17.0.17/java.lang.Thread.run(Thread.java:840)
+2025-12-29T13:56:02.088+03:00  WARN %PARSER_ERROR[pid] --- [           main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [lettuce-timer-3-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.17/java.lang.Thread.sleep(Native Method)
+ app//io.netty.util.HashedWheelTimer$Worker.waitForNextTick(HashedWheelTimer.java:598)
+ app//io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+ app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+ java.base@17.0.17/java.lang.Thread.run(Thread.java:840)
+2025-12-29T13:56:02.090+03:00  WARN %PARSER_ERROR[pid] --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2025-12-29T13:56:02.104+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-12-29T13:56:02.113+03:00 ERROR %PARSER_ERROR[pid] --- [           main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167) ~[spring-boot-web-server-4.0.1.jar:4.0.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:614) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.1.jar:4.0.1]
+	at com.example.appointment.AppointmentApplication.main(AppointmentApplication.java:12) ~[classes/:na]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:150) ~[spring-boot-tomcat-4.0.1.jar:4.0.1]
+	at org.springframework.boot.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:110) ~[spring-boot-tomcat-4.0.1.jar:4.0.1]
+	at org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:408) ~[spring-boot-tomcat-4.0.1.jar:4.0.1]
+	at org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:166) ~[spring-boot-tomcat-4.0.1.jar:4.0.1]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:190) ~[spring-boot-web-server-4.0.1.jar:4.0.1]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:164) ~[spring-boot-web-server-4.0.1.jar:4.0.1]
+	... 8 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthenticationFilter' defined in file [/home/aehamalhaeak/projects/appointment-system/target/classes/com/example/appointment/Auth/JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userRepository' defined in com.example.appointment.User.UserRepository defined in @EnableJpaRepositories declared on DataJpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1382) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1221) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:231) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:185) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:180) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:165) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:97) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.web.context.servlet.WebApplicationContextInitializer.initialize(WebApplicationContextInitializer.java:53) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.tomcat.servlet.DeferredServletContainerInitializers.onStartup(DeferredServletContainerInitializers.java:55) ~[spring-boot-tomcat-4.0.1.jar:4.0.1]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4416) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1162) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1158) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:714) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:780) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1162) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1158) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:714) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:201) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:410) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:864) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:435) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.boot.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:131) ~[spring-boot-tomcat-4.0.1.jar:4.0.1]
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.example.appointment.User.UserRepository defined in @EnableJpaRepositories declared on DataJpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1712) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1461) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:1225) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1704) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-7.0.2.jar:7.0.2]
+	... 53 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaSharedEM_entityManagerFactory': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:691) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:513) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:356) ~[spring-beans-7.0.2.jar:7.0.2]
+	... 67 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Connection to localhost:7777 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08001
+Error Code : 0
+Message    : Connection to localhost:7777 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:309) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-7.0.2.jar:7.0.2]
+	... 79 common frames omitted
+Caused by: org.flywaydb.core.internal.exception.sqlExceptions.FlywaySqlUnableToConnectToDbException: Unable to obtain connection from database: Connection to localhost:7777 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08001
+Error Code : 0
+Message    : Connection to localhost:7777 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:70) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:76) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:142) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:186) ~[flyway-core-11.14.1.jar:na]
+	at org.springframework.boot.flyway.autoconfigure.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:67) ~[spring-boot-flyway-4.0.1.jar:4.0.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.2.jar:7.0.2]
+	... 88 common frames omitted
+Caused by: org.postgresql.util.PSQLException: Connection to localhost:7777 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:373) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:57) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:279) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.Driver.makeConnection(Driver.java:448) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.Driver.connect(Driver.java:298) ~[postgresql-42.7.8.jar:42.7.8]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-7.0.2.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:65) ~[flyway-core-11.14.1.jar:na]
+	... 94 common frames omitted
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:261) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:122) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:146) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:289) ~[postgresql-42.7.8.jar:42.7.8]
+	... 106 common frames omitted
+
+2025-12-29T13:56:28.524+03:00  INFO %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : Starting AppointmentApplication using Java 17.0.17 with PID 6903 (/home/aehamalhaeak/projects/appointment-system/target/classes started by aehamalhaeak in /home/aehamalhaeak/projects/appointment-system)
+2025-12-29T13:56:28.525+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : Running with Spring Boot v4.0.1, Spring v7.0.2
+2025-12-29T13:56:28.525+03:00  INFO %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-12-29T13:56:28.958+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-29T13:56:28.959+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-29T13:56:29.025+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 2 JPA repository interfaces.
+2025-12-29T13:56:29.048+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-29T13:56:29.048+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-29T13:56:29.057+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Auth.UserSessionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-29T13:56:29.057+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.User.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-29T13:56:29.057+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-12-29T13:56:29.419+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2025-12-29T13:56:29.426+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-29T13:56:29.426+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2025-12-29T13:56:29.450+03:00  INFO %PARSER_ERROR[pid] --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 902 ms
+2025-12-29T13:56:29.885+03:00  INFO %PARSER_ERROR[pid] --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-29T13:56:30.913+03:00 ERROR %PARSER_ERROR[pid] --- [           main] t.s.DeferredServletContainerInitializers : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter' defined in file [/home/aehamalhaeak/projects/appointment-system/target/classes/com/example/appointment/Auth/JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userRepository' defined in com.example.appointment.User.UserRepository defined in @EnableJpaRepositories declared on DataJpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+2025-12-29T13:56:30.941+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-12-29T13:56:30.944+03:00  WARN %PARSER_ERROR[pid] --- [           main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [lettuce-eventExecutorLoop-1-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.17/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.17/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.17/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1679)
+ java.base@17.0.17/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+ app//io.netty.util.concurrent.SingleThreadEventExecutor.takeTask(SingleThreadEventExecutor.java:330)
+ app//io.netty.util.concurrent.DefaultEventExecutor.run(DefaultEventExecutor.java:64)
+ app//io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1195)
+ app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+ app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+ java.base@17.0.17/java.lang.Thread.run(Thread.java:840)
+2025-12-29T13:56:30.945+03:00  WARN %PARSER_ERROR[pid] --- [           main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [lettuce-timer-3-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.17/java.lang.Thread.sleep(Native Method)
+ app//io.netty.util.HashedWheelTimer$Worker.waitForNextTick(HashedWheelTimer.java:598)
+ app//io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+ app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+ java.base@17.0.17/java.lang.Thread.run(Thread.java:840)
+2025-12-29T13:56:30.949+03:00  WARN %PARSER_ERROR[pid] --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2025-12-29T13:56:30.972+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-12-29T13:56:30.984+03:00 ERROR %PARSER_ERROR[pid] --- [           main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167) ~[spring-boot-web-server-4.0.1.jar:4.0.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:614) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.1.jar:4.0.1]
+	at com.example.appointment.AppointmentApplication.main(AppointmentApplication.java:12) ~[classes/:na]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:150) ~[spring-boot-tomcat-4.0.1.jar:4.0.1]
+	at org.springframework.boot.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:110) ~[spring-boot-tomcat-4.0.1.jar:4.0.1]
+	at org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:408) ~[spring-boot-tomcat-4.0.1.jar:4.0.1]
+	at org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:166) ~[spring-boot-tomcat-4.0.1.jar:4.0.1]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:190) ~[spring-boot-web-server-4.0.1.jar:4.0.1]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:164) ~[spring-boot-web-server-4.0.1.jar:4.0.1]
+	... 8 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthenticationFilter' defined in file [/home/aehamalhaeak/projects/appointment-system/target/classes/com/example/appointment/Auth/JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userRepository' defined in com.example.appointment.User.UserRepository defined in @EnableJpaRepositories declared on DataJpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1382) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1221) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:231) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:185) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:180) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:165) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:97) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.web.context.servlet.WebApplicationContextInitializer.initialize(WebApplicationContextInitializer.java:53) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.tomcat.servlet.DeferredServletContainerInitializers.onStartup(DeferredServletContainerInitializers.java:55) ~[spring-boot-tomcat-4.0.1.jar:4.0.1]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4416) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1162) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1158) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:714) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:780) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1162) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1158) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:714) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:201) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:410) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:864) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:435) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.boot.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:131) ~[spring-boot-tomcat-4.0.1.jar:4.0.1]
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.example.appointment.User.UserRepository defined in @EnableJpaRepositories declared on DataJpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1712) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1461) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:1225) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1704) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-7.0.2.jar:7.0.2]
+	... 53 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaSharedEM_entityManagerFactory': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:691) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:513) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:356) ~[spring-beans-7.0.2.jar:7.0.2]
+	... 67 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Connection to localhost:7777 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08001
+Error Code : 0
+Message    : Connection to localhost:7777 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:309) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-7.0.2.jar:7.0.2]
+	... 79 common frames omitted
+Caused by: org.flywaydb.core.internal.exception.sqlExceptions.FlywaySqlUnableToConnectToDbException: Unable to obtain connection from database: Connection to localhost:7777 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08001
+Error Code : 0
+Message    : Connection to localhost:7777 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:70) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:76) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:142) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:186) ~[flyway-core-11.14.1.jar:na]
+	at org.springframework.boot.flyway.autoconfigure.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:67) ~[spring-boot-flyway-4.0.1.jar:4.0.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.2.jar:7.0.2]
+	... 88 common frames omitted
+Caused by: org.postgresql.util.PSQLException: Connection to localhost:7777 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:373) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:57) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:279) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.Driver.makeConnection(Driver.java:448) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.Driver.connect(Driver.java:298) ~[postgresql-42.7.8.jar:42.7.8]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-7.0.2.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:65) ~[flyway-core-11.14.1.jar:na]
+	... 94 common frames omitted
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:261) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:122) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:146) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:289) ~[postgresql-42.7.8.jar:42.7.8]
+	... 106 common frames omitted
+
+2025-12-29T16:11:25.485+03:00  INFO %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : Starting AppointmentApplication using Java 17.0.17 with PID 18436 (/home/aehamalhaeak/projects/appointment-system/target/classes started by aehamalhaeak in /home/aehamalhaeak/projects/appointment-system)
+2025-12-29T16:11:25.486+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : Running with Spring Boot v4.0.1, Spring v7.0.2
+2025-12-29T16:11:25.486+03:00  INFO %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-12-29T16:11:25.924+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-29T16:11:25.924+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-29T16:11:25.991+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 2 JPA repository interfaces.
+2025-12-29T16:11:26.013+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-29T16:11:26.014+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-29T16:11:26.022+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Auth.UserSessionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-29T16:11:26.023+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.User.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-29T16:11:26.023+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-12-29T16:11:26.370+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2025-12-29T16:11:26.377+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-29T16:11:26.377+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2025-12-29T16:11:26.401+03:00  INFO %PARSER_ERROR[pid] --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 889 ms
+2025-12-29T16:11:26.860+03:00  INFO %PARSER_ERROR[pid] --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-29T16:11:26.942+03:00  INFO %PARSER_ERROR[pid] --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@38f63756
+2025-12-29T16:11:26.943+03:00  INFO %PARSER_ERROR[pid] --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-29T16:11:26.961+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:7777/appointment (PostgreSQL 17.7)
+2025-12-29T16:11:26.988+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "public"."flyway_schema_history" does not exist yet
+2025-12-29T16:11:26.990+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.011s)
+2025-12-29T16:11:26.998+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.flywaydb.core.Flyway                 : All configured schemas are empty; baseline operation skipped. A baseline or migration script with a lower version than the baseline version may execute if available. Check the Schemas parameter if this is not intended.
+2025-12-29T16:11:27.003+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "public"."flyway_schema_history" ...
+2025-12-29T16:11:27.064+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2025-12-29T16:11:27.070+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "1 - init"
+2025-12-29T16:11:27.084+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "2 - create users table"
+2025-12-29T16:11:27.099+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "3 - create user sessions table"
+2025-12-29T16:11:27.110+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema "public", now at version v3 (execution time 00:00.012s)
+2025-12-29T16:11:27.150+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2025-12-29T16:11:27.177+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2025-12-29T16:11:27.413+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-29T16:11:27.446+03:00  WARN %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-29T16:11:27.461+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:7777/appointment]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.7
+	Default catalog/schema: appointment/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-29T16:11:27.939+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-29T16:11:27.962+03:00  INFO %PARSER_ERROR[pid] --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-29T16:11:28.005+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-29T16:11:28.136+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] c.e.a.Auth.JwtAuthenticationFilter       : Filter 'jwtAuthenticationFilter' configured for use
+2025-12-29T16:11:28.137+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2025-12-29T16:11:28.314+03:00  WARN %PARSER_ERROR[pid] --- [           main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: fafff5ca-589f-433e-9ac7-effbff261617
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-29T16:11:28.319+03:00  INFO %PARSER_ERROR[pid] --- [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-29T16:11:28.421+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-12-29T16:11:28.519+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 15 mappings in 'requestMappingHandlerMapping'
+2025-12-29T16:11:28.548+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-12-29T16:11:28.567+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-12-29T16:11:28.603+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-12-29T16:11:28.821+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoints beneath base path '/actuator'
+2025-12-29T16:11:28.878+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2025-12-29T16:11:28.886+03:00  INFO %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : Started AppointmentApplication in 3.645 seconds (process running for 3.807)
+2025-12-29T16:20:00.015+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2025-12-29T16:20:00.248+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2025-12-29T16:20:00.248+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2025-12-29T16:30:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2025-12-29T16:30:00.008+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2025-12-29T16:30:00.009+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2025-12-29T16:40:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2025-12-29T16:40:00.006+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2025-12-29T16:40:00.006+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2025-12-29T16:41:52.150+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-29T16:41:52.150+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-29T16:41:52.150+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-12-29T16:41:52.150+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-12-29T16:41:52.152+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@63c8a30e
+2025-12-29T16:41:52.152+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@5b9815b6
+2025-12-29T16:41:52.152+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-12-29T16:41:52.152+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-12-29T16:41:52.159+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/test/public/hello
+2025-12-29T16:41:52.168+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-29T16:41:52.172+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/test/public/hello
+2025-12-29T16:41:52.175+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/test/public/hello", parameters={}
+2025-12-29T16:41:52.182+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Test.TestController#publicHello()
+2025-12-29T16:41:52.189+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-2] c.e.appointment.Test.TestController      : PUBLIC endpoint accessed - /api/test/public/hello
+2025-12-29T16:41:52.189+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] c.e.appointment.Test.TestController      : Debug log: Processing public hello request
+2025-12-29T16:41:52.198+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-12-29T16:41:52.199+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=2025-12-29T16:41:52.189324793, authenticated=false, message=Hello from PUBLIC endpoint!}]
+2025-12-29T16:41:52.220+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-12-29T16:42:56.320+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/test/private/hello
+2025-12-29T16:42:56.321+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-29T16:42:56.325+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-29T16:42:56.330+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-12-29T16:42:56.331+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-29T16:42:56.332+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-29T16:45:19.055+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/test/private/hello
+2025-12-29T16:45:19.056+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-29T16:45:19.056+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-29T16:45:19.057+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-12-29T16:45:19.057+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-29T16:45:19.057+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-29T16:48:12.895+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/test/private/hello
+2025-12-29T16:48:12.896+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-29T16:48:12.897+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-29T16:48:12.898+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-12-29T16:48:12.899+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-29T16:48:12.899+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-29T16:48:18.783+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/test/private/hello
+2025-12-29T16:48:18.783+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-29T16:48:18.784+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-29T16:48:18.784+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-12-29T16:48:18.784+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-29T16:48:18.785+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-29T16:48:30.136+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/test/private/hello
+2025-12-29T16:48:30.136+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-29T16:48:30.137+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-29T16:48:30.137+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-12-29T16:48:30.138+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-29T16:48:30.138+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-29T16:48:53.906+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/test/public/heloo
+2025-12-29T16:48:53.907+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-29T16:48:53.907+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/test/public/heloo
+2025-12-29T16:48:53.908+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/test/public/heloo", parameters={}
+2025-12-29T16:48:53.910+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-12-29T16:48:53.911+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-12-29T16:48:53.913+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/test/public/heloo for request '/api/test/public/heloo'.]
+2025-12-29T16:48:53.913+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-12-29T16:48:53.915+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-12-29T16:48:53.916+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-29T16:48:53.916+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-29T16:49:06.542+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/test/public/hello
+2025-12-29T16:49:06.543+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-29T16:49:06.543+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/test/public/hello
+2025-12-29T16:49:06.543+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/test/public/hello", parameters={}
+2025-12-29T16:49:06.544+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Test.TestController#publicHello()
+2025-12-29T16:49:06.544+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-5] c.e.appointment.Test.TestController      : PUBLIC endpoint accessed - /api/test/public/hello
+2025-12-29T16:49:06.544+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] c.e.appointment.Test.TestController      : Debug log: Processing public hello request
+2025-12-29T16:49:06.545+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-12-29T16:49:06.545+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=2025-12-29T16:49:06.544817757, authenticated=false, message=Hello from PUBLIC endpoint!}]
+2025-12-29T16:49:06.546+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-12-29T16:50:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2025-12-29T16:50:00.005+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2025-12-29T16:50:00.005+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2025-12-29T16:54:05.485+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/test/private/hello
+2025-12-29T16:54:05.486+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-29T16:54:05.486+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-29T16:54:05.487+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-12-29T16:54:05.488+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-29T16:54:05.488+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-29T16:54:12.064+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/test/public/hello
+2025-12-29T16:54:12.064+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-29T16:54:12.064+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/test/public/hello
+2025-12-29T16:54:12.065+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/test/public/hello", parameters={}
+2025-12-29T16:54:12.065+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Test.TestController#publicHello()
+2025-12-29T16:54:12.065+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-9] c.e.appointment.Test.TestController      : PUBLIC endpoint accessed - /api/test/public/hello
+2025-12-29T16:54:12.065+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] c.e.appointment.Test.TestController      : Debug log: Processing public hello request
+2025-12-29T16:54:12.066+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-12-29T16:54:12.066+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=2025-12-29T16:54:12.065900632, authenticated=false, message=Hello from PUBLIC endpoint!}]
+2025-12-29T16:54:12.067+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-12-29T16:55:42.308+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
+2025-12-29T16:55:42.308+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-29T16:55:42.309+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
+2025-12-29T16:55:42.309+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/register", parameters={}
+2025-12-29T16:55:42.309+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Auth.AuthController#register(RegisterRequest)
+2025-12-29T16:55:42.356+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [RegisterRequest(username=admin_user, email=admin@example.com, phoneNumber=1234567890, password=admin (truncated)...]
+2025-12-29T16:55:42.575+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* SELECT
+        u.id id 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id 
+        from
+            users um1_0 
+        where
+            um1_0.email=? 
+        fetch
+            first ? rows only
+2025-12-29T16:55:42.589+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* SELECT
+        u.id id 
+    FROM
+        UserModel u 
+    WHERE
+        u.username = :username */ select
+            um1_0.id 
+        from
+            users um1_0 
+        where
+            um1_0.username=? 
+        fetch
+            first ? rows only
+2025-12-29T16:55:42.693+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* insert 
+    for
+        com.example.appointment.User.UserModel
+        */insert 
+    into
+        users (created_at, email, password, phone_number, role, updated_at, username) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2025-12-29T16:55:42.754+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] c.e.a.Auth.TokenBlacklistService         : Tracking access token b5352521-8a7c-44a1-bd74-692c60c0f40c for user 1
+2025-12-29T16:55:42.756+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* insert 
+    for
+        com.example.appointment.Auth.UserSessionModel
+        */insert 
+    into
+        user_sessions (created_at, expires_at, refresh_token, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?)
+2025-12-29T16:55:42.769+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-12-29T16:55:42.770+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [TokenResponse(accessToken=eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJ1c2VySWQiOjEsImp0aSI6ImI1MzUyN (truncated)...]
+2025-12-29T16:55:42.787+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2025-12-29T16:55:53.768+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
+2025-12-29T16:55:53.769+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-29T16:55:53.770+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
+2025-12-29T16:55:53.770+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/register", parameters={}
+2025-12-29T16:55:53.770+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Auth.AuthController#register(RegisterRequest)
+2025-12-29T16:55:53.771+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [RegisterRequest(username=admin_user, email=admin@example.com, phoneNumber=1234567890, password=admin (truncated)...]
+2025-12-29T16:55:53.773+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] org.hibernate.SQL                        : 
+    /* SELECT
+        u.id id 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id 
+        from
+            users um1_0 
+        where
+            um1_0.email=? 
+        fetch
+            first ? rows only
+2025-12-29T16:55:53.777+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-12-29T16:55:53.778+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2025-12-29T16:55:53.778+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2025-12-29T16:56:39.263+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/test/admin/hello
+2025-12-29T16:56:39.291+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2025-12-29T16:56:39.310+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/test/admin/hello
+2025-12-29T16:56:39.310+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/test/admin/hello", parameters={}
+2025-12-29T16:56:39.310+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Test.TestController#adminHello()
+2025-12-29T16:56:39.311+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.appointment.Test.TestController.adminHello(); target is of class [com.example.appointment.Test.TestController]
+2025-12-29T16:56:39.340+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.appointment.Test.TestController.adminHello(); target is of class [com.example.appointment.Test.TestController]
+2025-12-29T16:56:39.340+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-5] c.e.appointment.Test.TestController      : ADMIN endpoint accessed - /api/test/admin/hello - ADMIN role required
+2025-12-29T16:56:39.340+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] c.e.appointment.Test.TestController      : Debug log: Processing admin hello request
+2025-12-29T16:56:39.340+03:00  WARN %PARSER_ERROR[pid] --- [nio-8080-exec-5] c.e.appointment.Test.TestController      : Warning: Admin-only endpoint accessed
+2025-12-29T16:56:39.340+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-12-29T16:56:39.340+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=2025-12-29T16:56:39.340644571, role=ADMIN, message=Hello from ADMIN endpoint!}]
+2025-12-29T16:56:39.341+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-12-29T16:56:47.754+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/test/staff/hello
+2025-12-29T16:56:47.756+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2025-12-29T16:56:47.765+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/test/staff/hello
+2025-12-29T16:56:47.765+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/test/staff/hello", parameters={}
+2025-12-29T16:56:47.765+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Test.TestController#staffHello()
+2025-12-29T16:56:47.765+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.appointment.Test.TestController.staffHello(); target is of class [com.example.appointment.Test.TestController]
+2025-12-29T16:56:47.766+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] horizationManagerBeforeMethodInterceptor : Failed to authorize ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.appointment.Test.TestController.staffHello(); target is of class [com.example.appointment.Test.TestController] with authorization manager org.springframework.security.authorization.ObservationAuthorizationManager@5756e7bc and result ExpressionAuthorizationDecision [granted=false, expressionAttribute=hasRole('STAFF')]
+2025-12-29T16:56:47.769+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Failed to complete request: org.springframework.security.authorization.AuthorizationDeniedException: Access Denied
+2025-12-29T16:56:47.769+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2025-12-29T16:56:47.770+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-12-29T16:56:47.771+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-29T16:56:47.771+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-29T17:00:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2025-12-29T17:00:00.006+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2025-12-29T17:00:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2025-12-29T17:10:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2025-12-29T17:10:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2025-12-29T17:10:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2025-12-29T17:20:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2025-12-29T17:20:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2025-12-29T17:20:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2025-12-29T17:30:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2025-12-29T17:30:00.008+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2025-12-29T17:30:00.008+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2025-12-29T17:40:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2025-12-29T17:40:00.006+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2025-12-29T17:40:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2025-12-29T17:50:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2025-12-29T17:50:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2025-12-29T17:50:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2025-12-29T18:00:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2025-12-29T18:00:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2025-12-29T18:00:00.008+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2025-12-29T18:10:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2025-12-29T18:10:00.006+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2025-12-29T18:10:00.006+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2025-12-29T18:20:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2025-12-29T18:20:00.006+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2025-12-29T18:20:00.006+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2025-12-29T18:30:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2025-12-29T18:30:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2025-12-29T18:30:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2025-12-29T18:40:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2025-12-29T18:40:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2025-12-29T18:40:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2025-12-29T18:50:00.001+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2025-12-29T18:50:00.008+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2025-12-29T18:50:00.008+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2025-12-29T19:00:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2025-12-29T19:00:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2025-12-29T19:00:00.008+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
