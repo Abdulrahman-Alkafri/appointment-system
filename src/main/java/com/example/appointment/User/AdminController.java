@@ -17,7 +17,7 @@ public class AdminController {
 
     private final UserService userService;
 
-    @GetMapping
+    @GetMapping("/show_all_users")
     public List<UserResponse> getAllUsers() {
         return userService.getAllUsers()
                 .stream()
@@ -25,18 +25,18 @@ public class AdminController {
                 .toList();
     }
 
-    @PostMapping
+    @PostMapping("/create_user")
     public UserResponse createUser(@RequestBody CreateUserRequest request) {
         return userService.createUser(request);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/update_user/{id}")
     public UserResponse updateUser(@PathVariable Long id,
                                    @RequestBody UpdateUserRequest request) {
         return userService.updateUser(id, request);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete_user/{id}")
     public void deleteUser(@PathVariable Long id) {
         userService.deleteUser(id);
     }
