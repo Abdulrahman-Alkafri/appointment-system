@@ -25,6 +25,7 @@ com\example\appointment\User\UserRepository.class
 com\example\appointment\User\StaffController.class
 com\example\appointment\User\UserModel.class
 com\example\appointment\Services\ServiceRepository.class
+com\example\appointment\WorkingSchedule\Working_scheduleController.class
 com\example\appointment\Services\Service.class
 com\example\appointment\WorkingSchedule\Working_schedule.class
 com\example\appointment\Auth\AuthService.class

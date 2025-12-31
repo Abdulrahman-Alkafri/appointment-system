@@ -1,10 +1,6 @@
-package com.example.appointment.User;
+package com.example.appointment.WorkingSchedule;
 
-import com.example.appointment.User.dto.CreateUserRequest;
-import com.example.appointment.User.dto.UpdateUserRequest;
-import com.example.appointment.User.dto.UserResponse;
-import com.example.appointment.WorkingSchedule.Working_scheduleDTO;
-import com.example.appointment.WorkingSchedule.Working_scheduleService;
+import com.example.appointment.User.UserModel;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -14,95 +10,79 @@ import java.util.Set;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/admin")
+@RequestMapping("/api/working-schedules")
 @RequiredArgsConstructor
-@PreAuthorize("hasRole('ADMIN')")
-public class AdminController {
+public class Working_scheduleController {
 
-    private final UserService userService;
     private final Working_scheduleService workingScheduleService;
 
-    // User endpoints
-    @GetMapping("/users")
-    public List<UserResponse> getAllUsers() {
-        return userService.getAllUsers()
-                .stream()
-                .map(userService::mapToResponse)
-                .toList();
-    }
-
-    @PostMapping("/users")
-    public UserResponse createUser(@RequestBody CreateUserRequest request) {
-        return userService.createUser(request);
-    }
-
-    @PutMapping("/users/{id}")
-    public UserResponse updateUser(@PathVariable Long id,
-                                   @RequestBody UpdateUserRequest request) {
-        return userService.updateUser(id, request);
-    }
-
-    @DeleteMapping("/users/{id}")
-    public void deleteUser(@PathVariable Long id) {
-        userService.deleteUser(id);
-    }
-
-    // Working Schedule endpoints
-    @GetMapping("/working-schedules")
+    // Public endpoint to get all working schedules
+    @GetMapping
     public List<Working_scheduleDTO> getAllWorkingSchedules() {
         return workingScheduleService.getAllWorkingSchedules();
     }
 
-    @GetMapping("/working-schedules/{id}")
+    // Public endpoint to get a specific working schedule
+    @GetMapping("/{id}")
     public Working_scheduleDTO getWorkingSchedule(@PathVariable Long id) {
         return workingScheduleService.getWorkingScheduleById(id);
     }
 
-    @PostMapping("/working-schedules")
+    // Admin and Staff endpoints for managing working schedules
+    @PostMapping
+    @PreAuthorize("hasRole('ADMIN') or hasRole('STAFF')")
     public Working_scheduleDTO createWorkingSchedule(@RequestBody Working_scheduleDTO dto) {
         return workingScheduleService.createWorkingSchedule(dto);
     }
 
-    @PutMapping("/working-schedules/{id}")
+    @PutMapping("/{id}")
+    @PreAuthorize("hasRole('ADMIN') or hasRole('STAFF')")
     public Working_scheduleDTO updateWorkingSchedule(@PathVariable Long id,
                                                      @RequestBody Working_scheduleDTO dto) {
         return workingScheduleService.updateWorkingSchedule(id, dto);
     }
 
-    @DeleteMapping("/working-schedules/{id}")
+    @DeleteMapping("/{id}")
+    @PreAuthorize("hasRole('ADMIN') or hasRole('STAFF')")
     public void deleteWorkingSchedule(@PathVariable Long id) {
         workingScheduleService.deleteWorkingSchedule(id);
     }
 
     // Employee-schedule association endpoints
-    @PostMapping("/working-schedules/{scheduleId}/employees/{employeeId}")
+    @PostMapping("/{scheduleId}/employees/{employeeId}")
+    @PreAuthorize("hasRole('ADMIN')")
     public Working_scheduleDTO assignEmployeeToWorkingSchedule(@PathVariable Long scheduleId, @PathVariable Long employeeId) {
         return workingScheduleService.assignEmployeeToWorkingSchedule(employeeId, scheduleId);
     }
 
-    @DeleteMapping("/working-schedules/{scheduleId}/employees/{employeeId}")
+    @DeleteMapping("/{scheduleId}/employees/{employeeId}")
+    @PreAuthorize("hasRole('ADMIN')")
     public Working_scheduleDTO removeEmployeeFromWorkingSchedule(@PathVariable Long scheduleId, @PathVariable Long employeeId) {
         return workingScheduleService.removeEmployeeFromWorkingSchedule(employeeId, scheduleId);
     }
 
-    @GetMapping("/working-schedules/employees/{employeeId}")
+    @GetMapping("/employees/{employeeId}")
+    @PreAuthorize("hasRole('ADMIN') or hasRole('STAFF')")
     public Set<Working_scheduleDTO> getWorkingSchedulesForEmployee(@PathVariable Long employeeId) {
         return workingScheduleService.getWorkingSchedulesForEmployee(employeeId);
     }
 
-    @GetMapping("/working-schedules/{scheduleId}/employees")
-    public List<com.example.appointment.User.UserModel> getEmployeesForWorkingSchedule(@PathVariable Long scheduleId) {
+    @GetMapping("/{scheduleId}/employees")
+    @PreAuthorize("hasRole('ADMIN') or hasRole('STAFF')")
+    public List<UserModel> getEmployeesForWorkingSchedule(@PathVariable Long scheduleId) {
         return workingScheduleService.getEmployeesForWorkingSchedule(scheduleId);
     }
 
-    // New endpoints for staff-working schedule management
-    @GetMapping("/working-schedules/staff")
+    // New endpoints for staff-specific working schedule management
+    @GetMapping("/staff")
+    @PreAuthorize("hasRole('ADMIN')")
     public List<Map<String, Object>> getAllStaffWithWorkingSchedules() {
         return workingScheduleService.getAllStaffWithWorkingSchedules();
     }
 
-    @GetMapping("/working-schedules/{scheduleId}/staff")
-    public List<com.example.appointment.User.UserModel> getStaffForWorkingSchedule(@PathVariable Long scheduleId) {
+    @GetMapping("/{scheduleId}/staff")
+    @PreAuthorize("hasRole('ADMIN') or hasRole('STAFF')")
+    public List<UserModel> getStaffForWorkingSchedule(@PathVariable Long scheduleId) {
         return workingScheduleService.getStaffForWorkingSchedule(scheduleId);
     }
 }
