@@ -760,6 +760,243 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Admin - User Management",
+			"item": [
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/admin/users/show_all_users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"users",
+								"show_all_users"
+							]
+						},
+						"description": "Get all users. Requires ADMIN role."
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"new_staff_user\",\n    \"email\": \"newstaff@example.com\",\n    \"phoneNumber\": \"1234567893\",\n    \"password\": \"password123\",\n    \"role\": \"STAFF\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/admin/users/create_user",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"users",
+								"create_user"
+							]
+						},
+						"description": "Create a new user. Requires ADMIN role. Validates all fields according to database constraints."
+					},
+					"response": []
+				},
+				{
+					"name": "Update User (STAFF only)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"updated_staff_user\",\n    \"email\": \"updatedstaff@example.com\",\n    \"phoneNumber\": \"1234567894\",\n    \"role\": \"STAFF\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/admin/users/update_user/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"users",
+								"update_user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "User ID to update (must be STAFF role)"
+								}
+							]
+						},
+						"description": "Update a user. Only allows updating users with STAFF role. Requires ADMIN role. Validates all fields."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/admin/users/delete_user/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"users",
+								"delete_user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2",
+									"description": "User ID to delete (cannot be the current admin's own ID)"
+								}
+							]
+						},
+						"description": "Delete a user. Cannot delete yourself. Requires ADMIN role."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin - Service Management",
+			"item": [
+				{
+					"name": "Create Service",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Haircut\",\n    \"description\": \"Professional haircut service\",\n    \"cost\": 50,\n    \"duration\": \"PT30M\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/admin/services/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"services",
+								"create"
+							]
+						},
+						"description": "Create a new service. Requires ADMIN role. Duration format: PT30M (30 minutes), PT1H (1 hour), PT1H30M (1.5 hours). Validates all fields according to database constraints."
+					},
+					"response": []
+				},
+				{
+					"name": "Link Service to Staff",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"serviceId\": 1,\n    \"staffUserId\": 2\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/admin/services/link-to-staff",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"services",
+								"link-to-staff"
+							]
+						},
+						"description": "Link a service to a STAFF user. The user must have STAFF role. Requires ADMIN role."
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Services",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/admin/services/all",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"services",
+								"all"
+							]
+						},
+						"description": "Get all services. Requires ADMIN role."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Service by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/admin/services/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"services",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "Service ID"
+								}
+							]
+						},
+						"description": "Get a service by ID. Requires ADMIN role."
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }

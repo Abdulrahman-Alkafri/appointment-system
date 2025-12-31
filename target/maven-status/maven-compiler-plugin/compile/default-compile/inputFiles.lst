@@ -17,10 +17,13 @@
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Auth/dto/TokenResponse.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Auth/dto/TokenValidationResponse.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Common/enums/UserRole.java
+/home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Services/LinkServiceToStaffRequest.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Services/Service.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Services/ServiceController.java
-/home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Services/ServiceDTO.java
+/home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Services/ServiceDTOs/CreateServiceRequest.java
+/home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Services/ServiceDTOs/updateServiceRequest.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Services/ServiceRepository.java
+/home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Services/ServiceResponse.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Services/ServicesServ.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Test/TestController.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/User/AdminController.java

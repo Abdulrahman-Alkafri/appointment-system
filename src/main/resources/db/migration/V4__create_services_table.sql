@@ -4,7 +4,7 @@ CREATE TABLE services (
     name VARCHAR(128) NOT NULL,
     description TEXT,
     cost INTEGER NOT NULL CHECK (cost >= 0),
-    duration NUMERIC(21,0) NOT NULL
+    duration INTEGER NOT NULL
 );
 
 -- Create index on name for faster lookups

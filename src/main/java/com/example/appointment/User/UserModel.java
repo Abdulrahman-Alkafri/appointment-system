@@ -8,22 +8,23 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-
-
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
 @Table(name = "users")
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserModel {
@@ -62,8 +63,8 @@ public class UserModel {
     @Column(nullable = false)
     private LocalDateTime updatedAt;
 
-
-    @ManyToMany
+    @JsonIgnore
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "emp_serv",
             joinColumns = @JoinColumn(name = "user_id"),
@@ -71,7 +72,8 @@ public class UserModel {
     )
     private Set<Service> services = new HashSet<>();
 
-    @ManyToMany
+    @JsonIgnore
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "emp_work",
             joinColumns = @JoinColumn(name = "user_id"),
@@ -79,11 +81,25 @@ public class UserModel {
     )
     private Set<Working_schedule> workingtimes = new HashSet<>();
 
-    @OneToMany(mappedBy = "user")
+    @JsonIgnore
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<Appointment> appointments;
 
-    @OneToMany(mappedBy = "employee")
+    @JsonIgnore
+    @OneToMany(mappedBy = "employee", fetch = FetchType.LAZY)
     private List<Appointment> serv_appointments;
 
+    // ✅ استخدم ID فقط في hashCode و equals
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        UserModel userModel = (UserModel) o;
+        return Objects.equals(id, userModel.id);
+    }
 }
