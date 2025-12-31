@@ -1,23 +1,24 @@
 package com.example.appointment.Services;
 
-
 import com.example.appointment.Appointment.Appointment;
 import com.example.appointment.User.UserModel;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.Min;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-import java.time.Duration;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
 @Table(name = "services")
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Service {
@@ -25,20 +26,21 @@ public class Service {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
-    @Column(nullable = false  ,length = 128)
-    private  String name;
+    @Column(nullable = false, length = 128)
+    private String name;
 
-    @Column(nullable = true  ) // able to delete this column
+    @Column(nullable = true)
     private String description;
 
     @Column(nullable = false)
-    @Size(min = 0 , message = "cannot be negative")
-    private  int Cost;
+    @Min(value = 0, message = "cannot be negative")
+    private int Cost;
 
     @Column(nullable = false)
-    private Duration duration;
+    private int duration;
 
-    @ManyToMany
+    @JsonIgnore
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "emp_serv",
             joinColumns = @JoinColumn(name = "service_id"),
@@ -46,8 +48,20 @@ public class Service {
     )
     private Set<UserModel> employees = new HashSet<>();
 
-    @OneToMany(mappedBy = "service")
-
+    @JsonIgnore
+    @OneToMany(mappedBy = "service", fetch = FetchType.LAZY)
     private List<Appointment> appointments;
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Service service = (Service) o;
+        return Objects.equals(id, service.id);
+    }
 }
