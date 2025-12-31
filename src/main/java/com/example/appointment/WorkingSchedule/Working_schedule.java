@@ -38,7 +38,7 @@ public class Working_schedule {
             joinColumns = @JoinColumn(name = "work_time_id"),
             inverseJoinColumns = @JoinColumn(name = "user_id")
     )
-    private Set<UserModel> employes = new HashSet<>();
+    private Set<UserModel> employees = new HashSet<>();
 
 
 }

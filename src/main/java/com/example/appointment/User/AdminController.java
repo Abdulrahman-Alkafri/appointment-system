@@ -6,6 +6,8 @@ import com.example.appointment.Services.ServiceDTOs.updateServiceRequest;
 import com.example.appointment.User.dto.CreateUserRequest;
 import com.example.appointment.User.dto.UpdateUserRequest;
 import com.example.appointment.User.dto.UserResponse;
+import com.example.appointment.WorkingSchedule.Working_scheduleDTO;
+import com.example.appointment.WorkingSchedule.Working_scheduleService;
 
 import org.springframework.transaction.annotation.Transactional;
 import jakarta.validation.Valid;
@@ -17,6 +19,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -26,7 +30,10 @@ import java.util.Optional;
 public class AdminController {
 
     private final UserService userService;
+    private final Working_scheduleService workingScheduleService;
     private final ServicesServ servicesServ;
+
+    // User endpoints
 
     // User Management Endpoints
     @GetMapping("/users/show_all_users")
@@ -43,6 +50,8 @@ public class AdminController {
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
+
+
     @PutMapping("/users/update_user/{id}")
     public ResponseEntity<UserResponse> updateUser(@PathVariable Long id,
                                    @Valid @RequestBody UpdateUserRequest request) {
@@ -50,8 +59,9 @@ public class AdminController {
         return ResponseEntity.ok(response);
     }
 
+
     @DeleteMapping("/users/delete_user/{id}")
-    public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
+    public ResponseEntity<?> deleteUser(@PathVariable Long id) {
         userService.deleteUser(id);
         return ResponseEntity.noContent().build();
     }
@@ -63,18 +73,77 @@ public class AdminController {
         try{
             ServiceResponse response = servicesServ.createService(request);
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
-      
+
     }
       catch(Exception e) {
         return ResponseEntity.ok(e.getMessage());
       }
- 
+
     }
 
     @PostMapping("/services/link-to-staff")
     public ResponseEntity<ServiceResponse> linkServiceToStaff(@Valid @RequestBody LinkServiceToStaffRequest request) {
         ServiceResponse response = servicesServ.linkServiceToStaff(request);
         return ResponseEntity.ok(response);
+    }
+
+    // Working Schedule endpoints
+    @GetMapping("/working-schedules")
+    public List<Working_scheduleDTO> getAllWorkingSchedules() {
+        return workingScheduleService.getAllWorkingSchedules();
+    }
+
+    @GetMapping("/working-schedules/{id}")
+    public Working_scheduleDTO getWorkingSchedule(@PathVariable Long id) {
+        return workingScheduleService.getWorkingScheduleById(id);
+    }
+
+    @PostMapping("/working-schedules")
+    public Working_scheduleDTO createWorkingSchedule(@RequestBody Working_scheduleDTO dto) {
+        return workingScheduleService.createWorkingSchedule(dto);
+    }
+
+    @PutMapping("/working-schedules/{id}")
+    public Working_scheduleDTO updateWorkingSchedule(@PathVariable Long id,
+                                                     @RequestBody Working_scheduleDTO dto) {
+        return workingScheduleService.updateWorkingSchedule(id, dto);
+    }
+
+    @DeleteMapping("/working-schedules/{id}")
+    public void deleteWorkingSchedule(@PathVariable Long id) {
+        workingScheduleService.deleteWorkingSchedule(id);
+    }
+
+    // Employee-schedule association endpoints
+    @PostMapping("/working-schedules/{scheduleId}/employees/{employeeId}")
+    public Working_scheduleDTO assignEmployeeToWorkingSchedule(@PathVariable Long scheduleId, @PathVariable Long employeeId) {
+        return workingScheduleService.assignEmployeeToWorkingSchedule(employeeId, scheduleId);
+    }
+
+    @DeleteMapping("/working-schedules/{scheduleId}/employees/{employeeId}")
+    public Working_scheduleDTO removeEmployeeFromWorkingSchedule(@PathVariable Long scheduleId, @PathVariable Long employeeId) {
+        return workingScheduleService.removeEmployeeFromWorkingSchedule(employeeId, scheduleId);
+    }
+
+    @GetMapping("/working-schedules/employees/{employeeId}")
+    public Set<Working_scheduleDTO> getWorkingSchedulesForEmployee(@PathVariable Long employeeId) {
+        return workingScheduleService.getWorkingSchedulesForEmployee(employeeId);
+    }
+
+    @GetMapping("/working-schedules/{scheduleId}/employees")
+    public List<com.example.appointment.User.UserModel> getEmployeesForWorkingSchedule(@PathVariable Long scheduleId) {
+        return workingScheduleService.getEmployeesForWorkingSchedule(scheduleId);
+    }
+
+    // New endpoints for staff-working schedule management
+    @GetMapping("/working-schedules/staff")
+    public List<Map<String, Object>> getAllStaffWithWorkingSchedules() {
+        return workingScheduleService.getAllStaffWithWorkingSchedules();
+    }
+
+    @GetMapping("/working-schedules/{scheduleId}/staff")
+    public List<com.example.appointment.User.UserModel> getStaffForWorkingSchedule(@PathVariable Long scheduleId) {
+        return workingScheduleService.getStaffForWorkingSchedule(scheduleId);
     }
 
     @GetMapping("/services/all")
@@ -88,10 +157,10 @@ public class AdminController {
         ServiceResponse service = servicesServ.getServiceById(id);
         return ResponseEntity.ok(service);
     }
-      
+
     @PostMapping("/services/update/{id}")
     public ResponseEntity<?> updateService(@PathVariable Long id ,@Valid @RequestBody updateServiceRequest request ){
-      
+
         ServiceResponse response=servicesServ.updateService(id, request);
 
         return ResponseEntity.ok(response);
@@ -110,7 +179,7 @@ public class AdminController {
     }
 
     @GetMapping("/services/employees/{id}")
-    @Transactional(readOnly = true) 
+    @Transactional(readOnly = true)
     public ResponseEntity<?> getSeviceEmployes(@PathVariable Long id){
         Service serv = servicesServ.getServWithEmployes(id);
         return ResponseEntity.ok(serv.getEmployees());
