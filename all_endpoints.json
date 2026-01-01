@@ -91,6 +91,15 @@
           "response": "String message or 404",
           "auth_required": true,
           "role_required": "CUSTOMER"
+        },
+        {
+          "method": "GET",
+          "path": "/appointments/available_slots",
+          "description": "Get available time slots for a specific service on a specific date - from jalal",
+          "request_body": "serviceId (query param), date (query param)",
+          "response": "List<AvailableSlotDTO>",
+          "auth_required": true,
+          "role_required": "CUSTOMER"
         }
       ]
     },

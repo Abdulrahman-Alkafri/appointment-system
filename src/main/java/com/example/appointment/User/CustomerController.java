@@ -3,13 +3,16 @@ package com.example.appointment.User;
 import com.example.appointment.Appointment.Appointment;
 import com.example.appointment.Appointment.AppointmentDTO;
 import com.example.appointment.Appointment.AppointmentService;
+import com.example.appointment.Appointment.AvailableSlotDTO;
 import lombok.RequiredArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -76,6 +79,16 @@ public class CustomerController {
         } else {
             return ResponseEntity.notFound().build();
         }
+    }
+
+    // Get available time slots for a specific service on a specific date - from jalal
+    @GetMapping("/appointments/available_slots")
+    public ResponseEntity<List<AvailableSlotDTO>> getAvailableSlots(
+            @RequestParam Long serviceId,
+            @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date) {
+
+        List<AvailableSlotDTO> availableSlots = appointmentService.getAvailableSlots(serviceId, date);
+        return ResponseEntity.ok(availableSlots);
     }
 
     private AppointmentDTO convertToDTO(Appointment appointment) {
