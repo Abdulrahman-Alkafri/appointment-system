@@ -17,6 +17,12 @@
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Auth/dto/TokenResponse.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Auth/dto/TokenValidationResponse.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Common/enums/UserRole.java
+/home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Holiday/DTOs/CreateHolidayRequest.java
+/home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Holiday/DTOs/HolidayDTO.java
+/home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Holiday/DTOs/UpdateHolidayRequest.java
+/home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Holiday/Holiday.java
+/home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Holiday/HolidayRepository.java
+/home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Holiday/HolidayService.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Services/LinkServiceToStaffRequest.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Services/Service.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Services/ServiceController.java
