@@ -1,0 +1,461 @@
+{
+  "appointment_system_endpoints": {
+    "auth_endpoints": {
+      "base_url": "/api/auth",
+      "endpoints": [
+        {
+          "method": "POST",
+          "path": "/register",
+          "description": "Register a new user",
+          "request_body": "RegisterRequest",
+          "response": "TokenResponse",
+          "auth_required": false
+        },
+        {
+          "method": "POST",
+          "path": "/login",
+          "description": "Login user and get tokens",
+          "request_body": "LoginRequest",
+          "response": "TokenResponse",
+          "auth_required": false
+        },
+        {
+          "method": "POST",
+          "path": "/refresh",
+          "description": "Refresh access token",
+          "request_body": "RefreshTokenRequest",
+          "response": "TokenResponse",
+          "auth_required": false
+        },
+        {
+          "method": "POST",
+          "path": "/validate",
+          "description": "Validate access token",
+          "request_body": "Map<String, String>",
+          "response": "TokenValidationResponse",
+          "auth_required": false
+        },
+        {
+          "method": "POST",
+          "path": "/logout",
+          "description": "Logout user",
+          "request_body": "RefreshTokenRequest",
+          "response": "Map<String, String>",
+          "auth_required": true
+        },
+        {
+          "method": "POST",
+          "path": "/logout-all",
+          "description": "Logout all user sessions",
+          "request_body": "Authorization header",
+          "response": "Map<String, String>",
+          "auth_required": true
+        }
+      ]
+    },
+    "customer_endpoints": {
+      "base_url": "/api/customer",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/appointments/show_active_appointments",
+          "description": "Get all active appointments for the current customer",
+          "request_body": "None",
+          "response": "List<AppointmentDTO>",
+          "auth_required": true,
+          "role_required": "CUSTOMER"
+        },
+        {
+          "method": "GET",
+          "path": "/appointments/show_all_appointments",
+          "description": "Get all appointments (including cancelled) for the current customer",
+          "request_body": "None",
+          "response": "List<AppointmentDTO>",
+          "auth_required": true,
+          "role_required": "CUSTOMER"
+        },
+        {
+          "method": "GET",
+          "path": "/appointments/show_appointment/{id}",
+          "description": "Get a specific appointment by ID for the current customer",
+          "request_body": "None",
+          "response": "AppointmentDTO",
+          "auth_required": true,
+          "role_required": "CUSTOMER"
+        },
+        {
+          "method": "DELETE",
+          "path": "/appointments/cancel_appointment/{id}",
+          "description": "Cancel an appointment by ID for the current customer",
+          "request_body": "None",
+          "response": "String message or 404",
+          "auth_required": true,
+          "role_required": "CUSTOMER"
+        }
+      ]
+    },
+    "appointment_endpoints": {
+      "base_url": "/api/appointments",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/available-slots",
+          "description": "Get available appointment slots for a service on a specific date",
+          "request_body": "serviceId (query param), date (query param)",
+          "response": "List<AvailableSlotDTO>",
+          "auth_required": false
+        }
+      ]
+    },
+    "admin_endpoints": {
+      "base_url": "/api/admin",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/users/show_all_users",
+          "description": "Get all users in the system",
+          "request_body": "None",
+          "response": "List<UserResponse>",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        },
+        {
+          "method": "POST",
+          "path": "/users/create_user",
+          "description": "Create a new user",
+          "request_body": "CreateUserRequest",
+          "response": "UserResponse",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        },
+        {
+          "method": "PUT",
+          "path": "/users/update_user/{id}",
+          "description": "Update a user by ID",
+          "request_body": "UpdateUserRequest",
+          "response": "UserResponse",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        },
+        {
+          "method": "DELETE",
+          "path": "/users/delete_user/{id}",
+          "description": "Delete a user by ID",
+          "request_body": "None",
+          "response": "NoContent",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        },
+        {
+          "method": "POST",
+          "path": "/services/create",
+          "description": "Create a new service",
+          "request_body": "CreateServiceRequest",
+          "response": "ServiceResponse",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        },
+        {
+          "method": "POST",
+          "path": "/services/link-to-staff",
+          "description": "Link a service to staff members",
+          "request_body": "LinkServiceToStaffRequest",
+          "response": "ServiceResponse",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        },
+        {
+          "method": "GET",
+          "path": "/working-schedules",
+          "description": "Get all working schedules",
+          "request_body": "None",
+          "response": "List<Working_scheduleDTO>",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        },
+        {
+          "method": "GET",
+          "path": "/working-schedules/{id}",
+          "description": "Get a specific working schedule by ID",
+          "request_body": "None",
+          "response": "Working_scheduleDTO",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        },
+        {
+          "method": "POST",
+          "path": "/working-schedules",
+          "description": "Create a new working schedule",
+          "request_body": "Working_scheduleDTO",
+          "response": "Working_scheduleDTO",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        },
+        {
+          "method": "PUT",
+          "path": "/working-schedules/{id}",
+          "description": "Update a working schedule by ID",
+          "request_body": "Working_scheduleDTO",
+          "response": "Working_scheduleDTO",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        },
+        {
+          "method": "DELETE",
+          "path": "/working-schedules/{id}",
+          "description": "Delete a working schedule by ID",
+          "request_body": "None",
+          "response": "void",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        },
+        {
+          "method": "POST",
+          "path": "/working-schedules/{scheduleId}/employees/{employeeId}",
+          "description": "Assign an employee to a working schedule",
+          "request_body": "None",
+          "response": "Working_scheduleDTO",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        },
+        {
+          "method": "DELETE",
+          "path": "/working-schedules/{scheduleId}/employees/{employeeId}",
+          "description": "Remove an employee from a working schedule",
+          "request_body": "None",
+          "response": "Working_scheduleDTO",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        },
+        {
+          "method": "GET",
+          "path": "/working-schedules/employees/{employeeId}",
+          "description": "Get working schedules for a specific employee",
+          "request_body": "None",
+          "response": "Set<Working_scheduleDTO>",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        },
+        {
+          "method": "GET",
+          "path": "/working-schedules/{scheduleId}/employees",
+          "description": "Get employees for a specific working schedule",
+          "request_body": "None",
+          "response": "List<UserModel>",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        },
+        {
+          "method": "GET",
+          "path": "/working-schedules/staff",
+          "description": "Get all staff with their working schedules",
+          "request_body": "None",
+          "response": "List<Map<String, Object>>",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        },
+        {
+          "method": "GET",
+          "path": "/working-schedules/{scheduleId}/staff",
+          "description": "Get staff for a specific working schedule",
+          "request_body": "None",
+          "response": "List<UserModel>",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        },
+        {
+          "method": "GET",
+          "path": "/services/all",
+          "description": "Get all services",
+          "request_body": "None",
+          "response": "List<ServiceResponse>",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        },
+        {
+          "method": "GET",
+          "path": "/services/{id}",
+          "description": "Get a specific service by ID",
+          "request_body": "None",
+          "response": "ServiceResponse",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        },
+        {
+          "method": "POST",
+          "path": "/services/update/{id}",
+          "description": "Update a service by ID",
+          "request_body": "updateServiceRequest",
+          "response": "ServiceResponse",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        },
+        {
+          "method": "DELETE",
+          "path": "/services/delete/{id}",
+          "description": "Delete a service by ID",
+          "request_body": "None",
+          "response": "Boolean result",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        },
+        {
+          "method": "GET",
+          "path": "/services/employees/{id}",
+          "description": "Get employees for a specific service",
+          "request_body": "None",
+          "response": "List of employees",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        },
+        {
+          "method": "GET",
+          "path": "/services/appointments/{id}",
+          "description": "Get appointments for a specific service",
+          "request_body": "None",
+          "response": "List of appointments",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        },
+        {
+          "method": "POST",
+          "path": "/holidays/create",
+          "description": "Create a new holiday",
+          "request_body": "CreateHolidayRequest",
+          "response": "HolidayDTO",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        },
+        {
+          "method": "POST",
+          "path": "/holidays/update/{id}",
+          "description": "Update a holiday by ID",
+          "request_body": "UpdateHolidayRequest",
+          "response": "HolidayDTO",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        },
+        {
+          "method": "DELETE",
+          "path": "/holidays/update/{id}",
+          "description": "Delete a holiday by ID",
+          "request_body": "None",
+          "response": "Boolean result",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        },
+        {
+          "method": "GET",
+          "path": "/holidays/showAll",
+          "description": "Show all holidays",
+          "request_body": "None",
+          "response": "List<Holiday>",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        }
+      ]
+    },
+    "working_schedule_endpoints": {
+      "base_url": "/api/working-schedules",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/",
+          "description": "Get all working schedules (public)",
+          "request_body": "None",
+          "response": "List<Working_scheduleDTO>",
+          "auth_required": false
+        },
+        {
+          "method": "GET",
+          "path": "/{id}",
+          "description": "Get a specific working schedule by ID (public)",
+          "request_body": "None",
+          "response": "Working_scheduleDTO",
+          "auth_required": false
+        },
+        {
+          "method": "POST",
+          "path": "/",
+          "description": "Create a new working schedule",
+          "request_body": "Working_scheduleDTO",
+          "response": "Working_scheduleDTO",
+          "auth_required": true,
+          "role_required": "ADMIN or STAFF"
+        },
+        {
+          "method": "PUT",
+          "path": "/{id}",
+          "description": "Update a working schedule by ID",
+          "request_body": "Working_scheduleDTO",
+          "response": "Working_scheduleDTO",
+          "auth_required": true,
+          "role_required": "ADMIN or STAFF"
+        },
+        {
+          "method": "DELETE",
+          "path": "/{id}",
+          "description": "Delete a working schedule by ID",
+          "request_body": "None",
+          "response": "void",
+          "auth_required": true,
+          "role_required": "ADMIN or STAFF"
+        },
+        {
+          "method": "POST",
+          "path": "/{scheduleId}/employees/{employeeId}",
+          "description": "Assign an employee to a working schedule",
+          "request_body": "None",
+          "response": "Working_scheduleDTO",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        },
+        {
+          "method": "DELETE",
+          "path": "/{scheduleId}/employees/{employeeId}",
+          "description": "Remove an employee from a working schedule",
+          "request_body": "None",
+          "response": "Working_scheduleDTO",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        },
+        {
+          "method": "GET",
+          "path": "/employees/{employeeId}",
+          "description": "Get working schedules for a specific employee",
+          "request_body": "None",
+          "response": "Set<Working_scheduleDTO>",
+          "auth_required": true,
+          "role_required": "ADMIN or STAFF"
+        },
+        {
+          "method": "GET",
+          "path": "/{scheduleId}/employees",
+          "description": "Get employees for a specific working schedule",
+          "request_body": "None",
+          "response": "List<UserModel>",
+          "auth_required": true,
+          "role_required": "ADMIN or STAFF"
+        },
+        {
+          "method": "GET",
+          "path": "/staff",
+          "description": "Get all staff with their working schedules",
+          "request_body": "None",
+          "response": "List<Map<String, Object>>",
+          "auth_required": true,
+          "role_required": "ADMIN"
+        },
+        {
+          "method": "GET",
+          "path": "/{scheduleId}/staff",
+          "description": "Get staff for a specific working schedule",
+          "request_body": "None",
+          "response": "List<UserModel>",
+          "auth_required": true,
+          "role_required": "ADMIN or STAFF"
+        }
+      ]
+    }
+  }
+}
