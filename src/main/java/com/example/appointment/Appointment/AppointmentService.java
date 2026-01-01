@@ -1,6 +1,6 @@
 package com.example.appointment.Appointment;
 
-import com.example.appointment.Services.Service;
+
 import com.example.appointment.Services.ServiceRepository;
 import com.example.appointment.User.UserModel;
 import com.example.appointment.WorkingSchedule.Working_schedule;
@@ -50,7 +50,7 @@ public class AppointmentService {
     // Added method to get available time slots for a service on a specific date - from jalal
     public List<AvailableSlotDTO> getAvailableSlots(Long serviceId, LocalDate date) {
         // Get the service
-        Service service = serviceRepository.findById(serviceId).orElse(null);
+        com.example.appointment.Services.Service service = serviceRepository.findById(serviceId).orElse(null);
         if (service == null) {
             return new ArrayList<>();
         }

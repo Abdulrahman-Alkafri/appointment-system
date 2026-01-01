@@ -82,8 +82,8 @@ public class UserModel {
     private Set<Working_schedule> workingtimes = new HashSet<>();
 
     @JsonIgnore
-    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
-    private List<Appointment> appointments;
+    @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
+    private List<Appointment> customer_appointments;
 
     @JsonIgnore
     @OneToMany(mappedBy = "employee", fetch = FetchType.LAZY)

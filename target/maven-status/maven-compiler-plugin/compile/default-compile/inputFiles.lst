@@ -1,7 +1,10 @@
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Appointment/Appointment.java
+/home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Appointment/AppointmentController.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Appointment/AppointmentDTO.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Appointment/AppointmentRepository.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Appointment/AppointmentService.java
+/home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Appointment/AvailableSlotDTO.java
+/home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Appointment/ReserveAppointmentRequest.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/AppointmentApplication.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Auth/AuthController.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Auth/AuthService.java
