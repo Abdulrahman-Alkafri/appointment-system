@@ -1,5 +1,10 @@
 package com.example.appointment.User;
 
+import com.example.appointment.Holiday.DTOs.CreateHolidayRequest;
+import com.example.appointment.Holiday.DTOs.HolidayDTO;
+import com.example.appointment.Holiday.DTOs.UpdateHolidayRequest;
+import com.example.appointment.Holiday.Holiday;
+import com.example.appointment.Holiday.HolidayService;
 import com.example.appointment.Services.*;
 import com.example.appointment.Services.ServiceDTOs.CreateServiceRequest;
 import com.example.appointment.Services.ServiceDTOs.updateServiceRequest;
@@ -32,7 +37,7 @@ public class AdminController {
     private final UserService userService;
     private final Working_scheduleService workingScheduleService;
     private final ServicesServ servicesServ;
-
+    private  final HolidayService holidayService;
     // User endpoints
 
     // User Management Endpoints
@@ -189,6 +194,45 @@ public class AdminController {
     public ResponseEntity<?> getSeviceAppointments(@PathVariable Long id){
         Service serv = servicesServ.getServWithAppointments(id);
         return ResponseEntity.ok(serv.getAppointments());
+    }
+
+    @PostMapping("/holidays/create")
+    public ResponseEntity<?> createHoliday(@Valid @RequestBody CreateHolidayRequest request){
+      try{
+      HolidayDTO response=holidayService.createHoliday(request);
+          return ResponseEntity.status(HttpStatus.CREATED).body(response);
+      }
+      catch (Exception e){
+       return ResponseEntity.badRequest().body(e.getMessage());
+      }
+    }
+
+    @PostMapping("/holidays/update/{id}")
+    public ResponseEntity<?> updateHoliday(@PathVariable Long id ,@Valid @RequestBody UpdateHolidayRequest request){
+        try{
+            HolidayDTO response=holidayService.updateHoliday(id,request);
+            return ResponseEntity.ok(response);
+        }
+        catch (Exception e){
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
+    @DeleteMapping("/holidays/update/{id}")
+    public ResponseEntity<?> deleteHoliday(@PathVariable Long id){
+     try{
+      boolean res=holidayService.deleteHoliday(id);
+      return    ResponseEntity.ok(res);
+     }
+     catch (Exception e ){
+       return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
+    @GetMapping("/holidays/showAll")
+    public ResponseEntity<?> showAllHolidays(){
+      List<Holiday> holidays= holidayService.getAllHolidays();
+      return ResponseEntity.ok(holidays);
     }
 
 }
