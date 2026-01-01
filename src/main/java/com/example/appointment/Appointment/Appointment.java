@@ -19,7 +19,6 @@ public class Appointment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
-
     @ManyToOne
     @JoinColumn(name = "user_id")
     private UserModel user;
@@ -36,10 +35,15 @@ public class Appointment {
 
     private LocalDateTime to;
 
-
     @ManyToOne
     @JoinColumn(name = "service_id")
     private Service service;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status")
+    private AppointmentStatus status = AppointmentStatus.SCHEDULED;
 
+    public enum AppointmentStatus {
+        SCHEDULED, CANCELLED, COMPLETED
+    }
 }

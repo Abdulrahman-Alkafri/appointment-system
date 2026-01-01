@@ -1,4 +1,27 @@
 package com.example.appointment.Appointment;
 
-public interface AppointmentRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Optional;
+
+@Repository
+public interface AppointmentRepository extends JpaRepository<Appointment, Long> {
+    List<Appointment> findByCustomerIdAndStatusNot(Long customerId, Appointment.AppointmentStatus status);
+
+    @Query("SELECT a FROM Appointment a WHERE a.id = :id AND a.customer.id = :customerId")
+    Optional<Appointment> findByIdAndCustomerId(@Param("id") Long id, @Param("customerId") Long customerId);
+
+    // Method to get all appointments including cancelled ones
+    List<Appointment> findByCustomerId(Long customerId);
+
+    // Method to find appointments by service ID and date range - from jalal
+    @Query("SELECT a FROM Appointment a WHERE a.service.id = :serviceId AND a.from >= :startOfDay AND a.from < :endOfDay")
+    List<Appointment> findByServiceIdAndDate(@Param("serviceId") Long serviceId,
+                                           @Param("startOfDay") LocalDateTime startOfDay,
+                                           @Param("endOfDay") LocalDateTime endOfDay);
 }
