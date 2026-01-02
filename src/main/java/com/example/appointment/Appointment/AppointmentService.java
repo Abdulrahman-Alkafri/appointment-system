@@ -51,6 +51,10 @@ public class AppointmentService {
         return appointmentRepository.findByIdAndEmployeeId(appointmentId, employeeId);
     }
 
+    public List<Appointment> getAppointmentsByEmployeeIdAndStatus(Long employeeId, Appointment.AppointmentStatus status) {
+        return appointmentRepository.findByEmployeeIdAndStatus(employeeId, status);
+    }
+
     // Admin methods
     public List<Appointment> getAllAppointments() {
         return appointmentRepository.findAllAppointments();

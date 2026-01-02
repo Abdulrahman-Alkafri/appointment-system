@@ -21,6 +21,9 @@ public interface AppointmentRepository extends JpaRepository<Appointment, Long> 
     @Query("SELECT a FROM Appointment a LEFT JOIN FETCH a.customer LEFT JOIN FETCH a.employee WHERE a.employee.id = :employeeId AND a.status != :status")
     List<Appointment> findByEmployeeIdAndStatusNot(@Param("employeeId") Long employeeId, @Param("status") Appointment.AppointmentStatus status);
 
+    @Query("SELECT a FROM Appointment a LEFT JOIN FETCH a.customer LEFT JOIN FETCH a.employee WHERE a.employee.id = :employeeId AND a.status = :status")
+    List<Appointment> findByEmployeeIdAndStatus(@Param("employeeId") Long employeeId, @Param("status") Appointment.AppointmentStatus status);
+
     @Query("SELECT a FROM Appointment a LEFT JOIN FETCH a.customer LEFT JOIN FETCH a.employee WHERE a.employee.id = :employeeId")
     List<Appointment> findByEmployeeId(@Param("employeeId") Long employeeId);
 

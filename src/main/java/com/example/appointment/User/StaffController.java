@@ -51,6 +51,36 @@ public class StaffController {
         return ResponseEntity.ok(appointmentDTOs);
     }
 
+    // Get only accepted appointments assigned to the current staff member (SCHEDULED status)
+    @GetMapping("/appointments/show_accepted_appointments")
+    public ResponseEntity<List<AppointmentDTO>> getAcceptedAppointments() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        UserModel currentUser = (UserModel) authentication.getPrincipal();
+        Long staffId = currentUser.getId();
+
+        List<Appointment> appointments = appointmentService.getAppointmentsByEmployeeIdAndStatus(staffId, Appointment.AppointmentStatus.SCHEDULED);
+        List<AppointmentDTO> appointmentDTOs = appointments.stream()
+                .map(this::convertToDTO)
+                .collect(Collectors.toList());
+
+        return ResponseEntity.ok(appointmentDTOs);
+    }
+
+    // Get only completed appointments assigned to the current staff member (COMPLETED status)
+    @GetMapping("/appointments/show_completed_appointments")
+    public ResponseEntity<List<AppointmentDTO>> getCompletedAppointments() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        UserModel currentUser = (UserModel) authentication.getPrincipal();
+        Long staffId = currentUser.getId();
+
+        List<Appointment> appointments = appointmentService.getAppointmentsByEmployeeIdAndStatus(staffId, Appointment.AppointmentStatus.COMPLETED);
+        List<AppointmentDTO> appointmentDTOs = appointments.stream()
+                .map(this::convertToDTO)
+                .collect(Collectors.toList());
+
+        return ResponseEntity.ok(appointmentDTOs);
+    }
+
     // Get a specific appointment by ID assigned to the current staff member
     @GetMapping("/appointments/show_appointment/{id}")
     public ResponseEntity<AppointmentDTO> getAppointmentById(@PathVariable Long id) {
