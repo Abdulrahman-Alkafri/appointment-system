@@ -18725,3 +18725,1764 @@ This generated password is for development use only. Your security configuration
 2026-01-02T17:55:32.020+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoints beneath base path '/actuator'
 2026-01-02T17:55:32.080+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
 2026-01-02T17:55:32.088+03:00  INFO %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : Started AppointmentApplication in 4.023 seconds (process running for 4.192)
+2026-01-02T18:00:00.006+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T18:00:00.389+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T18:00:00.389+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T18:10:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T18:10:00.008+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T18:10:00.008+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T18:20:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T18:20:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T18:20:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T18:30:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T18:30:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T18:30:00.008+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T18:40:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T18:40:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T18:40:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T18:50:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T18:50:00.006+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T18:50:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T19:00:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T19:00:00.006+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T19:00:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T19:10:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T19:10:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T19:10:00.008+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T19:20:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T19:20:00.005+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T19:20:00.005+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T19:30:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T19:30:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T19:30:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T19:40:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T19:40:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T19:40:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T19:50:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T19:50:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T19:50:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T19:59:42.420+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-02T19:59:42.420+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-02T19:59:42.421+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-01-02T19:59:42.421+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-01-02T19:59:42.422+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3ca1f0a4
+2026-01-02T19:59:42.422+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@1c8ab147
+2026-01-02T19:59:42.423+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-01-02T19:59:42.423+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-01-02T19:59:42.430+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/appointments/reserve
+2026-01-02T19:59:42.437+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T19:59:42.440+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/appointments/reserve
+2026-01-02T19:59:42.443+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/appointments/reserve", parameters={}
+2026-01-02T19:59:42.445+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Appointment.AppointmentController#reserveAppointment(AppointmentReservationRequest)
+2026-01-02T19:59:42.501+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AppointmentReservationRequest(serviceId=1, customerId=1, appointmentDateTime=2026-01-15T12:30)]
+2026-01-02T19:59:42.526+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T19:59:42.609+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* SELECT
+        h 
+    FROM
+        Holiday h 
+    WHERE
+        h.holidayDate = :date */ select
+            h1_0.id,
+            h1_0.holiday_date 
+        from
+            holidays h1_0 
+        where
+            h1_0.holiday_date=?
+2026-01-02T19:59:42.611+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T19:59:42.620+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* SELECT
+        DISTINCT ws 
+    FROM
+        Working_schedule ws 
+    JOIN
+        
+    FETCH
+        ws.employees e 
+    JOIN
+        e.services serv 
+    WHERE
+        serv.id = :serviceId 
+        AND ws.day = :day */ select
+            distinct w1_0.id,
+            w1_0.day,
+            e1_0.work_time_id,
+            e1_1.id,
+            e1_1.created_at,
+            e1_1.email,
+            e1_1.password,
+            e1_1.phone_number,
+            e1_1.role,
+            e1_1.updated_at,
+            e1_1.username,
+            w1_0.end_time,
+            w1_0.start_time 
+        from
+            working_schedules w1_0 
+        join
+            emp_work e1_0 
+                on w1_0.id=e1_0.work_time_id 
+        join
+            users e1_1 
+                on e1_1.id=e1_0.user_id 
+        join
+            emp_serv s1_0 
+                on e1_1.id=s1_0.user_id 
+        where
+            s1_0.service_id=? 
+            and w1_0.day=?
+2026-01-02T19:59:42.628+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* SELECT
+        a 
+    FROM
+        Appointment a 
+    LEFT JOIN
+        
+    FETCH
+        a.customer 
+    LEFT JOIN
+        
+    FETCH
+        a.employee 
+    WHERE
+        a.service.id = :serviceId 
+        AND a.from >= :startOfDay 
+        AND a.from < :endOfDay */ select
+            a1_0.id,
+            a1_0.customer_id,
+            c1_0.id,
+            c1_0.created_at,
+            c1_0.email,
+            c1_0.password,
+            c1_0.phone_number,
+            c1_0.role,
+            c1_0.updated_at,
+            c1_0.username,
+            a1_0.employee_id,
+            e1_0.id,
+            e1_0.created_at,
+            e1_0.email,
+            e1_0.password,
+            e1_0.phone_number,
+            e1_0.role,
+            e1_0.updated_at,
+            e1_0.username,
+            a1_0.start_time,
+            a1_0.service_id,
+            a1_0.status,
+            a1_0.end_time 
+        from
+            appointments a1_0 
+        left join
+            users c1_0 
+                on c1_0.id=a1_0.customer_id 
+        left join
+            users e1_0 
+                on e1_0.id=a1_0.employee_id 
+        where
+            a1_0.service_id=? 
+            and a1_0.start_time>=? 
+            and a1_0.start_time<?
+2026-01-02T19:59:42.633+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T19:59:42.643+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T19:59:42.645+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AppointmentReservationResponse(success=false, message=Requested time slot is not available or does n (truncated)...]
+2026-01-02T19:59:42.665+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2026-01-02T20:00:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T20:00:00.008+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T20:00:00.008+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T20:10:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T20:10:00.002+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T20:10:00.002+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T20:20:00.001+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T20:20:00.017+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T20:20:00.017+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T20:24:02.089+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/test/logs
+2026-01-02T20:24:02.142+03:00 ERROR %PARSER_ERROR[pid] --- [nio-8080-exec-4] c.e.a.Auth.JwtAuthenticationFilter       : Cannot set user authentication: {}
+
+io.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+	at io.jsonwebtoken.impl.DefaultJwtParser.verifySignature(DefaultJwtParser.java:340) ~[jjwt-impl-0.12.6.jar:0.12.6]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:579) ~[jjwt-impl-0.12.6.jar:0.12.6]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:364) ~[jjwt-impl-0.12.6.jar:0.12.6]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:94) ~[jjwt-impl-0.12.6.jar:0.12.6]
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:36) ~[jjwt-impl-0.12.6.jar:0.12.6]
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:29) ~[jjwt-impl-0.12.6.jar:0.12.6]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseSignedClaims(DefaultJwtParser.java:830) ~[jjwt-impl-0.12.6.jar:0.12.6]
+	at com.example.appointment.Auth.JwtUtil.extractAllClaims(JwtUtil.java:105) ~[classes/:na]
+	at com.example.appointment.Auth.JwtUtil.extractClaim(JwtUtil.java:97) ~[classes/:na]
+	at com.example.appointment.Auth.JwtUtil.extractEmail(JwtUtil.java:71) ~[classes/:na]
+	at com.example.appointment.Auth.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:51) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:337) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-02T20:24:02.145+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T20:24:02.149+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2026-01-02T20:24:02.154+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2026-01-02T20:24:02.155+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T20:24:02.155+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2026-01-02T20:24:09.482+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-01-02T20:24:09.483+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T20:24:09.484+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-01-02T20:24:09.484+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2026-01-02T20:24:09.485+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Auth.AuthController#login(LoginRequest)
+2026-01-02T20:24:09.488+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest(email=admin@example.com, password=admin123)]
+2026-01-02T20:24:09.512+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-02T20:24:09.618+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] c.e.a.Auth.TokenBlacklistService         : Tracking access token 72545905-6762-4c24-aba5-fad79efa655c for user 1
+2026-01-02T20:24:09.630+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] org.hibernate.SQL                        : 
+    /* insert 
+    for
+        com.example.appointment.Auth.UserSessionModel
+        */insert 
+    into
+        user_sessions (created_at, expires_at, refresh_token, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-01-02T20:24:09.642+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T20:24:09.643+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [TokenResponse(accessToken=eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJ1c2VySWQiOjEsImp0aSI6IjcyNTQ1O (truncated)...]
+2026-01-02T20:24:09.646+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T20:24:18.356+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/test/error
+2026-01-02T20:24:18.358+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-02T20:24:18.370+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/test/error
+2026-01-02T20:24:18.370+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/test/error", parameters={}
+2026-01-02T20:24:18.371+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Test.TestController#triggerError()
+2026-01-02T20:24:18.372+03:00 ERROR %PARSER_ERROR[pid] --- [nio-8080-exec-6] c.e.appointment.Test.TestController      : ERROR endpoint triggered - Simulating application error
+2026-01-02T20:24:18.372+03:00 ERROR %PARSER_ERROR[pid] --- [nio-8080-exec-6] c.e.appointment.Test.TestController      : Stack trace simulation
+
+java.lang.RuntimeException: Simulated error for testing
+	at com.example.appointment.Test.TestController.triggerError(TestController.java:124) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:715) ~[spring-aop-7.0.2.jar:7.0.2]
+	at com.example.appointment.Test.TestController$$SpringCGLIB$$0.triggerError(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.15.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.15.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:493) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:354) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:86) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:132) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:132) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:86) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at com.example.appointment.Auth.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:82) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:337) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-02T20:24:18.374+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T20:24:18.374+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{message=Check logs in Loki for error details, error=Simulated error}]
+2026-01-02T20:24:18.378+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
+2026-01-02T20:24:29.528+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/test/logs
+2026-01-02T20:24:29.530+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-02T20:24:29.536+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/test/logs
+2026-01-02T20:24:29.537+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/api/test/logs", parameters={}
+2026-01-02T20:24:29.537+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Test.TestController#generateLogs(Map)
+2026-01-02T20:24:29.542+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{level=warn, message=Testing WARN log level from Postman}]
+2026-01-02T20:24:29.542+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-8] c.e.appointment.Test.TestController      : === Generating test logs at level: warn ===
+2026-01-02T20:24:29.543+03:00  WARN %PARSER_ERROR[pid] --- [nio-8080-exec-8] c.e.appointment.Test.TestController      : WARN LOG: Testing WARN log level from Postman
+2026-01-02T20:24:29.543+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-8] c.e.appointment.Test.TestController      : === Test logs generated successfully ===
+2026-01-02T20:24:29.543+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T20:24:29.543+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=success, message=Logs generated successfully. Check Loki for output., level=warn}]
+2026-01-02T20:24:29.544+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T20:24:35.430+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/test/logs
+2026-01-02T20:24:35.433+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-02T20:24:35.440+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/test/logs
+2026-01-02T20:24:35.440+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : POST "/api/test/logs", parameters={}
+2026-01-02T20:24:35.440+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Test.TestController#generateLogs(Map)
+2026-01-02T20:24:35.440+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{level=error, message=Testing ERROR log level with stack trace}]
+2026-01-02T20:24:35.441+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-9] c.e.appointment.Test.TestController      : === Generating test logs at level: error ===
+2026-01-02T20:24:35.441+03:00 ERROR %PARSER_ERROR[pid] --- [nio-8080-exec-9] c.e.appointment.Test.TestController      : ERROR LOG: Testing ERROR log level with stack trace
+2026-01-02T20:24:35.441+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-9] c.e.appointment.Test.TestController      : === Test logs generated successfully ===
+2026-01-02T20:24:35.441+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T20:24:35.441+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=success, message=Logs generated successfully. Check Loki for output., level=error}]
+2026-01-02T20:24:35.442+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T20:24:41.350+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/test/logs
+2026-01-02T20:24:41.352+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-02T20:24:41.362+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/test/logs
+2026-01-02T20:24:41.362+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : POST "/api/test/logs", parameters={}
+2026-01-02T20:24:41.362+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Test.TestController#generateLogs(Map)
+2026-01-02T20:24:41.362+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{level=all, message=Testing ALL log levels from Postman}]
+2026-01-02T20:24:41.363+03:00  INFO %PARSER_ERROR[pid] --- [io-8080-exec-10] c.e.appointment.Test.TestController      : === Generating test logs at level: all ===
+2026-01-02T20:24:41.363+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] c.e.appointment.Test.TestController      : DEBUG LOG: Testing ALL log levels from Postman
+2026-01-02T20:24:41.363+03:00  INFO %PARSER_ERROR[pid] --- [io-8080-exec-10] c.e.appointment.Test.TestController      : INFO LOG: Testing ALL log levels from Postman
+2026-01-02T20:24:41.363+03:00  WARN %PARSER_ERROR[pid] --- [io-8080-exec-10] c.e.appointment.Test.TestController      : WARN LOG: Testing ALL log levels from Postman
+2026-01-02T20:24:41.363+03:00 ERROR %PARSER_ERROR[pid] --- [io-8080-exec-10] c.e.appointment.Test.TestController      : ERROR LOG: Testing ALL log levels from Postman
+2026-01-02T20:24:41.363+03:00  INFO %PARSER_ERROR[pid] --- [io-8080-exec-10] c.e.appointment.Test.TestController      : === Test logs generated successfully ===
+2026-01-02T20:24:41.363+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T20:24:41.363+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=success, message=Logs generated successfully. Check Loki for output., level=all}]
+2026-01-02T20:24:41.364+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T20:24:44.956+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/test/logs
+2026-01-02T20:24:44.957+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-02T20:24:44.965+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/test/logs
+2026-01-02T20:24:44.965+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/test/logs", parameters={}
+2026-01-02T20:24:44.966+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Test.TestController#generateLogs(Map)
+2026-01-02T20:24:44.966+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{level=info, message=Testing INFO log level from Postman}]
+2026-01-02T20:24:44.967+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-1] c.e.appointment.Test.TestController      : === Generating test logs at level: info ===
+2026-01-02T20:24:44.967+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-1] c.e.appointment.Test.TestController      : INFO LOG: Testing INFO log level from Postman
+2026-01-02T20:24:44.967+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-1] c.e.appointment.Test.TestController      : === Test logs generated successfully ===
+2026-01-02T20:24:44.967+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T20:24:44.967+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=success, message=Logs generated successfully. Check Loki for output., level=info}]
+2026-01-02T20:24:44.968+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T20:25:00.103+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /actuator/health
+2026-01-02T20:25:00.104+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T20:25:00.104+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /actuator/health
+2026-01-02T20:25:00.104+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/actuator/health", parameters={}
+2026-01-02T20:25:00.105+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/octet-stream" to []
+2026-01-02T20:25:00.159+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/vnd.spring-boot.actuator.v3+json', given [*/*] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2026-01-02T20:25:00.160+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [org.springframework.boot.health.actuate.endpoint.SystemHealthDescriptor@3ce4dd69]
+2026-01-02T20:25:00.174+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T20:25:17.978+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /actuator/prometheus
+2026-01-02T20:25:17.978+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T20:25:17.979+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /actuator/prometheus
+2026-01-02T20:25:17.979+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/actuator/prometheus", parameters={}
+2026-01-02T20:25:17.979+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/octet-stream" to []
+2026-01-02T20:25:18.001+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Found 'Content-Type:text/plain;version=0.0.4;charset=utf-8' in response
+2026-01-02T20:25:18.004+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{232048454c50206170706c69636174696f6e5f72656164795f74696d655f7365636f6e64732054696d652074616b656e206 (truncated)...]
+2026-01-02T20:25:18.005+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T20:25:27.762+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /actuator/metrics
+2026-01-02T20:25:27.763+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T20:25:27.763+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /actuator/metrics
+2026-01-02T20:25:27.763+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/actuator/metrics", parameters={}
+2026-01-02T20:25:27.763+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/octet-stream" to []
+2026-01-02T20:25:27.765+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/vnd.spring-boot.actuator.v3+json', given [*/*] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2026-01-02T20:25:27.765+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [org.springframework.boot.micrometer.metrics.actuate.endpoint.MetricsEndpoint$MetricNamesDescriptor@1 (truncated)...]
+2026-01-02T20:25:27.766+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T20:25:42.439+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /actuator/info
+2026-01-02T20:25:42.439+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T20:25:42.439+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /actuator/info
+2026-01-02T20:25:42.439+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/actuator/info", parameters={}
+2026-01-02T20:25:42.440+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/octet-stream" to []
+2026-01-02T20:25:42.441+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/vnd.spring-boot.actuator.v3+json', given [*/*] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2026-01-02T20:25:42.442+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [{}]
+2026-01-02T20:25:42.444+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T20:30:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T20:30:00.004+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T20:30:00.004+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T20:40:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T20:40:00.006+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T20:40:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T20:50:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T20:50:00.006+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T20:50:00.006+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T21:00:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T21:00:00.006+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T21:00:00.006+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T21:10:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T21:10:00.003+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T21:10:00.003+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T21:20:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T21:20:00.006+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T21:20:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T21:30:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T21:30:00.002+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T21:30:00.002+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T21:40:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T21:40:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T21:40:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T21:44:49.112+03:00  INFO %PARSER_ERROR[pid] --- [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-02T21:44:49.115+03:00  INFO %PARSER_ERROR[pid] --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-01-02T21:44:49.149+03:00  INFO %PARSER_ERROR[pid] --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-02T21:44:49.153+03:00  INFO %PARSER_ERROR[pid] --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-02T21:44:49.154+03:00  INFO %PARSER_ERROR[pid] --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-02T21:44:54.278+03:00  INFO %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : Starting AppointmentApplication using Java 17.0.17 with PID 311840 (/home/aehamalhaeak/projects/appointment-system/target/classes started by aehamalhaeak in /home/aehamalhaeak/projects/appointment-system)
+2026-01-02T21:44:54.279+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-01-02T21:44:54.280+03:00  INFO %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T21:44:54.837+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-02T21:44:54.838+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-02T21:44:54.912+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 6 JPA repository interfaces.
+2026-01-02T21:44:54.933+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-02T21:44:54.934+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-02T21:44:54.942+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Appointment.AppointmentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T21:44:54.942+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Auth.UserSessionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T21:44:54.942+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Holiday.HolidayRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T21:44:54.942+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Services.ServiceRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T21:44:54.942+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.User.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T21:44:54.943+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.WorkingSchedule.Working_scheduleRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T21:44:54.943+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2026-01-02T21:44:55.327+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-01-02T21:44:55.335+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-02T21:44:55.335+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-02T21:44:55.368+03:00  INFO %PARSER_ERROR[pid] --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1065 ms
+2026-01-02T21:44:55.844+03:00  INFO %PARSER_ERROR[pid] --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-02T21:44:55.927+03:00  INFO %PARSER_ERROR[pid] --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6fe243a
+2026-01-02T21:44:55.927+03:00  INFO %PARSER_ERROR[pid] --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-02T21:44:55.945+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:7777/appointment (PostgreSQL 17.7)
+2026-01-02T21:44:55.978+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 10 migrations (execution time 00:00.018s)
+2026-01-02T21:44:56.008+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 10
+2026-01-02T21:44:56.010+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-01-02T21:44:56.064+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-02T21:44:56.091+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-01-02T21:44:56.313+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-02T21:44:56.353+03:00  WARN %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-02T21:44:56.363+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:7777/appointment]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.7
+	Default catalog/schema: appointment/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-02T21:44:56.936+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-02T21:44:56.962+03:00  INFO %PARSER_ERROR[pid] --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-02T21:44:57.008+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-02T21:44:57.143+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] c.e.a.Auth.JwtAuthenticationFilter       : Filter 'jwtAuthenticationFilter' configured for use
+2026-01-02T21:44:57.144+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2026-01-02T21:44:57.700+03:00  WARN %PARSER_ERROR[pid] --- [           main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 74ca4ded-3cb9-415c-939f-f41b0b6280ae
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-01-02T21:44:57.704+03:00  INFO %PARSER_ERROR[pid] --- [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-01-02T21:44:57.811+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-01-02T21:44:57.925+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 72 mappings in 'requestMappingHandlerMapping'
+2026-01-02T21:44:57.952+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-01-02T21:44:57.972+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-01-02T21:44:58.007+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-01-02T21:44:58.218+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoints beneath base path '/actuator'
+2026-01-02T21:44:58.279+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-01-02T21:44:58.288+03:00  INFO %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : Started AppointmentApplication in 4.258 seconds (process running for 4.45)
+2026-01-02T21:50:00.013+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T21:50:00.272+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T21:50:00.272+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T22:00:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T22:00:00.008+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T22:00:00.008+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T22:10:00.001+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T22:10:00.009+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T22:10:00.010+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T22:20:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T22:20:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T22:20:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T22:20:09.176+03:00  INFO %PARSER_ERROR[pid] --- [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-02T22:20:09.180+03:00  INFO %PARSER_ERROR[pid] --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-01-02T22:20:09.208+03:00  INFO %PARSER_ERROR[pid] --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-02T22:20:09.212+03:00  INFO %PARSER_ERROR[pid] --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-02T22:20:09.214+03:00  INFO %PARSER_ERROR[pid] --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-02T22:20:14.735+03:00  INFO %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : Starting AppointmentApplication using Java 17.0.17 with PID 333875 (/home/aehamalhaeak/projects/appointment-system/target/classes started by aehamalhaeak in /home/aehamalhaeak/projects/appointment-system)
+2026-01-02T22:20:14.737+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-01-02T22:20:14.737+03:00  INFO %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T22:20:15.224+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-02T22:20:15.225+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-02T22:20:15.301+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 6 JPA repository interfaces.
+2026-01-02T22:20:15.321+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-02T22:20:15.322+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-02T22:20:15.331+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Appointment.AppointmentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T22:20:15.331+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Auth.UserSessionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T22:20:15.331+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Holiday.HolidayRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T22:20:15.332+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Services.ServiceRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T22:20:15.332+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.User.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T22:20:15.332+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.WorkingSchedule.Working_scheduleRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T22:20:15.332+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2026-01-02T22:20:15.740+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-01-02T22:20:15.747+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-02T22:20:15.747+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-02T22:20:15.770+03:00  INFO %PARSER_ERROR[pid] --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1002 ms
+2026-01-02T22:20:16.228+03:00  INFO %PARSER_ERROR[pid] --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-02T22:20:16.305+03:00  INFO %PARSER_ERROR[pid] --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@183a508b
+2026-01-02T22:20:16.305+03:00  INFO %PARSER_ERROR[pid] --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-02T22:20:16.322+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:7777/appointment (PostgreSQL 17.7)
+2026-01-02T22:20:16.358+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 10 migrations (execution time 00:00.023s)
+2026-01-02T22:20:16.383+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 10
+2026-01-02T22:20:16.385+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-01-02T22:20:16.441+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-02T22:20:16.470+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-01-02T22:20:16.691+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-02T22:20:16.743+03:00  WARN %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-02T22:20:16.753+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:7777/appointment]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.7
+	Default catalog/schema: appointment/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-02T22:20:17.319+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-02T22:20:17.360+03:00  INFO %PARSER_ERROR[pid] --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-02T22:20:17.403+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-02T22:20:17.557+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] c.e.a.Auth.JwtAuthenticationFilter       : Filter 'jwtAuthenticationFilter' configured for use
+2026-01-02T22:20:17.558+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2026-01-02T22:20:18.185+03:00  WARN %PARSER_ERROR[pid] --- [           main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 4304f167-6abe-4c71-b1d6-78ee7f97ab19
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-01-02T22:20:18.190+03:00  INFO %PARSER_ERROR[pid] --- [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-01-02T22:20:18.293+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-01-02T22:20:18.395+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 72 mappings in 'requestMappingHandlerMapping'
+2026-01-02T22:20:18.420+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-01-02T22:20:18.440+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-01-02T22:20:18.478+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-01-02T22:20:18.698+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoints beneath base path '/actuator'
+2026-01-02T22:20:18.754+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-01-02T22:20:18.762+03:00  INFO %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : Started AppointmentApplication in 4.302 seconds (process running for 4.498)
+2026-01-02T22:20:28.503+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-02T22:20:28.504+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-02T22:20:28.504+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-01-02T22:20:28.504+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-01-02T22:20:28.505+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@e86c9a5
+2026-01-02T22:20:28.505+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@2e47ec5e
+2026-01-02T22:20:28.505+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-01-02T22:20:28.506+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-01-02T22:20:28.516+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-01-02T22:20:28.525+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T22:20:28.539+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-01-02T22:20:28.540+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2026-01-02T22:20:28.542+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Auth.AuthController#login(LoginRequest)
+2026-01-02T22:20:28.602+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest(email=admin@example.com, password=admin123)]
+2026-01-02T22:20:28.691+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-02T22:20:29.122+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] c.e.a.Auth.TokenBlacklistService         : Tracking access token a866e79b-6fd2-4759-9a10-4cf305d3d053 for user 1
+2026-01-02T22:20:29.136+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert 
+    for
+        com.example.appointment.Auth.UserSessionModel
+        */insert 
+    into
+        user_sessions (created_at, expires_at, refresh_token, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-01-02T22:20:29.156+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T22:20:29.156+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [TokenResponse(accessToken=eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJ1c2VySWQiOjEsImp0aSI6ImE4NjZlN (truncated)...]
+2026-01-02T22:20:29.171+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T22:20:38.848+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/admin/users/show_all_users
+2026-01-02T22:20:38.866+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-02T22:20:38.878+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/admin/users/show_all_users
+2026-01-02T22:20:38.878+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/admin/users/show_all_users", parameters={}
+2026-01-02T22:20:38.879+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.User.AdminController#getAllUsers()
+2026-01-02T22:20:38.881+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public java.util.List com.example.appointment.User.AdminController.getAllUsers(); target is of class [com.example.appointment.User.AdminController]
+2026-01-02T22:20:38.908+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public java.util.List com.example.appointment.User.AdminController.getAllUsers(); target is of class [com.example.appointment.User.AdminController]
+2026-01-02T22:20:38.918+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        um1_0.id,
+        um1_0.created_at,
+        um1_0.email,
+        um1_0.password,
+        um1_0.phone_number,
+        um1_0.role,
+        um1_0.updated_at,
+        um1_0.username 
+    from
+        users um1_0
+2026-01-02T22:20:38.922+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T22:20:38.924+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [[UserResponse[id=1, username=admin_user, email=admin@example.com, phoneNumber=1234567890, role=ADMIN (truncated)...]
+2026-01-02T22:20:38.930+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T22:21:02.576+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/admin/users/create_user
+2026-01-02T22:21:02.577+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-02T22:21:02.582+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/admin/users/create_user
+2026-01-02T22:21:02.582+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/admin/users/create_user", parameters={}
+2026-01-02T22:21:02.583+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.User.AdminController#createUser(CreateUserRequest)
+2026-01-02T22:21:02.590+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CreateUserRequest[username=new_staff_user, email=newstaff@example.com, phoneNumber=1234567893, passw (truncated)...]
+2026-01-02T22:21:02.608+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.appointment.User.AdminController.createUser(com.example.appointment.User.dto.CreateUserRequest); target is of class [com.example.appointment.User.AdminController]
+2026-01-02T22:21:02.609+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.appointment.User.AdminController.createUser(com.example.appointment.User.dto.CreateUserRequest); target is of class [com.example.appointment.User.AdminController]
+2026-01-02T22:21:02.614+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] org.hibernate.SQL                        : 
+    /* SELECT
+        u.id id 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id 
+        from
+            users um1_0 
+        where
+            um1_0.email=? 
+        fetch
+            first ? rows only
+2026-01-02T22:21:02.619+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Failed to complete request: java.lang.RuntimeException: Email already exists
+2026-01-02T22:21:02.621+03:00 ERROR %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Email already exists] with root cause
+
+java.lang.RuntimeException: Email already exists
+	at com.example.appointment.User.UserService.createUser(UserService.java:43) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:715) ~[spring-aop-7.0.2.jar:7.0.2]
+	at com.example.appointment.User.UserService$$SpringCGLIB$$0.createUser(<generated>) ~[classes/:na]
+	at com.example.appointment.User.AdminController.createUser(AdminController.java:60) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.proceed(AuthorizationManagerBeforeMethodInterceptor.java:271) ~[spring-security-core-7.0.2.jar:7.0.2]
+	at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.attemptAuthorization(AuthorizationManagerBeforeMethodInterceptor.java:266) ~[spring-security-core-7.0.2.jar:7.0.2]
+	at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.invoke(AuthorizationManagerBeforeMethodInterceptor.java:197) ~[spring-security-core-7.0.2.jar:7.0.2]
+	at org.springframework.security.config.annotation.method.configuration.DeferringMethodInterceptor.invoke(DeferringMethodInterceptor.java:44) ~[spring-security-config-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-7.0.2.jar:7.0.2]
+	at com.example.appointment.User.AdminController$$SpringCGLIB$$0.createUser(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.15.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.2.jar:7.0.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.15.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:493) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:354) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:86) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:132) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:132) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:86) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at com.example.appointment.Auth.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:82) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:337) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.2.jar:7.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-02T22:21:02.630+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2026-01-02T22:21:02.631+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T22:21:02.634+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2026-01-02T22:23:09.190+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/admin/services/create
+2026-01-02T22:23:09.191+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-02T22:23:09.197+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/admin/services/create
+2026-01-02T22:23:09.197+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/admin/services/create", parameters={}
+2026-01-02T22:23:09.198+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.User.AdminController#createService(CreateServiceRequest)
+2026-01-02T22:23:09.210+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CreateServiceRequest[name=Haircut, description=Professional haircut service, cost=50, duration=30]]
+2026-01-02T22:23:09.216+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.appointment.User.AdminController.createService(com.example.appointment.Services.ServiceDTOs.CreateServiceRequest); target is of class [com.example.appointment.User.AdminController]
+2026-01-02T22:23:09.217+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.appointment.User.AdminController.createService(com.example.appointment.Services.ServiceDTOs.CreateServiceRequest); target is of class [com.example.appointment.User.AdminController]
+2026-01-02T22:23:09.220+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] org.hibernate.SQL                        : 
+    /* insert 
+    for
+        com.example.appointment.Services.Service
+        */insert 
+    into
+        services (cost, description, duration, name) 
+    values
+        (?, ?, ?, ?)
+2026-01-02T22:23:09.229+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T22:23:09.229+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ServiceResponse[id=2, name=Haircut, description=Professional haircut service, cost=50, duration=30]]
+2026-01-02T22:23:09.231+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2026-01-02T22:25:21.095+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/admin/services/all
+2026-01-02T22:25:21.098+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-02T22:25:21.110+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/admin/services/all
+2026-01-02T22:25:21.111+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/admin/services/all", parameters={}
+2026-01-02T22:25:21.112+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.User.AdminController#getAllServices()
+2026-01-02T22:25:21.112+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.appointment.User.AdminController.getAllServices(); target is of class [com.example.appointment.User.AdminController]
+2026-01-02T22:25:21.113+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.appointment.User.AdminController.getAllServices(); target is of class [com.example.appointment.User.AdminController]
+2026-01-02T22:25:21.115+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0
+2026-01-02T22:25:21.121+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T22:25:21.122+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[ServiceResponse[id=1, name=Haircut, description=Professional haircut service, cost=50, duration=20] (truncated)...]
+2026-01-02T22:25:21.124+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T22:29:32.208+03:00  INFO %PARSER_ERROR[pid] --- [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-02T22:29:32.211+03:00  INFO %PARSER_ERROR[pid] --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-01-02T22:29:32.265+03:00  INFO %PARSER_ERROR[pid] --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-02T22:29:32.295+03:00  INFO %PARSER_ERROR[pid] --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-02T22:29:32.300+03:00  INFO %PARSER_ERROR[pid] --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-02T22:29:47.405+03:00  INFO %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : Starting AppointmentApplication using Java 17.0.17 with PID 340102 (/home/aehamalhaeak/projects/appointment-system/target/classes started by aehamalhaeak in /home/aehamalhaeak/projects/appointment-system)
+2026-01-02T22:29:47.406+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-01-02T22:29:47.407+03:00  INFO %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T22:29:47.898+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-02T22:29:47.899+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-02T22:29:47.976+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 6 JPA repository interfaces.
+2026-01-02T22:29:48.000+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-02T22:29:48.001+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-02T22:29:48.009+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Appointment.AppointmentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T22:29:48.009+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Auth.UserSessionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T22:29:48.009+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Holiday.HolidayRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T22:29:48.009+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Services.ServiceRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T22:29:48.009+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.User.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T22:29:48.009+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.WorkingSchedule.Working_scheduleRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T22:29:48.010+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2026-01-02T22:29:48.409+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-01-02T22:29:48.416+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-02T22:29:48.416+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-02T22:29:48.447+03:00  INFO %PARSER_ERROR[pid] --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1017 ms
+2026-01-02T22:29:48.929+03:00  INFO %PARSER_ERROR[pid] --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-02T22:29:49.007+03:00  INFO %PARSER_ERROR[pid] --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2fb70301
+2026-01-02T22:29:49.008+03:00  INFO %PARSER_ERROR[pid] --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-02T22:29:49.024+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:7777/appointment (PostgreSQL 17.7)
+2026-01-02T22:29:49.057+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 10 migrations (execution time 00:00.019s)
+2026-01-02T22:29:49.079+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 10
+2026-01-02T22:29:49.081+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-01-02T22:29:49.132+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-02T22:29:49.158+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-01-02T22:29:49.365+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-02T22:29:49.405+03:00  WARN %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-02T22:29:49.423+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:7777/appointment]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.7
+	Default catalog/schema: appointment/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-02T22:29:49.974+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-02T22:29:49.998+03:00  INFO %PARSER_ERROR[pid] --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-02T22:29:50.040+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-02T22:29:50.169+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] c.e.a.Auth.JwtAuthenticationFilter       : Filter 'jwtAuthenticationFilter' configured for use
+2026-01-02T22:29:50.170+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2026-01-02T22:29:50.713+03:00  WARN %PARSER_ERROR[pid] --- [           main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 2ac70945-ec45-425b-a62e-f1e21a70b85d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-01-02T22:29:50.717+03:00  INFO %PARSER_ERROR[pid] --- [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-01-02T22:29:50.824+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-01-02T22:29:50.936+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 72 mappings in 'requestMappingHandlerMapping'
+2026-01-02T22:29:50.963+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-01-02T22:29:50.983+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-01-02T22:29:51.023+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-01-02T22:29:51.263+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoints beneath base path '/actuator'
+2026-01-02T22:29:51.338+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-01-02T22:29:51.354+03:00  INFO %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : Started AppointmentApplication in 4.213 seconds (process running for 4.416)
+2026-01-02T22:29:59.801+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-02T22:29:59.802+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-02T22:29:59.802+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-01-02T22:29:59.802+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-01-02T22:29:59.803+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4b2b2757
+2026-01-02T22:29:59.804+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@13e59265
+2026-01-02T22:29:59.804+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-01-02T22:29:59.804+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-01-02T22:29:59.817+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-01-02T22:29:59.827+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T22:29:59.833+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-01-02T22:29:59.836+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2026-01-02T22:29:59.839+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Auth.AuthController#login(LoginRequest)
+2026-01-02T22:29:59.907+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest(email=admin@example.com, password=admin123)]
+2026-01-02T22:29:59.999+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-02T22:30:00.002+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T22:30:00.289+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T22:30:00.289+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T22:30:00.291+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] c.e.a.Auth.TokenBlacklistService         : Tracking access token 4dc8a57b-79d2-431a-a018-4acfc8c80c8b for user 1
+2026-01-02T22:30:00.309+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert 
+    for
+        com.example.appointment.Auth.UserSessionModel
+        */insert 
+    into
+        user_sessions (created_at, expires_at, refresh_token, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-01-02T22:30:00.331+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T22:30:00.331+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [TokenResponse(accessToken=eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJ1c2VySWQiOjEsImp0aSI6IjRkYzhhN (truncated)...]
+2026-01-02T22:30:00.346+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T22:30:07.077+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/admin/users/show_all_users
+2026-01-02T22:30:07.113+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-02T22:30:07.135+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/admin/users/show_all_users
+2026-01-02T22:30:07.135+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/admin/users/show_all_users", parameters={}
+2026-01-02T22:30:07.137+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.User.AdminController#getAllUsers()
+2026-01-02T22:30:07.140+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public java.util.List com.example.appointment.User.AdminController.getAllUsers(); target is of class [com.example.appointment.User.AdminController]
+2026-01-02T22:30:07.185+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public java.util.List com.example.appointment.User.AdminController.getAllUsers(); target is of class [com.example.appointment.User.AdminController]
+2026-01-02T22:30:07.197+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        um1_0.id,
+        um1_0.created_at,
+        um1_0.email,
+        um1_0.password,
+        um1_0.phone_number,
+        um1_0.role,
+        um1_0.updated_at,
+        um1_0.username 
+    from
+        users um1_0
+2026-01-02T22:30:07.201+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T22:30:07.203+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [[UserResponse[id=1, username=admin_user, email=admin@example.com, phoneNumber=1234567890, role=ADMIN (truncated)...]
+2026-01-02T22:30:07.210+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T22:33:44.867+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-01-02T22:33:44.868+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T22:33:44.868+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-01-02T22:33:44.868+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2026-01-02T22:33:44.869+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Auth.AuthController#login(LoginRequest)
+2026-01-02T22:33:44.872+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest(email=customer@example.com, password=customer123)]
+2026-01-02T22:33:44.874+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-02T22:33:44.965+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] c.e.a.Auth.TokenBlacklistService         : Tracking access token cba04e02-ac99-4e33-a1c4-76f5e8bc75a8 for user 3
+2026-01-02T22:33:44.966+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] org.hibernate.SQL                        : 
+    /* insert 
+    for
+        com.example.appointment.Auth.UserSessionModel
+        */insert 
+    into
+        user_sessions (created_at, expires_at, refresh_token, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-01-02T22:33:44.969+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T22:33:44.970+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [TokenResponse(accessToken=eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQ1VTVE9NRVIiLCJ1c2VySWQiOjMsImp0aSI6ImNiY (truncated)...]
+2026-01-02T22:33:44.970+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T22:33:57.896+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/appointments/available-slots?serviceId=1&date=2026-01-15
+2026-01-02T22:33:57.896+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T22:33:57.896+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/appointments/available-slots?serviceId=1&date=2026-01-15
+2026-01-02T22:33:57.897+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/appointments/available-slots?serviceId=1&date=2026-01-15", parameters={masked}
+2026-01-02T22:33:57.897+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Appointment.AppointmentController#getAvailableSlots(Long, LocalDate)
+2026-01-02T22:33:57.899+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-7] c.e.a.Appointment.AppointmentController  : PUBLIC endpoint accessed - /api/appointments/available-slots
+2026-01-02T22:33:57.899+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] c.e.a.Appointment.AppointmentController  : Debug log: Processing request to get available slots for service ID: 1 on date: 2026-01-15
+2026-01-02T22:33:57.904+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T22:33:57.913+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] org.hibernate.SQL                        : 
+    /* SELECT
+        DISTINCT ws 
+    FROM
+        Working_schedule ws 
+    JOIN
+        
+    FETCH
+        ws.employees e 
+    JOIN
+        e.services serv 
+    WHERE
+        serv.id = :serviceId 
+        AND ws.day = :day */ select
+            distinct w1_0.id,
+            w1_0.day,
+            e1_0.work_time_id,
+            e1_1.id,
+            e1_1.created_at,
+            e1_1.email,
+            e1_1.password,
+            e1_1.phone_number,
+            e1_1.role,
+            e1_1.updated_at,
+            e1_1.username,
+            w1_0.end_time,
+            w1_0.start_time 
+        from
+            working_schedules w1_0 
+        join
+            emp_work e1_0 
+                on w1_0.id=e1_0.work_time_id 
+        join
+            users e1_1 
+                on e1_1.id=e1_0.user_id 
+        join
+            emp_serv s1_0 
+                on e1_1.id=s1_0.user_id 
+        where
+            s1_0.service_id=? 
+            and w1_0.day=?
+2026-01-02T22:33:57.925+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] org.hibernate.SQL                        : 
+    /* SELECT
+        a 
+    FROM
+        Appointment a 
+    LEFT JOIN
+        
+    FETCH
+        a.customer 
+    LEFT JOIN
+        
+    FETCH
+        a.employee 
+    WHERE
+        a.service.id = :serviceId 
+        AND a.from >= :startOfDay 
+        AND a.from < :endOfDay */ select
+            a1_0.id,
+            a1_0.customer_id,
+            c1_0.id,
+            c1_0.created_at,
+            c1_0.email,
+            c1_0.password,
+            c1_0.phone_number,
+            c1_0.role,
+            c1_0.updated_at,
+            c1_0.username,
+            a1_0.employee_id,
+            e1_0.id,
+            e1_0.created_at,
+            e1_0.email,
+            e1_0.password,
+            e1_0.phone_number,
+            e1_0.role,
+            e1_0.updated_at,
+            e1_0.username,
+            a1_0.start_time,
+            a1_0.service_id,
+            a1_0.status,
+            a1_0.end_time 
+        from
+            appointments a1_0 
+        left join
+            users c1_0 
+                on c1_0.id=a1_0.customer_id 
+        left join
+            users e1_0 
+                on e1_0.id=a1_0.employee_id 
+        where
+            a1_0.service_id=? 
+            and a1_0.start_time>=? 
+            and a1_0.start_time<?
+2026-01-02T22:33:57.939+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T22:33:57.961+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] c.e.a.Appointment.AppointmentController  : Found 30 available slots for service ID: 1 on date: 2026-01-15
+2026-01-02T22:33:57.961+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-7] c.e.a.Appointment.AppointmentController  : Successfully retrieved 30 available slots for service ID: 1 on date: 2026-01-15
+2026-01-02T22:33:57.963+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T22:33:57.965+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[AvailableSlotDTO(startTime=2026-01-15T12:00, endTime=2026-01-15T12:20, employeeId=2, employeeName=E (truncated)...]
+2026-01-02T22:33:57.976+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T22:34:26.244+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/customer/appointments/show_active_appointments
+2026-01-02T22:34:26.246+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-02T22:34:26.262+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/customer/appointments/show_active_appointments
+2026-01-02T22:34:26.262+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/customer/appointments/show_active_appointments", parameters={}
+2026-01-02T22:34:26.263+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.User.CustomerController#getActiveAppointments()
+2026-01-02T22:34:26.264+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.appointment.User.CustomerController.getActiveAppointments(); target is of class [com.example.appointment.User.CustomerController]
+2026-01-02T22:34:26.268+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.appointment.User.CustomerController.getActiveAppointments(); target is of class [com.example.appointment.User.CustomerController]
+2026-01-02T22:34:26.269+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-9] c.e.appointment.User.CustomerController  : CUSTOMER endpoint accessed - /api/customer/appointments/show_active_appointments - CUSTOMER role required
+2026-01-02T22:34:26.269+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] c.e.appointment.User.CustomerController  : Debug log: Processing request to get active appointments for customer
+2026-01-02T22:34:26.269+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] c.e.appointment.User.CustomerController  : Customer ID: 3
+2026-01-02T22:34:26.278+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] org.hibernate.SQL                        : 
+    /* SELECT
+        a 
+    FROM
+        Appointment a 
+    LEFT JOIN
+        
+    FETCH
+        a.customer 
+    LEFT JOIN
+        
+    FETCH
+        a.employee 
+    WHERE
+        a.customer.id = :customerId 
+        AND a.status != :status */ select
+            a1_0.id,
+            a1_0.customer_id,
+            c1_0.id,
+            c1_0.created_at,
+            c1_0.email,
+            c1_0.password,
+            c1_0.phone_number,
+            c1_0.role,
+            c1_0.updated_at,
+            c1_0.username,
+            a1_0.employee_id,
+            e1_0.id,
+            e1_0.created_at,
+            e1_0.email,
+            e1_0.password,
+            e1_0.phone_number,
+            e1_0.role,
+            e1_0.updated_at,
+            e1_0.username,
+            a1_0.start_time,
+            a1_0.service_id,
+            a1_0.status,
+            a1_0.end_time 
+        from
+            appointments a1_0 
+        left join
+            users c1_0 
+                on c1_0.id=a1_0.customer_id 
+        left join
+            users e1_0 
+                on e1_0.id=a1_0.employee_id 
+        where
+            c1_0.id=? 
+            and a1_0.status<>?
+2026-01-02T22:34:26.283+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] c.e.appointment.User.CustomerController  : Found 0 active appointments for customer ID: 3
+2026-01-02T22:34:26.284+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-9] c.e.appointment.User.CustomerController  : Successfully retrieved 0 active appointments for customer ID: 3
+2026-01-02T22:34:26.285+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T22:34:26.286+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
+2026-01-02T22:34:26.289+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T22:37:00.925+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/admin/services/link-to-staff
+2026-01-02T22:37:00.926+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-02T22:37:00.935+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/admin/services/link-to-staff
+2026-01-02T22:37:00.936+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/admin/services/link-to-staff", parameters={}
+2026-01-02T22:37:00.937+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.User.AdminController#linkServiceToStaff(LinkServiceToStaffRequest)
+2026-01-02T22:37:00.945+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LinkServiceToStaffRequest[serviceId=1, staffUserId=2]]
+2026-01-02T22:37:00.952+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.appointment.User.AdminController.linkServiceToStaff(com.example.appointment.Services.LinkServiceToStaffRequest); target is of class [com.example.appointment.User.AdminController]
+2026-01-02T22:37:00.955+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] horizationManagerBeforeMethodInterceptor : Failed to authorize ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.appointment.User.AdminController.linkServiceToStaff(com.example.appointment.Services.LinkServiceToStaffRequest); target is of class [com.example.appointment.User.AdminController] with authorization manager org.springframework.security.authorization.ObservationAuthorizationManager@4aea5419 and result ExpressionAuthorizationDecision [granted=false, expressionAttribute=hasRole('ADMIN')]
+2026-01-02T22:37:00.957+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Failed to complete request: org.springframework.security.authorization.AuthorizationDeniedException: Access Denied
+2026-01-02T22:37:00.958+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2026-01-02T22:37:00.962+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /error
+2026-01-02T22:37:00.962+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T22:37:00.963+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2026-01-02T22:40:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T22:40:00.006+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T22:40:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T22:48:31.198+03:00  INFO %PARSER_ERROR[pid] --- [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-02T22:48:31.201+03:00  INFO %PARSER_ERROR[pid] --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-01-02T22:48:31.250+03:00  INFO %PARSER_ERROR[pid] --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-02T22:48:31.256+03:00  INFO %PARSER_ERROR[pid] --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-02T22:48:31.262+03:00  INFO %PARSER_ERROR[pid] --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-02T22:48:40.872+03:00  INFO %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : Starting AppointmentApplication using Java 17.0.17 with PID 352077 (/home/aehamalhaeak/projects/appointment-system/target/classes started by aehamalhaeak in /home/aehamalhaeak/projects/appointment-system)
+2026-01-02T22:48:40.874+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-01-02T22:48:40.874+03:00  INFO %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T22:48:41.375+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-02T22:48:41.376+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-02T22:48:41.449+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 6 JPA repository interfaces.
+2026-01-02T22:48:41.470+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-02T22:48:41.471+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-02T22:48:41.479+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Appointment.AppointmentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T22:48:41.479+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Auth.UserSessionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T22:48:41.479+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Holiday.HolidayRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T22:48:41.479+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Services.ServiceRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T22:48:41.479+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.User.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T22:48:41.479+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.WorkingSchedule.Working_scheduleRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T22:48:41.479+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2026-01-02T22:48:41.886+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-01-02T22:48:41.898+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-02T22:48:41.898+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-02T22:48:41.927+03:00  INFO %PARSER_ERROR[pid] --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1025 ms
+2026-01-02T22:48:42.429+03:00  INFO %PARSER_ERROR[pid] --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-02T22:48:42.506+03:00  INFO %PARSER_ERROR[pid] --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6fe243a
+2026-01-02T22:48:42.507+03:00  INFO %PARSER_ERROR[pid] --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-02T22:48:42.524+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:7777/appointment (PostgreSQL 17.7)
+2026-01-02T22:48:42.555+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 10 migrations (execution time 00:00.018s)
+2026-01-02T22:48:42.578+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 10
+2026-01-02T22:48:42.580+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-01-02T22:48:42.620+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-02T22:48:42.647+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-01-02T22:48:42.859+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-02T22:48:42.896+03:00  WARN %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-02T22:48:42.906+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:7777/appointment]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.7
+	Default catalog/schema: appointment/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-02T22:48:43.482+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-02T22:48:43.510+03:00  INFO %PARSER_ERROR[pid] --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-02T22:48:43.555+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-02T22:48:43.687+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] c.e.a.Auth.JwtAuthenticationFilter       : Filter 'jwtAuthenticationFilter' configured for use
+2026-01-02T22:48:43.687+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2026-01-02T22:48:44.247+03:00  WARN %PARSER_ERROR[pid] --- [           main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 1107761f-c8ea-4a14-b075-c86232db76d0
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-01-02T22:48:44.252+03:00  INFO %PARSER_ERROR[pid] --- [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-01-02T22:48:44.356+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-01-02T22:48:44.458+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 72 mappings in 'requestMappingHandlerMapping'
+2026-01-02T22:48:44.488+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-01-02T22:48:44.511+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-01-02T22:48:44.546+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-01-02T22:48:44.769+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoints beneath base path '/actuator'
+2026-01-02T22:48:44.830+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-01-02T22:48:44.839+03:00  INFO %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : Started AppointmentApplication in 4.237 seconds (process running for 4.434)
+2026-01-02T22:48:56.149+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-02T22:48:56.150+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-02T22:48:56.150+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-01-02T22:48:56.150+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-01-02T22:48:56.151+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3ca1f0a4
+2026-01-02T22:48:56.151+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@1c8ab147
+2026-01-02T22:48:56.151+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-01-02T22:48:56.152+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-01-02T22:48:56.175+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-01-02T22:48:56.191+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T22:48:56.200+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-01-02T22:48:56.203+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2026-01-02T22:48:56.206+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Auth.AuthController#login(LoginRequest)
+2026-01-02T22:48:56.267+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest(email=admin@example.com, password=admin123)]
+2026-01-02T22:48:56.359+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-02T22:48:56.814+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] c.e.a.Auth.TokenBlacklistService         : Tracking access token 6c8e5c76-c35d-452f-87c6-edc7194ace08 for user 1
+2026-01-02T22:48:56.833+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert 
+    for
+        com.example.appointment.Auth.UserSessionModel
+        */insert 
+    into
+        user_sessions (created_at, expires_at, refresh_token, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-01-02T22:48:56.858+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T22:48:56.859+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [TokenResponse(accessToken=eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJ1c2VySWQiOjEsImp0aSI6IjZjOGU1Y (truncated)...]
+2026-01-02T22:48:56.874+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T22:49:01.694+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/admin/services/all
+2026-01-02T22:49:01.732+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-02T22:49:01.759+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/admin/services/all
+2026-01-02T22:49:01.759+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/admin/services/all", parameters={}
+2026-01-02T22:49:01.761+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.User.AdminController#getAllServices()
+2026-01-02T22:49:01.764+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.appointment.User.AdminController.getAllServices(); target is of class [com.example.appointment.User.AdminController]
+2026-01-02T22:49:01.800+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.appointment.User.AdminController.getAllServices(); target is of class [com.example.appointment.User.AdminController]
+2026-01-02T22:49:01.809+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0
+2026-01-02T22:49:01.812+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T22:49:01.816+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[ServiceResponse[id=1, name=Haircut, description=Professional haircut service, cost=50, duration=20] (truncated)...]
+2026-01-02T22:49:01.822+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
