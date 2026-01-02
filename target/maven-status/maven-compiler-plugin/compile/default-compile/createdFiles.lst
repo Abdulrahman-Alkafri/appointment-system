@@ -15,7 +15,6 @@ com/example/appointment/Holiday/DTOs/UpdateHolidayRequest.class
 com/example/appointment/Services/ServiceResponse.class
 com/example/appointment/User/dto/UserResponse.class
 com/example/appointment/WorkingSchedule/Working_scheduleController.class
-com/example/appointment/Appointment/ReserveAppointmentRequest.class
 com/example/appointment/Auth/dto/LoginRequest.class
 com/example/appointment/User/UserModel.class
 com/example/appointment/AppointmentApplication.class

@@ -15729,3 +15729,2999 @@ This generated password is for development use only. Your security configuration
 2026-01-02T14:57:51.536+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
 2026-01-02T14:57:51.537+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AppointmentDTO(id=3, customer=com.example.appointment.User.UserModel@20, employee=com.example.appoin (truncated)...]
 2026-01-02T14:57:51.538+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T15:00:00.003+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T15:00:00.016+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T15:00:00.017+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T15:10:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T15:10:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T15:10:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T15:20:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T15:20:00.006+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T15:20:00.006+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T15:30:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T15:30:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T15:30:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T15:40:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T15:40:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T15:40:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T15:50:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T15:50:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T15:50:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T16:00:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T16:00:00.013+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T16:00:00.013+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T16:10:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T16:10:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T16:10:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T16:20:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T16:20:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T16:20:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T16:30:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T16:30:00.006+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T16:30:00.006+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T16:40:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T16:40:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T16:40:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T16:50:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T16:50:00.006+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T16:50:00.006+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T17:00:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T17:00:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T17:00:00.008+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T17:10:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T17:10:00.006+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T17:10:00.006+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T17:10:34.117+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-01-02T17:10:34.117+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T17:10:34.117+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-01-02T17:10:34.117+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2026-01-02T17:10:34.117+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Auth.AuthController#login(LoginRequest)
+2026-01-02T17:10:34.118+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest(email=customer@example.com, password=customer123)]
+2026-01-02T17:10:34.119+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-02T17:10:34.214+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] c.e.a.Auth.TokenBlacklistService         : Tracking access token bf564fd1-8455-42ab-8760-c7007e5bf2cb for user 3
+2026-01-02T17:10:34.215+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] org.hibernate.SQL                        : 
+    /* insert 
+    for
+        com.example.appointment.Auth.UserSessionModel
+        */insert 
+    into
+        user_sessions (created_at, expires_at, refresh_token, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-01-02T17:10:34.230+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T17:10:34.230+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [TokenResponse(accessToken=eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQ1VTVE9NRVIiLCJ1c2VySWQiOjMsImp0aSI6ImJmN (truncated)...]
+2026-01-02T17:10:34.231+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T17:10:40.925+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/appointments/available-slots?serviceId=1&date=2026-01-15
+2026-01-02T17:10:40.926+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T17:10:40.926+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/appointments/available-slots?serviceId=1&date=2026-01-15
+2026-01-02T17:10:40.926+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/appointments/available-slots?serviceId=1&date=2026-01-15", parameters={masked}
+2026-01-02T17:10:40.927+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Appointment.AppointmentController#getAvailableSlots(Long, LocalDate)
+2026-01-02T17:10:40.929+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:10:40.933+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] org.hibernate.SQL                        : 
+    /* SELECT
+        DISTINCT ws 
+    FROM
+        Working_schedule ws 
+    JOIN
+        
+    FETCH
+        ws.employees e 
+    JOIN
+        e.services serv 
+    WHERE
+        serv.id = :serviceId 
+        AND ws.day = :day */ select
+            distinct w1_0.id,
+            w1_0.day,
+            e1_0.work_time_id,
+            e1_1.id,
+            e1_1.created_at,
+            e1_1.email,
+            e1_1.password,
+            e1_1.phone_number,
+            e1_1.role,
+            e1_1.updated_at,
+            e1_1.username,
+            w1_0.end_time,
+            w1_0.start_time 
+        from
+            working_schedules w1_0 
+        join
+            emp_work e1_0 
+                on w1_0.id=e1_0.work_time_id 
+        join
+            users e1_1 
+                on e1_1.id=e1_0.user_id 
+        join
+            emp_serv s1_0 
+                on e1_1.id=s1_0.user_id 
+        where
+            s1_0.service_id=? 
+            and w1_0.day=?
+2026-01-02T17:10:40.938+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] org.hibernate.SQL                        : 
+    /* SELECT
+        a 
+    FROM
+        Appointment a 
+    LEFT JOIN
+        
+    FETCH
+        a.customer 
+    LEFT JOIN
+        
+    FETCH
+        a.employee 
+    WHERE
+        a.service.id = :serviceId 
+        AND a.from >= :startOfDay 
+        AND a.from < :endOfDay */ select
+            a1_0.id,
+            a1_0.customer_id,
+            c1_0.id,
+            c1_0.created_at,
+            c1_0.email,
+            c1_0.password,
+            c1_0.phone_number,
+            c1_0.role,
+            c1_0.updated_at,
+            c1_0.username,
+            a1_0.employee_id,
+            e1_0.id,
+            e1_0.created_at,
+            e1_0.email,
+            e1_0.password,
+            e1_0.phone_number,
+            e1_0.role,
+            e1_0.updated_at,
+            e1_0.username,
+            a1_0.start_time,
+            a1_0.service_id,
+            a1_0.status,
+            a1_0.end_time 
+        from
+            appointments a1_0 
+        left join
+            users c1_0 
+                on c1_0.id=a1_0.customer_id 
+        left join
+            users e1_0 
+                on e1_0.id=a1_0.employee_id 
+        where
+            a1_0.service_id=? 
+            and a1_0.start_time>=? 
+            and a1_0.start_time<?
+2026-01-02T17:10:40.940+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:10:40.942+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T17:10:40.942+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[AvailableSlotDTO(startTime=2026-01-15T09:20, endTime=2026-01-15T09:40, employeeId=2, employeeName=E (truncated)...]
+2026-01-02T17:10:40.943+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T17:13:35.153+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/appointments/reserve
+2026-01-02T17:13:35.154+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T17:13:35.155+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/appointments/reserve
+2026-01-02T17:13:35.155+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/appointments/reserve", parameters={}
+2026-01-02T17:13:35.156+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Appointment.AppointmentController#reserveAppointment(AppointmentReservationRequest)
+2026-01-02T17:13:35.157+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AppointmentReservationRequest(serviceId=1, customerId=1, appointmentDateTime=2026-01-15T09:30)]
+2026-01-02T17:13:35.159+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:13:35.167+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] org.hibernate.SQL                        : 
+    /* SELECT
+        h 
+    FROM
+        Holiday h 
+    WHERE
+        h.holidayDate = :date */ select
+            h1_0.id,
+            h1_0.holiday_date 
+        from
+            holidays h1_0 
+        where
+            h1_0.holiday_date=?
+2026-01-02T17:13:35.173+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] org.hibernate.SQL                        : 
+    /* SELECT
+        DISTINCT ws 
+    FROM
+        Working_schedule ws 
+    JOIN
+        
+    FETCH
+        ws.employees e 
+    JOIN
+        e.services serv 
+    WHERE
+        serv.id = :serviceId 
+        AND ws.day = :day */ select
+            distinct w1_0.id,
+            w1_0.day,
+            e1_0.work_time_id,
+            e1_1.id,
+            e1_1.created_at,
+            e1_1.email,
+            e1_1.password,
+            e1_1.phone_number,
+            e1_1.role,
+            e1_1.updated_at,
+            e1_1.username,
+            w1_0.end_time,
+            w1_0.start_time 
+        from
+            working_schedules w1_0 
+        join
+            emp_work e1_0 
+                on w1_0.id=e1_0.work_time_id 
+        join
+            users e1_1 
+                on e1_1.id=e1_0.user_id 
+        join
+            emp_serv s1_0 
+                on e1_1.id=s1_0.user_id 
+        where
+            s1_0.service_id=? 
+            and w1_0.day=?
+2026-01-02T17:13:35.180+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] org.hibernate.SQL                        : 
+    /* SELECT
+        a 
+    FROM
+        Appointment a 
+    LEFT JOIN
+        
+    FETCH
+        a.customer 
+    LEFT JOIN
+        
+    FETCH
+        a.employee 
+    WHERE
+        a.employee.id = :employeeId 
+        AND a.from >= :startOfDay 
+        AND a.from < :endOfDay 
+        AND a.status != 'CANCELLED' */ select
+            a1_0.id,
+            a1_0.customer_id,
+            c1_0.id,
+            c1_0.created_at,
+            c1_0.email,
+            c1_0.password,
+            c1_0.phone_number,
+            c1_0.role,
+            c1_0.updated_at,
+            c1_0.username,
+            a1_0.employee_id,
+            e1_0.id,
+            e1_0.created_at,
+            e1_0.email,
+            e1_0.password,
+            e1_0.phone_number,
+            e1_0.role,
+            e1_0.updated_at,
+            e1_0.username,
+            a1_0.start_time,
+            a1_0.service_id,
+            a1_0.status,
+            a1_0.end_time 
+        from
+            appointments a1_0 
+        left join
+            users c1_0 
+                on c1_0.id=a1_0.customer_id 
+        left join
+            users e1_0 
+                on e1_0.id=a1_0.employee_id 
+        where
+            e1_0.id=? 
+            and a1_0.start_time>=? 
+            and a1_0.start_time<? 
+            and a1_0.status<>'CANCELLED'
+2026-01-02T17:13:35.186+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:13:35.193+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] org.hibernate.SQL                        : 
+    /* insert 
+    for
+        com.example.appointment.Appointment.Appointment
+        */insert 
+    into
+        appointments (customer_id, employee_id, start_time, service_id, status, end_time) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-01-02T17:13:35.202+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T17:13:35.202+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AppointmentReservationResponse(success=true, message=Appointment reserved successfully, appointmentI (truncated)...]
+2026-01-02T17:13:35.203+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T17:13:44.682+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/appointments/reserve
+2026-01-02T17:13:44.682+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T17:13:44.683+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/appointments/reserve
+2026-01-02T17:13:44.683+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/appointments/reserve", parameters={}
+2026-01-02T17:13:44.683+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Appointment.AppointmentController#reserveAppointment(AppointmentReservationRequest)
+2026-01-02T17:13:44.684+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AppointmentReservationRequest(serviceId=1, customerId=1, appointmentDateTime=2026-01-15T09:40)]
+2026-01-02T17:13:44.684+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:13:44.686+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] org.hibernate.SQL                        : 
+    /* SELECT
+        h 
+    FROM
+        Holiday h 
+    WHERE
+        h.holidayDate = :date */ select
+            h1_0.id,
+            h1_0.holiday_date 
+        from
+            holidays h1_0 
+        where
+            h1_0.holiday_date=?
+2026-01-02T17:13:44.687+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] org.hibernate.SQL                        : 
+    /* SELECT
+        DISTINCT ws 
+    FROM
+        Working_schedule ws 
+    JOIN
+        
+    FETCH
+        ws.employees e 
+    JOIN
+        e.services serv 
+    WHERE
+        serv.id = :serviceId 
+        AND ws.day = :day */ select
+            distinct w1_0.id,
+            w1_0.day,
+            e1_0.work_time_id,
+            e1_1.id,
+            e1_1.created_at,
+            e1_1.email,
+            e1_1.password,
+            e1_1.phone_number,
+            e1_1.role,
+            e1_1.updated_at,
+            e1_1.username,
+            w1_0.end_time,
+            w1_0.start_time 
+        from
+            working_schedules w1_0 
+        join
+            emp_work e1_0 
+                on w1_0.id=e1_0.work_time_id 
+        join
+            users e1_1 
+                on e1_1.id=e1_0.user_id 
+        join
+            emp_serv s1_0 
+                on e1_1.id=s1_0.user_id 
+        where
+            s1_0.service_id=? 
+            and w1_0.day=?
+2026-01-02T17:13:44.691+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] org.hibernate.SQL                        : 
+    /* SELECT
+        a 
+    FROM
+        Appointment a 
+    LEFT JOIN
+        
+    FETCH
+        a.customer 
+    LEFT JOIN
+        
+    FETCH
+        a.employee 
+    WHERE
+        a.employee.id = :employeeId 
+        AND a.from >= :startOfDay 
+        AND a.from < :endOfDay 
+        AND a.status != 'CANCELLED' */ select
+            a1_0.id,
+            a1_0.customer_id,
+            c1_0.id,
+            c1_0.created_at,
+            c1_0.email,
+            c1_0.password,
+            c1_0.phone_number,
+            c1_0.role,
+            c1_0.updated_at,
+            c1_0.username,
+            a1_0.employee_id,
+            e1_0.id,
+            e1_0.created_at,
+            e1_0.email,
+            e1_0.password,
+            e1_0.phone_number,
+            e1_0.role,
+            e1_0.updated_at,
+            e1_0.username,
+            a1_0.start_time,
+            a1_0.service_id,
+            a1_0.status,
+            a1_0.end_time 
+        from
+            appointments a1_0 
+        left join
+            users c1_0 
+                on c1_0.id=a1_0.customer_id 
+        left join
+            users e1_0 
+                on e1_0.id=a1_0.employee_id 
+        where
+            e1_0.id=? 
+            and a1_0.start_time>=? 
+            and a1_0.start_time<? 
+            and a1_0.status<>'CANCELLED'
+2026-01-02T17:13:44.693+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:13:44.696+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] org.hibernate.SQL                        : 
+    /* SELECT
+        a 
+    FROM
+        Appointment a 
+    LEFT JOIN
+        
+    FETCH
+        a.customer 
+    LEFT JOIN
+        
+    FETCH
+        a.employee 
+    WHERE
+        a.employee.id = :employeeId 
+        AND a.from >= :startOfDay 
+        AND a.from < :endOfDay 
+        AND a.status != 'CANCELLED' */ select
+            a1_0.id,
+            a1_0.customer_id,
+            c1_0.id,
+            c1_0.created_at,
+            c1_0.email,
+            c1_0.password,
+            c1_0.phone_number,
+            c1_0.role,
+            c1_0.updated_at,
+            c1_0.username,
+            a1_0.employee_id,
+            e1_0.id,
+            e1_0.created_at,
+            e1_0.email,
+            e1_0.password,
+            e1_0.phone_number,
+            e1_0.role,
+            e1_0.updated_at,
+            e1_0.username,
+            a1_0.start_time,
+            a1_0.service_id,
+            a1_0.status,
+            a1_0.end_time 
+        from
+            appointments a1_0 
+        left join
+            users c1_0 
+                on c1_0.id=a1_0.customer_id 
+        left join
+            users e1_0 
+                on e1_0.id=a1_0.employee_id 
+        where
+            e1_0.id=? 
+            and a1_0.start_time>=? 
+            and a1_0.start_time<? 
+            and a1_0.status<>'CANCELLED'
+2026-01-02T17:13:44.697+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:13:44.700+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T17:13:44.700+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AppointmentReservationResponse(success=false, message=No available employee for the requested time s (truncated)...]
+2026-01-02T17:13:44.701+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2026-01-02T17:14:04.065+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/appointments/reserve
+2026-01-02T17:14:04.066+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T17:14:04.066+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/appointments/reserve
+2026-01-02T17:14:04.066+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/appointments/reserve", parameters={}
+2026-01-02T17:14:04.067+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Appointment.AppointmentController#reserveAppointment(AppointmentReservationRequest)
+2026-01-02T17:14:04.071+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.web.method.HandlerMethod             : Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<com.example.appointment.Appointment.AppointmentReservationResponse> com.example.appointment.Appointment.AppointmentController.reserveAppointment(com.example.appointment.Appointment.AppointmentReservationRequest): JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "2026-01-15T010:10:00": Failed to deserialize `java.time.LocalDateTime` (with format 'Value(YearOfEra,4,19,EXCEEDS_PAD)'-'Value(MonthOfYear,2)'-'Value(DayOfMonth,2)'T'Value(HourOfDay,2)':'Value(MinuteOfHour,2)':'Value(SecondOfMinute,2)'): (java.time.format.DateTimeParseException) Text '2026-01-15T010:10:00' could not be parsed at index 13
+2026-01-02T17:14:04.072+03:00  WARN %PARSER_ERROR[pid] --- [nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "2026-01-15T010:10:00": Failed to deserialize `java.time.LocalDateTime` (with format 'Value(YearOfEra,4,19,EXCEEDS_PAD)'-'Value(MonthOfYear,2)'-'Value(DayOfMonth,2)'T'Value(HourOfDay,2)':'Value(MinuteOfHour,2)':'Value(SecondOfMinute,2)'): (java.time.format.DateTimeParseException) Text '2026-01-15T010:10:00' could not be parsed at index 13]
+2026-01-02T17:14:04.073+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2026-01-02T17:14:04.074+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /error
+2026-01-02T17:14:04.075+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T17:14:04.076+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2026-01-02T17:14:13.648+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/appointments/reserve
+2026-01-02T17:14:13.648+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T17:14:13.649+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/appointments/reserve
+2026-01-02T17:14:13.649+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/appointments/reserve", parameters={}
+2026-01-02T17:14:13.649+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Appointment.AppointmentController#reserveAppointment(AppointmentReservationRequest)
+2026-01-02T17:14:13.649+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.web.method.HandlerMethod             : Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<com.example.appointment.Appointment.AppointmentReservationResponse> com.example.appointment.Appointment.AppointmentController.reserveAppointment(com.example.appointment.Appointment.AppointmentReservationRequest): JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "2026-01-15T010:00:00": Failed to deserialize `java.time.LocalDateTime` (with format 'Value(YearOfEra,4,19,EXCEEDS_PAD)'-'Value(MonthOfYear,2)'-'Value(DayOfMonth,2)'T'Value(HourOfDay,2)':'Value(MinuteOfHour,2)':'Value(SecondOfMinute,2)'): (java.time.format.DateTimeParseException) Text '2026-01-15T010:00:00' could not be parsed at index 13
+2026-01-02T17:14:13.650+03:00  WARN %PARSER_ERROR[pid] --- [nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "2026-01-15T010:00:00": Failed to deserialize `java.time.LocalDateTime` (with format 'Value(YearOfEra,4,19,EXCEEDS_PAD)'-'Value(MonthOfYear,2)'-'Value(DayOfMonth,2)'T'Value(HourOfDay,2)':'Value(MinuteOfHour,2)':'Value(SecondOfMinute,2)'): (java.time.format.DateTimeParseException) Text '2026-01-15T010:00:00' could not be parsed at index 13]
+2026-01-02T17:14:13.650+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2026-01-02T17:14:13.651+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /error
+2026-01-02T17:14:13.651+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T17:14:13.651+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2026-01-02T17:14:20.163+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/appointments/reserve
+2026-01-02T17:14:20.163+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T17:14:20.163+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/appointments/reserve
+2026-01-02T17:14:20.163+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/api/appointments/reserve", parameters={}
+2026-01-02T17:14:20.164+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Appointment.AppointmentController#reserveAppointment(AppointmentReservationRequest)
+2026-01-02T17:14:20.164+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AppointmentReservationRequest(serviceId=1, customerId=1, appointmentDateTime=2026-01-15T10:00)]
+2026-01-02T17:14:20.165+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:14:20.167+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] org.hibernate.SQL                        : 
+    /* SELECT
+        h 
+    FROM
+        Holiday h 
+    WHERE
+        h.holidayDate = :date */ select
+            h1_0.id,
+            h1_0.holiday_date 
+        from
+            holidays h1_0 
+        where
+            h1_0.holiday_date=?
+2026-01-02T17:14:20.168+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] org.hibernate.SQL                        : 
+    /* SELECT
+        DISTINCT ws 
+    FROM
+        Working_schedule ws 
+    JOIN
+        
+    FETCH
+        ws.employees e 
+    JOIN
+        e.services serv 
+    WHERE
+        serv.id = :serviceId 
+        AND ws.day = :day */ select
+            distinct w1_0.id,
+            w1_0.day,
+            e1_0.work_time_id,
+            e1_1.id,
+            e1_1.created_at,
+            e1_1.email,
+            e1_1.password,
+            e1_1.phone_number,
+            e1_1.role,
+            e1_1.updated_at,
+            e1_1.username,
+            w1_0.end_time,
+            w1_0.start_time 
+        from
+            working_schedules w1_0 
+        join
+            emp_work e1_0 
+                on w1_0.id=e1_0.work_time_id 
+        join
+            users e1_1 
+                on e1_1.id=e1_0.user_id 
+        join
+            emp_serv s1_0 
+                on e1_1.id=s1_0.user_id 
+        where
+            s1_0.service_id=? 
+            and w1_0.day=?
+2026-01-02T17:14:20.170+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] org.hibernate.SQL                        : 
+    /* SELECT
+        a 
+    FROM
+        Appointment a 
+    LEFT JOIN
+        
+    FETCH
+        a.customer 
+    LEFT JOIN
+        
+    FETCH
+        a.employee 
+    WHERE
+        a.employee.id = :employeeId 
+        AND a.from >= :startOfDay 
+        AND a.from < :endOfDay 
+        AND a.status != 'CANCELLED' */ select
+            a1_0.id,
+            a1_0.customer_id,
+            c1_0.id,
+            c1_0.created_at,
+            c1_0.email,
+            c1_0.password,
+            c1_0.phone_number,
+            c1_0.role,
+            c1_0.updated_at,
+            c1_0.username,
+            a1_0.employee_id,
+            e1_0.id,
+            e1_0.created_at,
+            e1_0.email,
+            e1_0.password,
+            e1_0.phone_number,
+            e1_0.role,
+            e1_0.updated_at,
+            e1_0.username,
+            a1_0.start_time,
+            a1_0.service_id,
+            a1_0.status,
+            a1_0.end_time 
+        from
+            appointments a1_0 
+        left join
+            users c1_0 
+                on c1_0.id=a1_0.customer_id 
+        left join
+            users e1_0 
+                on e1_0.id=a1_0.employee_id 
+        where
+            e1_0.id=? 
+            and a1_0.start_time>=? 
+            and a1_0.start_time<? 
+            and a1_0.status<>'CANCELLED'
+2026-01-02T17:14:20.172+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:14:20.173+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] org.hibernate.SQL                        : 
+    /* SELECT
+        a 
+    FROM
+        Appointment a 
+    LEFT JOIN
+        
+    FETCH
+        a.customer 
+    LEFT JOIN
+        
+    FETCH
+        a.employee 
+    WHERE
+        a.employee.id = :employeeId 
+        AND a.from >= :startOfDay 
+        AND a.from < :endOfDay 
+        AND a.status != 'CANCELLED' */ select
+            a1_0.id,
+            a1_0.customer_id,
+            c1_0.id,
+            c1_0.created_at,
+            c1_0.email,
+            c1_0.password,
+            c1_0.phone_number,
+            c1_0.role,
+            c1_0.updated_at,
+            c1_0.username,
+            a1_0.employee_id,
+            e1_0.id,
+            e1_0.created_at,
+            e1_0.email,
+            e1_0.password,
+            e1_0.phone_number,
+            e1_0.role,
+            e1_0.updated_at,
+            e1_0.username,
+            a1_0.start_time,
+            a1_0.service_id,
+            a1_0.status,
+            a1_0.end_time 
+        from
+            appointments a1_0 
+        left join
+            users c1_0 
+                on c1_0.id=a1_0.customer_id 
+        left join
+            users e1_0 
+                on e1_0.id=a1_0.employee_id 
+        where
+            e1_0.id=? 
+            and a1_0.start_time>=? 
+            and a1_0.start_time<? 
+            and a1_0.status<>'CANCELLED'
+2026-01-02T17:14:20.175+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:14:20.177+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T17:14:20.177+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AppointmentReservationResponse(success=false, message=No available employee for the requested time s (truncated)...]
+2026-01-02T17:14:20.178+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2026-01-02T17:14:26.354+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/appointments/reserve
+2026-01-02T17:14:26.354+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T17:14:26.355+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/appointments/reserve
+2026-01-02T17:14:26.355+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : POST "/api/appointments/reserve", parameters={}
+2026-01-02T17:14:26.355+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Appointment.AppointmentController#reserveAppointment(AppointmentReservationRequest)
+2026-01-02T17:14:26.355+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AppointmentReservationRequest(serviceId=1, customerId=1, appointmentDateTime=2026-01-15T10:10)]
+2026-01-02T17:14:26.356+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:14:26.358+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] org.hibernate.SQL                        : 
+    /* SELECT
+        h 
+    FROM
+        Holiday h 
+    WHERE
+        h.holidayDate = :date */ select
+            h1_0.id,
+            h1_0.holiday_date 
+        from
+            holidays h1_0 
+        where
+            h1_0.holiday_date=?
+2026-01-02T17:14:26.359+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] org.hibernate.SQL                        : 
+    /* SELECT
+        DISTINCT ws 
+    FROM
+        Working_schedule ws 
+    JOIN
+        
+    FETCH
+        ws.employees e 
+    JOIN
+        e.services serv 
+    WHERE
+        serv.id = :serviceId 
+        AND ws.day = :day */ select
+            distinct w1_0.id,
+            w1_0.day,
+            e1_0.work_time_id,
+            e1_1.id,
+            e1_1.created_at,
+            e1_1.email,
+            e1_1.password,
+            e1_1.phone_number,
+            e1_1.role,
+            e1_1.updated_at,
+            e1_1.username,
+            w1_0.end_time,
+            w1_0.start_time 
+        from
+            working_schedules w1_0 
+        join
+            emp_work e1_0 
+                on w1_0.id=e1_0.work_time_id 
+        join
+            users e1_1 
+                on e1_1.id=e1_0.user_id 
+        join
+            emp_serv s1_0 
+                on e1_1.id=s1_0.user_id 
+        where
+            s1_0.service_id=? 
+            and w1_0.day=?
+2026-01-02T17:14:26.362+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] org.hibernate.SQL                        : 
+    /* SELECT
+        a 
+    FROM
+        Appointment a 
+    LEFT JOIN
+        
+    FETCH
+        a.customer 
+    LEFT JOIN
+        
+    FETCH
+        a.employee 
+    WHERE
+        a.employee.id = :employeeId 
+        AND a.from >= :startOfDay 
+        AND a.from < :endOfDay 
+        AND a.status != 'CANCELLED' */ select
+            a1_0.id,
+            a1_0.customer_id,
+            c1_0.id,
+            c1_0.created_at,
+            c1_0.email,
+            c1_0.password,
+            c1_0.phone_number,
+            c1_0.role,
+            c1_0.updated_at,
+            c1_0.username,
+            a1_0.employee_id,
+            e1_0.id,
+            e1_0.created_at,
+            e1_0.email,
+            e1_0.password,
+            e1_0.phone_number,
+            e1_0.role,
+            e1_0.updated_at,
+            e1_0.username,
+            a1_0.start_time,
+            a1_0.service_id,
+            a1_0.status,
+            a1_0.end_time 
+        from
+            appointments a1_0 
+        left join
+            users c1_0 
+                on c1_0.id=a1_0.customer_id 
+        left join
+            users e1_0 
+                on e1_0.id=a1_0.employee_id 
+        where
+            e1_0.id=? 
+            and a1_0.start_time>=? 
+            and a1_0.start_time<? 
+            and a1_0.status<>'CANCELLED'
+2026-01-02T17:14:26.364+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:14:26.366+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] org.hibernate.SQL                        : 
+    /* SELECT
+        a 
+    FROM
+        Appointment a 
+    LEFT JOIN
+        
+    FETCH
+        a.customer 
+    LEFT JOIN
+        
+    FETCH
+        a.employee 
+    WHERE
+        a.employee.id = :employeeId 
+        AND a.from >= :startOfDay 
+        AND a.from < :endOfDay 
+        AND a.status != 'CANCELLED' */ select
+            a1_0.id,
+            a1_0.customer_id,
+            c1_0.id,
+            c1_0.created_at,
+            c1_0.email,
+            c1_0.password,
+            c1_0.phone_number,
+            c1_0.role,
+            c1_0.updated_at,
+            c1_0.username,
+            a1_0.employee_id,
+            e1_0.id,
+            e1_0.created_at,
+            e1_0.email,
+            e1_0.password,
+            e1_0.phone_number,
+            e1_0.role,
+            e1_0.updated_at,
+            e1_0.username,
+            a1_0.start_time,
+            a1_0.service_id,
+            a1_0.status,
+            a1_0.end_time 
+        from
+            appointments a1_0 
+        left join
+            users c1_0 
+                on c1_0.id=a1_0.customer_id 
+        left join
+            users e1_0 
+                on e1_0.id=a1_0.employee_id 
+        where
+            e1_0.id=? 
+            and a1_0.start_time>=? 
+            and a1_0.start_time<? 
+            and a1_0.status<>'CANCELLED'
+2026-01-02T17:14:26.367+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:14:26.368+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T17:14:26.369+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AppointmentReservationResponse(success=false, message=No available employee for the requested time s (truncated)...]
+2026-01-02T17:14:26.369+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2026-01-02T17:14:35.644+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/appointments/available-slots?serviceId=1&date=2026-01-15
+2026-01-02T17:14:35.644+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T17:14:35.645+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/appointments/available-slots?serviceId=1&date=2026-01-15
+2026-01-02T17:14:35.645+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/appointments/available-slots?serviceId=1&date=2026-01-15", parameters={masked}
+2026-01-02T17:14:35.645+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Appointment.AppointmentController#getAvailableSlots(Long, LocalDate)
+2026-01-02T17:14:35.646+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:14:35.648+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* SELECT
+        DISTINCT ws 
+    FROM
+        Working_schedule ws 
+    JOIN
+        
+    FETCH
+        ws.employees e 
+    JOIN
+        e.services serv 
+    WHERE
+        serv.id = :serviceId 
+        AND ws.day = :day */ select
+            distinct w1_0.id,
+            w1_0.day,
+            e1_0.work_time_id,
+            e1_1.id,
+            e1_1.created_at,
+            e1_1.email,
+            e1_1.password,
+            e1_1.phone_number,
+            e1_1.role,
+            e1_1.updated_at,
+            e1_1.username,
+            w1_0.end_time,
+            w1_0.start_time 
+        from
+            working_schedules w1_0 
+        join
+            emp_work e1_0 
+                on w1_0.id=e1_0.work_time_id 
+        join
+            users e1_1 
+                on e1_1.id=e1_0.user_id 
+        join
+            emp_serv s1_0 
+                on e1_1.id=s1_0.user_id 
+        where
+            s1_0.service_id=? 
+            and w1_0.day=?
+2026-01-02T17:14:35.650+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* SELECT
+        a 
+    FROM
+        Appointment a 
+    LEFT JOIN
+        
+    FETCH
+        a.customer 
+    LEFT JOIN
+        
+    FETCH
+        a.employee 
+    WHERE
+        a.service.id = :serviceId 
+        AND a.from >= :startOfDay 
+        AND a.from < :endOfDay */ select
+            a1_0.id,
+            a1_0.customer_id,
+            c1_0.id,
+            c1_0.created_at,
+            c1_0.email,
+            c1_0.password,
+            c1_0.phone_number,
+            c1_0.role,
+            c1_0.updated_at,
+            c1_0.username,
+            a1_0.employee_id,
+            e1_0.id,
+            e1_0.created_at,
+            e1_0.email,
+            e1_0.password,
+            e1_0.phone_number,
+            e1_0.role,
+            e1_0.updated_at,
+            e1_0.username,
+            a1_0.start_time,
+            a1_0.service_id,
+            a1_0.status,
+            a1_0.end_time 
+        from
+            appointments a1_0 
+        left join
+            users c1_0 
+                on c1_0.id=a1_0.customer_id 
+        left join
+            users e1_0 
+                on e1_0.id=a1_0.employee_id 
+        where
+            a1_0.service_id=? 
+            and a1_0.start_time>=? 
+            and a1_0.start_time<?
+2026-01-02T17:14:35.651+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:14:35.653+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T17:14:35.654+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[AvailableSlotDTO(startTime=2026-01-15T10:20, endTime=2026-01-15T10:40, employeeId=2, employeeName=E (truncated)...]
+2026-01-02T17:14:35.658+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T17:17:21.620+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/appointments/available-slots?serviceId=1&date=2026-01-15
+2026-01-02T17:17:21.620+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T17:17:21.621+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/appointments/available-slots?serviceId=1&date=2026-01-15
+2026-01-02T17:17:21.621+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/appointments/available-slots?serviceId=1&date=2026-01-15", parameters={masked}
+2026-01-02T17:17:21.621+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Appointment.AppointmentController#getAvailableSlots(Long, LocalDate)
+2026-01-02T17:17:21.623+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:17:21.627+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] org.hibernate.SQL                        : 
+    /* SELECT
+        DISTINCT ws 
+    FROM
+        Working_schedule ws 
+    JOIN
+        
+    FETCH
+        ws.employees e 
+    JOIN
+        e.services serv 
+    WHERE
+        serv.id = :serviceId 
+        AND ws.day = :day */ select
+            distinct w1_0.id,
+            w1_0.day,
+            e1_0.work_time_id,
+            e1_1.id,
+            e1_1.created_at,
+            e1_1.email,
+            e1_1.password,
+            e1_1.phone_number,
+            e1_1.role,
+            e1_1.updated_at,
+            e1_1.username,
+            w1_0.end_time,
+            w1_0.start_time 
+        from
+            working_schedules w1_0 
+        join
+            emp_work e1_0 
+                on w1_0.id=e1_0.work_time_id 
+        join
+            users e1_1 
+                on e1_1.id=e1_0.user_id 
+        join
+            emp_serv s1_0 
+                on e1_1.id=s1_0.user_id 
+        where
+            s1_0.service_id=? 
+            and w1_0.day=?
+2026-01-02T17:17:21.634+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] org.hibernate.SQL                        : 
+    /* SELECT
+        a 
+    FROM
+        Appointment a 
+    LEFT JOIN
+        
+    FETCH
+        a.customer 
+    LEFT JOIN
+        
+    FETCH
+        a.employee 
+    WHERE
+        a.service.id = :serviceId 
+        AND a.from >= :startOfDay 
+        AND a.from < :endOfDay */ select
+            a1_0.id,
+            a1_0.customer_id,
+            c1_0.id,
+            c1_0.created_at,
+            c1_0.email,
+            c1_0.password,
+            c1_0.phone_number,
+            c1_0.role,
+            c1_0.updated_at,
+            c1_0.username,
+            a1_0.employee_id,
+            e1_0.id,
+            e1_0.created_at,
+            e1_0.email,
+            e1_0.password,
+            e1_0.phone_number,
+            e1_0.role,
+            e1_0.updated_at,
+            e1_0.username,
+            a1_0.start_time,
+            a1_0.service_id,
+            a1_0.status,
+            a1_0.end_time 
+        from
+            appointments a1_0 
+        left join
+            users c1_0 
+                on c1_0.id=a1_0.customer_id 
+        left join
+            users e1_0 
+                on e1_0.id=a1_0.employee_id 
+        where
+            a1_0.service_id=? 
+            and a1_0.start_time>=? 
+            and a1_0.start_time<?
+2026-01-02T17:17:21.640+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:17:21.646+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T17:17:21.646+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[AvailableSlotDTO(startTime=2026-01-15T10:20, endTime=2026-01-15T10:40, employeeId=2, employeeName=E (truncated)...]
+2026-01-02T17:17:21.650+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T17:17:32.155+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/appointments/reserve
+2026-01-02T17:17:32.155+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T17:17:32.155+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/appointments/reserve
+2026-01-02T17:17:32.156+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/appointments/reserve", parameters={}
+2026-01-02T17:17:32.156+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Appointment.AppointmentController#reserveAppointment(AppointmentReservationRequest)
+2026-01-02T17:17:32.157+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AppointmentReservationRequest(serviceId=1, customerId=1, appointmentDateTime=2026-01-15T10:30)]
+2026-01-02T17:17:32.159+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:17:32.161+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] org.hibernate.SQL                        : 
+    /* SELECT
+        h 
+    FROM
+        Holiday h 
+    WHERE
+        h.holidayDate = :date */ select
+            h1_0.id,
+            h1_0.holiday_date 
+        from
+            holidays h1_0 
+        where
+            h1_0.holiday_date=?
+2026-01-02T17:17:32.164+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] org.hibernate.SQL                        : 
+    /* SELECT
+        DISTINCT ws 
+    FROM
+        Working_schedule ws 
+    JOIN
+        
+    FETCH
+        ws.employees e 
+    JOIN
+        e.services serv 
+    WHERE
+        serv.id = :serviceId 
+        AND ws.day = :day */ select
+            distinct w1_0.id,
+            w1_0.day,
+            e1_0.work_time_id,
+            e1_1.id,
+            e1_1.created_at,
+            e1_1.email,
+            e1_1.password,
+            e1_1.phone_number,
+            e1_1.role,
+            e1_1.updated_at,
+            e1_1.username,
+            w1_0.end_time,
+            w1_0.start_time 
+        from
+            working_schedules w1_0 
+        join
+            emp_work e1_0 
+                on w1_0.id=e1_0.work_time_id 
+        join
+            users e1_1 
+                on e1_1.id=e1_0.user_id 
+        join
+            emp_serv s1_0 
+                on e1_1.id=s1_0.user_id 
+        where
+            s1_0.service_id=? 
+            and w1_0.day=?
+2026-01-02T17:17:32.167+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] org.hibernate.SQL                        : 
+    /* SELECT
+        a 
+    FROM
+        Appointment a 
+    LEFT JOIN
+        
+    FETCH
+        a.customer 
+    LEFT JOIN
+        
+    FETCH
+        a.employee 
+    WHERE
+        a.employee.id = :employeeId 
+        AND a.from >= :startOfDay 
+        AND a.from < :endOfDay 
+        AND a.status != 'CANCELLED' */ select
+            a1_0.id,
+            a1_0.customer_id,
+            c1_0.id,
+            c1_0.created_at,
+            c1_0.email,
+            c1_0.password,
+            c1_0.phone_number,
+            c1_0.role,
+            c1_0.updated_at,
+            c1_0.username,
+            a1_0.employee_id,
+            e1_0.id,
+            e1_0.created_at,
+            e1_0.email,
+            e1_0.password,
+            e1_0.phone_number,
+            e1_0.role,
+            e1_0.updated_at,
+            e1_0.username,
+            a1_0.start_time,
+            a1_0.service_id,
+            a1_0.status,
+            a1_0.end_time 
+        from
+            appointments a1_0 
+        left join
+            users c1_0 
+                on c1_0.id=a1_0.customer_id 
+        left join
+            users e1_0 
+                on e1_0.id=a1_0.employee_id 
+        where
+            e1_0.id=? 
+            and a1_0.start_time>=? 
+            and a1_0.start_time<? 
+            and a1_0.status<>'CANCELLED'
+2026-01-02T17:17:32.168+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:17:32.171+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] org.hibernate.SQL                        : 
+    /* insert 
+    for
+        com.example.appointment.Appointment.Appointment
+        */insert 
+    into
+        appointments (customer_id, employee_id, start_time, service_id, status, end_time) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-01-02T17:17:32.175+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T17:17:32.176+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AppointmentReservationResponse(success=true, message=Appointment reserved successfully, appointmentI (truncated)...]
+2026-01-02T17:17:32.176+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T17:17:38.355+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/appointments/available-slots?serviceId=1&date=2026-01-15
+2026-01-02T17:17:38.355+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T17:17:38.355+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/appointments/available-slots?serviceId=1&date=2026-01-15
+2026-01-02T17:17:38.356+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/appointments/available-slots?serviceId=1&date=2026-01-15", parameters={masked}
+2026-01-02T17:17:38.356+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Appointment.AppointmentController#getAvailableSlots(Long, LocalDate)
+2026-01-02T17:17:38.357+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:17:38.359+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] org.hibernate.SQL                        : 
+    /* SELECT
+        DISTINCT ws 
+    FROM
+        Working_schedule ws 
+    JOIN
+        
+    FETCH
+        ws.employees e 
+    JOIN
+        e.services serv 
+    WHERE
+        serv.id = :serviceId 
+        AND ws.day = :day */ select
+            distinct w1_0.id,
+            w1_0.day,
+            e1_0.work_time_id,
+            e1_1.id,
+            e1_1.created_at,
+            e1_1.email,
+            e1_1.password,
+            e1_1.phone_number,
+            e1_1.role,
+            e1_1.updated_at,
+            e1_1.username,
+            w1_0.end_time,
+            w1_0.start_time 
+        from
+            working_schedules w1_0 
+        join
+            emp_work e1_0 
+                on w1_0.id=e1_0.work_time_id 
+        join
+            users e1_1 
+                on e1_1.id=e1_0.user_id 
+        join
+            emp_serv s1_0 
+                on e1_1.id=s1_0.user_id 
+        where
+            s1_0.service_id=? 
+            and w1_0.day=?
+2026-01-02T17:17:38.362+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] org.hibernate.SQL                        : 
+    /* SELECT
+        a 
+    FROM
+        Appointment a 
+    LEFT JOIN
+        
+    FETCH
+        a.customer 
+    LEFT JOIN
+        
+    FETCH
+        a.employee 
+    WHERE
+        a.service.id = :serviceId 
+        AND a.from >= :startOfDay 
+        AND a.from < :endOfDay */ select
+            a1_0.id,
+            a1_0.customer_id,
+            c1_0.id,
+            c1_0.created_at,
+            c1_0.email,
+            c1_0.password,
+            c1_0.phone_number,
+            c1_0.role,
+            c1_0.updated_at,
+            c1_0.username,
+            a1_0.employee_id,
+            e1_0.id,
+            e1_0.created_at,
+            e1_0.email,
+            e1_0.password,
+            e1_0.phone_number,
+            e1_0.role,
+            e1_0.updated_at,
+            e1_0.username,
+            a1_0.start_time,
+            a1_0.service_id,
+            a1_0.status,
+            a1_0.end_time 
+        from
+            appointments a1_0 
+        left join
+            users c1_0 
+                on c1_0.id=a1_0.customer_id 
+        left join
+            users e1_0 
+                on e1_0.id=a1_0.employee_id 
+        where
+            a1_0.service_id=? 
+            and a1_0.start_time>=? 
+            and a1_0.start_time<?
+2026-01-02T17:17:38.364+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:17:38.365+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T17:17:38.366+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[AvailableSlotDTO(startTime=2026-01-15T10:50, endTime=2026-01-15T11:10, employeeId=2, employeeName=E (truncated)...]
+2026-01-02T17:17:38.366+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T17:19:07.885+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/appointments/reserve
+2026-01-02T17:19:07.885+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T17:19:07.886+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/appointments/reserve
+2026-01-02T17:19:07.886+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : POST "/api/appointments/reserve", parameters={}
+2026-01-02T17:19:07.886+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Appointment.AppointmentController#reserveAppointment(AppointmentReservationRequest)
+2026-01-02T17:19:07.886+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AppointmentReservationRequest(serviceId=1, customerId=1, appointmentDateTime=2026-01-15T11:00)]
+2026-01-02T17:19:07.887+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:19:07.888+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] org.hibernate.SQL                        : 
+    /* SELECT
+        h 
+    FROM
+        Holiday h 
+    WHERE
+        h.holidayDate = :date */ select
+            h1_0.id,
+            h1_0.holiday_date 
+        from
+            holidays h1_0 
+        where
+            h1_0.holiday_date=?
+2026-01-02T17:19:07.889+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] org.hibernate.SQL                        : 
+    /* SELECT
+        DISTINCT ws 
+    FROM
+        Working_schedule ws 
+    JOIN
+        
+    FETCH
+        ws.employees e 
+    JOIN
+        e.services serv 
+    WHERE
+        serv.id = :serviceId 
+        AND ws.day = :day */ select
+            distinct w1_0.id,
+            w1_0.day,
+            e1_0.work_time_id,
+            e1_1.id,
+            e1_1.created_at,
+            e1_1.email,
+            e1_1.password,
+            e1_1.phone_number,
+            e1_1.role,
+            e1_1.updated_at,
+            e1_1.username,
+            w1_0.end_time,
+            w1_0.start_time 
+        from
+            working_schedules w1_0 
+        join
+            emp_work e1_0 
+                on w1_0.id=e1_0.work_time_id 
+        join
+            users e1_1 
+                on e1_1.id=e1_0.user_id 
+        join
+            emp_serv s1_0 
+                on e1_1.id=s1_0.user_id 
+        where
+            s1_0.service_id=? 
+            and w1_0.day=?
+2026-01-02T17:19:07.891+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] org.hibernate.SQL                        : 
+    /* SELECT
+        a 
+    FROM
+        Appointment a 
+    LEFT JOIN
+        
+    FETCH
+        a.customer 
+    LEFT JOIN
+        
+    FETCH
+        a.employee 
+    WHERE
+        a.employee.id = :employeeId 
+        AND a.from >= :startOfDay 
+        AND a.from < :endOfDay 
+        AND a.status != 'CANCELLED' */ select
+            a1_0.id,
+            a1_0.customer_id,
+            c1_0.id,
+            c1_0.created_at,
+            c1_0.email,
+            c1_0.password,
+            c1_0.phone_number,
+            c1_0.role,
+            c1_0.updated_at,
+            c1_0.username,
+            a1_0.employee_id,
+            e1_0.id,
+            e1_0.created_at,
+            e1_0.email,
+            e1_0.password,
+            e1_0.phone_number,
+            e1_0.role,
+            e1_0.updated_at,
+            e1_0.username,
+            a1_0.start_time,
+            a1_0.service_id,
+            a1_0.status,
+            a1_0.end_time 
+        from
+            appointments a1_0 
+        left join
+            users c1_0 
+                on c1_0.id=a1_0.customer_id 
+        left join
+            users e1_0 
+                on e1_0.id=a1_0.employee_id 
+        where
+            e1_0.id=? 
+            and a1_0.start_time>=? 
+            and a1_0.start_time<? 
+            and a1_0.status<>'CANCELLED'
+2026-01-02T17:19:07.892+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:19:07.894+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] org.hibernate.SQL                        : 
+    /* insert 
+    for
+        com.example.appointment.Appointment.Appointment
+        */insert 
+    into
+        appointments (customer_id, employee_id, start_time, service_id, status, end_time) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-01-02T17:19:07.915+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T17:19:07.915+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AppointmentReservationResponse(success=true, message=Appointment reserved successfully, appointmentI (truncated)...]
+2026-01-02T17:19:07.916+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T17:20:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T17:20:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T17:20:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T17:30:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T17:30:00.003+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T17:30:00.003+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T17:40:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-02T17:40:00.006+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-02T17:40:00.006+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-02T17:41:53.504+03:00  INFO %PARSER_ERROR[pid] --- [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-02T17:41:53.507+03:00  INFO %PARSER_ERROR[pid] --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-01-02T17:41:53.530+03:00  INFO %PARSER_ERROR[pid] --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-02T17:41:53.533+03:00  INFO %PARSER_ERROR[pid] --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-02T17:41:53.535+03:00  INFO %PARSER_ERROR[pid] --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-02T17:51:59.128+03:00  INFO %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : Starting AppointmentApplication using Java 17.0.17 with PID 166103 (/home/aehamalhaeak/projects/appointment-system/target/classes started by aehamalhaeak in /home/aehamalhaeak/projects/appointment-system)
+2026-01-02T17:51:59.129+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-01-02T17:51:59.129+03:00  INFO %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T17:51:59.572+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-02T17:51:59.573+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-02T17:51:59.645+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 6 JPA repository interfaces.
+2026-01-02T17:51:59.666+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-02T17:51:59.667+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-02T17:51:59.676+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Appointment.AppointmentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T17:51:59.676+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Auth.UserSessionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T17:51:59.676+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Holiday.HolidayRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T17:51:59.676+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Services.ServiceRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T17:51:59.676+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.User.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T17:51:59.676+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.WorkingSchedule.Working_scheduleRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T17:51:59.677+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2026-01-02T17:52:00.043+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-01-02T17:52:00.051+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-02T17:52:00.051+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-02T17:52:00.082+03:00  INFO %PARSER_ERROR[pid] --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 929 ms
+2026-01-02T17:52:00.522+03:00  INFO %PARSER_ERROR[pid] --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-02T17:52:00.598+03:00  INFO %PARSER_ERROR[pid] --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@578d5d02
+2026-01-02T17:52:00.599+03:00  INFO %PARSER_ERROR[pid] --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-02T17:52:00.616+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:7777/appointment (PostgreSQL 17.7)
+2026-01-02T17:52:00.646+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 10 migrations (execution time 00:00.016s)
+2026-01-02T17:52:00.668+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 10
+2026-01-02T17:52:00.670+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-01-02T17:52:00.715+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-02T17:52:00.741+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-01-02T17:52:00.944+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-02T17:52:00.979+03:00  WARN %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-02T17:52:00.994+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:7777/appointment]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.7
+	Default catalog/schema: appointment/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-02T17:52:01.547+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-02T17:52:01.573+03:00  INFO %PARSER_ERROR[pid] --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-02T17:52:01.616+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-02T17:52:01.747+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] c.e.a.Auth.JwtAuthenticationFilter       : Filter 'jwtAuthenticationFilter' configured for use
+2026-01-02T17:52:01.747+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2026-01-02T17:52:02.284+03:00  WARN %PARSER_ERROR[pid] --- [           main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 82e95406-b87c-4475-a229-d7a05aeab581
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-01-02T17:52:02.288+03:00  INFO %PARSER_ERROR[pid] --- [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-01-02T17:52:02.393+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-01-02T17:52:02.493+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 72 mappings in 'requestMappingHandlerMapping'
+2026-01-02T17:52:02.520+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-01-02T17:52:02.539+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-01-02T17:52:02.579+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-01-02T17:52:02.785+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoints beneath base path '/actuator'
+2026-01-02T17:52:02.841+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-01-02T17:52:02.849+03:00  INFO %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : Started AppointmentApplication in 3.966 seconds (process running for 4.134)
+2026-01-02T17:52:11.017+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-02T17:52:11.017+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-02T17:52:11.017+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-01-02T17:52:11.017+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-01-02T17:52:11.019+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@539f0729
+2026-01-02T17:52:11.019+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@45ef4dcb
+2026-01-02T17:52:11.019+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-01-02T17:52:11.019+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-01-02T17:52:11.032+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-01-02T17:52:11.042+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T17:52:11.046+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-01-02T17:52:11.049+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2026-01-02T17:52:11.051+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Auth.AuthController#login(LoginRequest)
+2026-01-02T17:52:11.112+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest(email=customer@example.com, password=customer123)]
+2026-01-02T17:52:11.195+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-02T17:52:11.640+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] c.e.a.Auth.TokenBlacklistService         : Tracking access token 1a30aa38-5813-42cb-a80f-cac18268240d for user 3
+2026-01-02T17:52:11.655+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert 
+    for
+        com.example.appointment.Auth.UserSessionModel
+        */insert 
+    into
+        user_sessions (created_at, expires_at, refresh_token, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-01-02T17:52:11.674+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T17:52:11.675+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [TokenResponse(accessToken=eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQ1VTVE9NRVIiLCJ1c2VySWQiOjMsImp0aSI6IjFhM (truncated)...]
+2026-01-02T17:52:11.689+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T17:52:15.677+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/appointments/available-slots?serviceId=1&date=2026-01-15
+2026-01-02T17:52:15.677+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T17:52:15.678+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/appointments/available-slots?serviceId=1&date=2026-01-15
+2026-01-02T17:52:15.678+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/appointments/available-slots?serviceId=1&date=2026-01-15", parameters={masked}
+2026-01-02T17:52:15.679+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Appointment.AppointmentController#getAvailableSlots(Long, LocalDate)
+2026-01-02T17:52:15.687+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:52:15.710+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] org.hibernate.SQL                        : 
+    /* SELECT
+        DISTINCT ws 
+    FROM
+        Working_schedule ws 
+    JOIN
+        
+    FETCH
+        ws.employees e 
+    JOIN
+        e.services serv 
+    WHERE
+        serv.id = :serviceId 
+        AND ws.day = :day */ select
+            distinct w1_0.id,
+            w1_0.day,
+            e1_0.work_time_id,
+            e1_1.id,
+            e1_1.created_at,
+            e1_1.email,
+            e1_1.password,
+            e1_1.phone_number,
+            e1_1.role,
+            e1_1.updated_at,
+            e1_1.username,
+            w1_0.end_time,
+            w1_0.start_time 
+        from
+            working_schedules w1_0 
+        join
+            emp_work e1_0 
+                on w1_0.id=e1_0.work_time_id 
+        join
+            users e1_1 
+                on e1_1.id=e1_0.user_id 
+        join
+            emp_serv s1_0 
+                on e1_1.id=s1_0.user_id 
+        where
+            s1_0.service_id=? 
+            and w1_0.day=?
+2026-01-02T17:52:15.718+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] org.hibernate.SQL                        : 
+    /* SELECT
+        a 
+    FROM
+        Appointment a 
+    LEFT JOIN
+        
+    FETCH
+        a.customer 
+    LEFT JOIN
+        
+    FETCH
+        a.employee 
+    WHERE
+        a.service.id = :serviceId 
+        AND a.from >= :startOfDay 
+        AND a.from < :endOfDay */ select
+            a1_0.id,
+            a1_0.customer_id,
+            c1_0.id,
+            c1_0.created_at,
+            c1_0.email,
+            c1_0.password,
+            c1_0.phone_number,
+            c1_0.role,
+            c1_0.updated_at,
+            c1_0.username,
+            a1_0.employee_id,
+            e1_0.id,
+            e1_0.created_at,
+            e1_0.email,
+            e1_0.password,
+            e1_0.phone_number,
+            e1_0.role,
+            e1_0.updated_at,
+            e1_0.username,
+            a1_0.start_time,
+            a1_0.service_id,
+            a1_0.status,
+            a1_0.end_time 
+        from
+            appointments a1_0 
+        left join
+            users c1_0 
+                on c1_0.id=a1_0.customer_id 
+        left join
+            users e1_0 
+                on e1_0.id=a1_0.employee_id 
+        where
+            a1_0.service_id=? 
+            and a1_0.start_time>=? 
+            and a1_0.start_time<?
+2026-01-02T17:52:15.723+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:52:15.727+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T17:52:15.728+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[AvailableSlotDTO(startTime=2026-01-15T11:20, endTime=2026-01-15T11:40, employeeId=2, employeeName=E (truncated)...]
+2026-01-02T17:52:15.732+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T17:52:32.049+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/appointments/reserve
+2026-01-02T17:52:32.050+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T17:52:32.051+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/appointments/reserve
+2026-01-02T17:52:32.051+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/appointments/reserve", parameters={}
+2026-01-02T17:52:32.052+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Appointment.AppointmentController#reserveAppointment(AppointmentReservationRequest)
+2026-01-02T17:52:32.063+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AppointmentReservationRequest(serviceId=1, customerId=1, appointmentDateTime=2026-01-15T11:30)]
+2026-01-02T17:52:32.066+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:52:32.072+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] org.hibernate.SQL                        : 
+    /* SELECT
+        h 
+    FROM
+        Holiday h 
+    WHERE
+        h.holidayDate = :date */ select
+            h1_0.id,
+            h1_0.holiday_date 
+        from
+            holidays h1_0 
+        where
+            h1_0.holiday_date=?
+2026-01-02T17:52:32.077+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:52:32.083+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] org.hibernate.SQL                        : 
+    /* SELECT
+        DISTINCT ws 
+    FROM
+        Working_schedule ws 
+    JOIN
+        
+    FETCH
+        ws.employees e 
+    JOIN
+        e.services serv 
+    WHERE
+        serv.id = :serviceId 
+        AND ws.day = :day */ select
+            distinct w1_0.id,
+            w1_0.day,
+            e1_0.work_time_id,
+            e1_1.id,
+            e1_1.created_at,
+            e1_1.email,
+            e1_1.password,
+            e1_1.phone_number,
+            e1_1.role,
+            e1_1.updated_at,
+            e1_1.username,
+            w1_0.end_time,
+            w1_0.start_time 
+        from
+            working_schedules w1_0 
+        join
+            emp_work e1_0 
+                on w1_0.id=e1_0.work_time_id 
+        join
+            users e1_1 
+                on e1_1.id=e1_0.user_id 
+        join
+            emp_serv s1_0 
+                on e1_1.id=s1_0.user_id 
+        where
+            s1_0.service_id=? 
+            and w1_0.day=?
+2026-01-02T17:52:32.093+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] org.hibernate.SQL                        : 
+    /* SELECT
+        a 
+    FROM
+        Appointment a 
+    LEFT JOIN
+        
+    FETCH
+        a.customer 
+    LEFT JOIN
+        
+    FETCH
+        a.employee 
+    WHERE
+        a.service.id = :serviceId 
+        AND a.from >= :startOfDay 
+        AND a.from < :endOfDay */ select
+            a1_0.id,
+            a1_0.customer_id,
+            c1_0.id,
+            c1_0.created_at,
+            c1_0.email,
+            c1_0.password,
+            c1_0.phone_number,
+            c1_0.role,
+            c1_0.updated_at,
+            c1_0.username,
+            a1_0.employee_id,
+            e1_0.id,
+            e1_0.created_at,
+            e1_0.email,
+            e1_0.password,
+            e1_0.phone_number,
+            e1_0.role,
+            e1_0.updated_at,
+            e1_0.username,
+            a1_0.start_time,
+            a1_0.service_id,
+            a1_0.status,
+            a1_0.end_time 
+        from
+            appointments a1_0 
+        left join
+            users c1_0 
+                on c1_0.id=a1_0.customer_id 
+        left join
+            users e1_0 
+                on e1_0.id=a1_0.employee_id 
+        where
+            a1_0.service_id=? 
+            and a1_0.start_time>=? 
+            and a1_0.start_time<?
+2026-01-02T17:52:32.098+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:52:32.102+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T17:52:32.107+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AppointmentReservationResponse(success=false, message=Requested time slot is not available or does n (truncated)...]
+2026-01-02T17:52:32.112+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2026-01-02T17:53:08.234+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/appointments/reserve
+2026-01-02T17:53:08.234+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T17:53:08.235+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/appointments/reserve
+2026-01-02T17:53:08.235+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/api/appointments/reserve", parameters={}
+2026-01-02T17:53:08.235+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Appointment.AppointmentController#reserveAppointment(AppointmentReservationRequest)
+2026-01-02T17:53:08.236+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AppointmentReservationRequest(serviceId=1, customerId=1, appointmentDateTime=2026-01-15T11:20)]
+2026-01-02T17:53:08.237+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:53:08.239+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] org.hibernate.SQL                        : 
+    /* SELECT
+        h 
+    FROM
+        Holiday h 
+    WHERE
+        h.holidayDate = :date */ select
+            h1_0.id,
+            h1_0.holiday_date 
+        from
+            holidays h1_0 
+        where
+            h1_0.holiday_date=?
+2026-01-02T17:53:08.240+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:53:08.242+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] org.hibernate.SQL                        : 
+    /* SELECT
+        DISTINCT ws 
+    FROM
+        Working_schedule ws 
+    JOIN
+        
+    FETCH
+        ws.employees e 
+    JOIN
+        e.services serv 
+    WHERE
+        serv.id = :serviceId 
+        AND ws.day = :day */ select
+            distinct w1_0.id,
+            w1_0.day,
+            e1_0.work_time_id,
+            e1_1.id,
+            e1_1.created_at,
+            e1_1.email,
+            e1_1.password,
+            e1_1.phone_number,
+            e1_1.role,
+            e1_1.updated_at,
+            e1_1.username,
+            w1_0.end_time,
+            w1_0.start_time 
+        from
+            working_schedules w1_0 
+        join
+            emp_work e1_0 
+                on w1_0.id=e1_0.work_time_id 
+        join
+            users e1_1 
+                on e1_1.id=e1_0.user_id 
+        join
+            emp_serv s1_0 
+                on e1_1.id=s1_0.user_id 
+        where
+            s1_0.service_id=? 
+            and w1_0.day=?
+2026-01-02T17:53:08.246+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] org.hibernate.SQL                        : 
+    /* SELECT
+        a 
+    FROM
+        Appointment a 
+    LEFT JOIN
+        
+    FETCH
+        a.customer 
+    LEFT JOIN
+        
+    FETCH
+        a.employee 
+    WHERE
+        a.service.id = :serviceId 
+        AND a.from >= :startOfDay 
+        AND a.from < :endOfDay */ select
+            a1_0.id,
+            a1_0.customer_id,
+            c1_0.id,
+            c1_0.created_at,
+            c1_0.email,
+            c1_0.password,
+            c1_0.phone_number,
+            c1_0.role,
+            c1_0.updated_at,
+            c1_0.username,
+            a1_0.employee_id,
+            e1_0.id,
+            e1_0.created_at,
+            e1_0.email,
+            e1_0.password,
+            e1_0.phone_number,
+            e1_0.role,
+            e1_0.updated_at,
+            e1_0.username,
+            a1_0.start_time,
+            a1_0.service_id,
+            a1_0.status,
+            a1_0.end_time 
+        from
+            appointments a1_0 
+        left join
+            users c1_0 
+                on c1_0.id=a1_0.customer_id 
+        left join
+            users e1_0 
+                on e1_0.id=a1_0.employee_id 
+        where
+            a1_0.service_id=? 
+            and a1_0.start_time>=? 
+            and a1_0.start_time<?
+2026-01-02T17:53:08.247+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:53:08.251+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] org.hibernate.SQL                        : 
+    /* insert 
+    for
+        com.example.appointment.Appointment.Appointment
+        */insert 
+    into
+        appointments (customer_id, employee_id, start_time, service_id, status, end_time) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-01-02T17:53:08.258+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T17:53:08.258+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AppointmentReservationResponse(success=true, message=Appointment reserved successfully, appointmentI (truncated)...]
+2026-01-02T17:53:08.259+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T17:53:12.830+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/appointments/available-slots?serviceId=1&date=2026-01-15
+2026-01-02T17:53:12.831+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T17:53:12.831+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/appointments/available-slots?serviceId=1&date=2026-01-15
+2026-01-02T17:53:12.831+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/appointments/available-slots?serviceId=1&date=2026-01-15", parameters={masked}
+2026-01-02T17:53:12.832+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Appointment.AppointmentController#getAvailableSlots(Long, LocalDate)
+2026-01-02T17:53:12.833+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:53:12.835+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] org.hibernate.SQL                        : 
+    /* SELECT
+        DISTINCT ws 
+    FROM
+        Working_schedule ws 
+    JOIN
+        
+    FETCH
+        ws.employees e 
+    JOIN
+        e.services serv 
+    WHERE
+        serv.id = :serviceId 
+        AND ws.day = :day */ select
+            distinct w1_0.id,
+            w1_0.day,
+            e1_0.work_time_id,
+            e1_1.id,
+            e1_1.created_at,
+            e1_1.email,
+            e1_1.password,
+            e1_1.phone_number,
+            e1_1.role,
+            e1_1.updated_at,
+            e1_1.username,
+            w1_0.end_time,
+            w1_0.start_time 
+        from
+            working_schedules w1_0 
+        join
+            emp_work e1_0 
+                on w1_0.id=e1_0.work_time_id 
+        join
+            users e1_1 
+                on e1_1.id=e1_0.user_id 
+        join
+            emp_serv s1_0 
+                on e1_1.id=s1_0.user_id 
+        where
+            s1_0.service_id=? 
+            and w1_0.day=?
+2026-01-02T17:53:12.841+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] org.hibernate.SQL                        : 
+    /* SELECT
+        a 
+    FROM
+        Appointment a 
+    LEFT JOIN
+        
+    FETCH
+        a.customer 
+    LEFT JOIN
+        
+    FETCH
+        a.employee 
+    WHERE
+        a.service.id = :serviceId 
+        AND a.from >= :startOfDay 
+        AND a.from < :endOfDay */ select
+            a1_0.id,
+            a1_0.customer_id,
+            c1_0.id,
+            c1_0.created_at,
+            c1_0.email,
+            c1_0.password,
+            c1_0.phone_number,
+            c1_0.role,
+            c1_0.updated_at,
+            c1_0.username,
+            a1_0.employee_id,
+            e1_0.id,
+            e1_0.created_at,
+            e1_0.email,
+            e1_0.password,
+            e1_0.phone_number,
+            e1_0.role,
+            e1_0.updated_at,
+            e1_0.username,
+            a1_0.start_time,
+            a1_0.service_id,
+            a1_0.status,
+            a1_0.end_time 
+        from
+            appointments a1_0 
+        left join
+            users c1_0 
+                on c1_0.id=a1_0.customer_id 
+        left join
+            users e1_0 
+                on e1_0.id=a1_0.employee_id 
+        where
+            a1_0.service_id=? 
+            and a1_0.start_time>=? 
+            and a1_0.start_time<?
+2026-01-02T17:53:12.845+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:53:12.852+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T17:53:12.853+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[AvailableSlotDTO(startTime=2026-01-15T11:40, endTime=2026-01-15T12:00, employeeId=2, employeeName=E (truncated)...]
+2026-01-02T17:53:12.857+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T17:53:49.068+03:00  INFO %PARSER_ERROR[pid] --- [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-02T17:53:49.072+03:00  INFO %PARSER_ERROR[pid] --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-01-02T17:53:49.094+03:00  INFO %PARSER_ERROR[pid] --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-02T17:53:49.096+03:00  INFO %PARSER_ERROR[pid] --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-02T17:53:49.098+03:00  INFO %PARSER_ERROR[pid] --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-02T17:53:52.169+03:00  INFO %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : Starting AppointmentApplication using Java 17.0.17 with PID 167577 (/home/aehamalhaeak/projects/appointment-system/target/classes started by aehamalhaeak in /home/aehamalhaeak/projects/appointment-system)
+2026-01-02T17:53:52.170+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-01-02T17:53:52.171+03:00  INFO %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T17:53:52.657+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-02T17:53:52.658+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-02T17:53:52.733+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 6 JPA repository interfaces.
+2026-01-02T17:53:52.757+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-02T17:53:52.758+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-02T17:53:52.767+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Appointment.AppointmentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T17:53:52.768+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Auth.UserSessionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T17:53:52.768+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Holiday.HolidayRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T17:53:52.768+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Services.ServiceRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T17:53:52.768+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.User.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T17:53:52.768+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.WorkingSchedule.Working_scheduleRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T17:53:52.768+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2026-01-02T17:53:53.157+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-01-02T17:53:53.164+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-02T17:53:53.165+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-02T17:53:53.196+03:00  INFO %PARSER_ERROR[pid] --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1000 ms
+2026-01-02T17:53:53.659+03:00  INFO %PARSER_ERROR[pid] --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-02T17:53:53.737+03:00  INFO %PARSER_ERROR[pid] --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6fe243a
+2026-01-02T17:53:53.738+03:00  INFO %PARSER_ERROR[pid] --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-02T17:53:53.756+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:7777/appointment (PostgreSQL 17.7)
+2026-01-02T17:53:53.788+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 10 migrations (execution time 00:00.017s)
+2026-01-02T17:53:53.812+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 10
+2026-01-02T17:53:53.815+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-01-02T17:53:53.877+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-02T17:53:53.905+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-01-02T17:53:54.120+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-02T17:53:54.158+03:00  WARN %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-02T17:53:54.169+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:7777/appointment]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.7
+	Default catalog/schema: appointment/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-02T17:53:54.761+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-02T17:53:54.786+03:00  INFO %PARSER_ERROR[pid] --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-02T17:53:54.838+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-02T17:53:54.991+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] c.e.a.Auth.JwtAuthenticationFilter       : Filter 'jwtAuthenticationFilter' configured for use
+2026-01-02T17:53:54.992+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2026-01-02T17:53:55.555+03:00  WARN %PARSER_ERROR[pid] --- [           main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: d5664e42-8b6d-414d-9ed1-49984256648e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-01-02T17:53:55.560+03:00  INFO %PARSER_ERROR[pid] --- [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-01-02T17:53:55.665+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-01-02T17:53:55.771+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 72 mappings in 'requestMappingHandlerMapping'
+2026-01-02T17:53:55.797+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-01-02T17:53:55.817+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-01-02T17:53:55.853+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-01-02T17:53:56.066+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoints beneath base path '/actuator'
+2026-01-02T17:53:56.122+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-01-02T17:53:56.131+03:00  INFO %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : Started AppointmentApplication in 4.21 seconds (process running for 4.39)
+2026-01-02T17:54:04.037+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-02T17:54:04.037+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-02T17:54:04.037+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-01-02T17:54:04.037+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-01-02T17:54:04.039+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3ca1f0a4
+2026-01-02T17:54:04.039+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@1c8ab147
+2026-01-02T17:54:04.039+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-01-02T17:54:04.039+03:00  INFO %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-01-02T17:54:04.065+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-01-02T17:54:04.096+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T17:54:04.101+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-01-02T17:54:04.104+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2026-01-02T17:54:04.107+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Auth.AuthController#login(LoginRequest)
+2026-01-02T17:54:04.169+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest(email=customer@example.com, password=customer123)]
+2026-01-02T17:54:04.255+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-02T17:54:04.687+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] c.e.a.Auth.TokenBlacklistService         : Tracking access token 8c47b1a1-9a66-404b-9c66-22f1921db039 for user 3
+2026-01-02T17:54:04.702+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* insert 
+    for
+        com.example.appointment.Auth.UserSessionModel
+        */insert 
+    into
+        user_sessions (created_at, expires_at, refresh_token, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-01-02T17:54:04.720+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T17:54:04.721+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [TokenResponse(accessToken=eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQ1VTVE9NRVIiLCJ1c2VySWQiOjMsImp0aSI6IjhjN (truncated)...]
+2026-01-02T17:54:04.735+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T17:54:08.615+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/appointments/available-slots?serviceId=1&date=2026-01-15
+2026-01-02T17:54:08.616+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T17:54:08.617+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/appointments/available-slots?serviceId=1&date=2026-01-15
+2026-01-02T17:54:08.618+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/appointments/available-slots?serviceId=1&date=2026-01-15", parameters={masked}
+2026-01-02T17:54:08.619+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Appointment.AppointmentController#getAvailableSlots(Long, LocalDate)
+2026-01-02T17:54:08.627+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:54:08.655+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] org.hibernate.SQL                        : 
+    /* SELECT
+        DISTINCT ws 
+    FROM
+        Working_schedule ws 
+    JOIN
+        
+    FETCH
+        ws.employees e 
+    JOIN
+        e.services serv 
+    WHERE
+        serv.id = :serviceId 
+        AND ws.day = :day */ select
+            distinct w1_0.id,
+            w1_0.day,
+            e1_0.work_time_id,
+            e1_1.id,
+            e1_1.created_at,
+            e1_1.email,
+            e1_1.password,
+            e1_1.phone_number,
+            e1_1.role,
+            e1_1.updated_at,
+            e1_1.username,
+            w1_0.end_time,
+            w1_0.start_time 
+        from
+            working_schedules w1_0 
+        join
+            emp_work e1_0 
+                on w1_0.id=e1_0.work_time_id 
+        join
+            users e1_1 
+                on e1_1.id=e1_0.user_id 
+        join
+            emp_serv s1_0 
+                on e1_1.id=s1_0.user_id 
+        where
+            s1_0.service_id=? 
+            and w1_0.day=?
+2026-01-02T17:54:08.663+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] org.hibernate.SQL                        : 
+    /* SELECT
+        a 
+    FROM
+        Appointment a 
+    LEFT JOIN
+        
+    FETCH
+        a.customer 
+    LEFT JOIN
+        
+    FETCH
+        a.employee 
+    WHERE
+        a.service.id = :serviceId 
+        AND a.from >= :startOfDay 
+        AND a.from < :endOfDay */ select
+            a1_0.id,
+            a1_0.customer_id,
+            c1_0.id,
+            c1_0.created_at,
+            c1_0.email,
+            c1_0.password,
+            c1_0.phone_number,
+            c1_0.role,
+            c1_0.updated_at,
+            c1_0.username,
+            a1_0.employee_id,
+            e1_0.id,
+            e1_0.created_at,
+            e1_0.email,
+            e1_0.password,
+            e1_0.phone_number,
+            e1_0.role,
+            e1_0.updated_at,
+            e1_0.username,
+            a1_0.start_time,
+            a1_0.service_id,
+            a1_0.status,
+            a1_0.end_time 
+        from
+            appointments a1_0 
+        left join
+            users c1_0 
+                on c1_0.id=a1_0.customer_id 
+        left join
+            users e1_0 
+                on e1_0.id=a1_0.employee_id 
+        where
+            a1_0.service_id=? 
+            and a1_0.start_time>=? 
+            and a1_0.start_time<?
+2026-01-02T17:54:08.670+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:54:08.682+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T17:54:08.683+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[AvailableSlotDTO(startTime=2026-01-15T11:40, endTime=2026-01-15T12:00, employeeId=2, employeeName=E (truncated)...]
+2026-01-02T17:54:08.688+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T17:54:17.063+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/appointments/reserve
+2026-01-02T17:54:17.063+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T17:54:17.064+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/appointments/reserve
+2026-01-02T17:54:17.064+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/appointments/reserve", parameters={}
+2026-01-02T17:54:17.064+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Appointment.AppointmentController#reserveAppointment(AppointmentReservationRequest)
+2026-01-02T17:54:17.071+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AppointmentReservationRequest(serviceId=1, customerId=1, appointmentDateTime=2026-01-15T11:40)]
+2026-01-02T17:54:17.072+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:54:17.075+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] org.hibernate.SQL                        : 
+    /* SELECT
+        h 
+    FROM
+        Holiday h 
+    WHERE
+        h.holidayDate = :date */ select
+            h1_0.id,
+            h1_0.holiday_date 
+        from
+            holidays h1_0 
+        where
+            h1_0.holiday_date=?
+2026-01-02T17:54:17.077+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:54:17.080+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] org.hibernate.SQL                        : 
+    /* SELECT
+        DISTINCT ws 
+    FROM
+        Working_schedule ws 
+    JOIN
+        
+    FETCH
+        ws.employees e 
+    JOIN
+        e.services serv 
+    WHERE
+        serv.id = :serviceId 
+        AND ws.day = :day */ select
+            distinct w1_0.id,
+            w1_0.day,
+            e1_0.work_time_id,
+            e1_1.id,
+            e1_1.created_at,
+            e1_1.email,
+            e1_1.password,
+            e1_1.phone_number,
+            e1_1.role,
+            e1_1.updated_at,
+            e1_1.username,
+            w1_0.end_time,
+            w1_0.start_time 
+        from
+            working_schedules w1_0 
+        join
+            emp_work e1_0 
+                on w1_0.id=e1_0.work_time_id 
+        join
+            users e1_1 
+                on e1_1.id=e1_0.user_id 
+        join
+            emp_serv s1_0 
+                on e1_1.id=s1_0.user_id 
+        where
+            s1_0.service_id=? 
+            and w1_0.day=?
+2026-01-02T17:54:17.083+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] org.hibernate.SQL                        : 
+    /* SELECT
+        a 
+    FROM
+        Appointment a 
+    LEFT JOIN
+        
+    FETCH
+        a.customer 
+    LEFT JOIN
+        
+    FETCH
+        a.employee 
+    WHERE
+        a.service.id = :serviceId 
+        AND a.from >= :startOfDay 
+        AND a.from < :endOfDay */ select
+            a1_0.id,
+            a1_0.customer_id,
+            c1_0.id,
+            c1_0.created_at,
+            c1_0.email,
+            c1_0.password,
+            c1_0.phone_number,
+            c1_0.role,
+            c1_0.updated_at,
+            c1_0.username,
+            a1_0.employee_id,
+            e1_0.id,
+            e1_0.created_at,
+            e1_0.email,
+            e1_0.password,
+            e1_0.phone_number,
+            e1_0.role,
+            e1_0.updated_at,
+            e1_0.username,
+            a1_0.start_time,
+            a1_0.service_id,
+            a1_0.status,
+            a1_0.end_time 
+        from
+            appointments a1_0 
+        left join
+            users c1_0 
+                on c1_0.id=a1_0.customer_id 
+        left join
+            users e1_0 
+                on e1_0.id=a1_0.employee_id 
+        where
+            a1_0.service_id=? 
+            and a1_0.start_time>=? 
+            and a1_0.start_time<?
+2026-01-02T17:54:17.084+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:54:17.091+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] org.hibernate.SQL                        : 
+    /* SELECT
+        a 
+    FROM
+        Appointment a 
+    LEFT JOIN
+        
+    FETCH
+        a.customer 
+    LEFT JOIN
+        
+    FETCH
+        a.employee 
+    WHERE
+        a.employee.id = :employeeId 
+        AND a.from >= :startOfDay 
+        AND a.from < :endOfDay 
+        AND a.status != 'CANCELLED' */ select
+            a1_0.id,
+            a1_0.customer_id,
+            c1_0.id,
+            c1_0.created_at,
+            c1_0.email,
+            c1_0.password,
+            c1_0.phone_number,
+            c1_0.role,
+            c1_0.updated_at,
+            c1_0.username,
+            a1_0.employee_id,
+            e1_0.id,
+            e1_0.created_at,
+            e1_0.email,
+            e1_0.password,
+            e1_0.phone_number,
+            e1_0.role,
+            e1_0.updated_at,
+            e1_0.username,
+            a1_0.start_time,
+            a1_0.service_id,
+            a1_0.status,
+            a1_0.end_time 
+        from
+            appointments a1_0 
+        left join
+            users c1_0 
+                on c1_0.id=a1_0.customer_id 
+        left join
+            users e1_0 
+                on e1_0.id=a1_0.employee_id 
+        where
+            e1_0.id=? 
+            and a1_0.start_time>=? 
+            and a1_0.start_time<? 
+            and a1_0.status<>'CANCELLED'
+2026-01-02T17:54:17.096+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:54:17.100+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] org.hibernate.SQL                        : 
+    /* insert 
+    for
+        com.example.appointment.Appointment.Appointment
+        */insert 
+    into
+        appointments (customer_id, employee_id, start_time, service_id, status, end_time) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-01-02T17:54:17.106+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T17:54:17.108+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AppointmentReservationResponse(success=true, message=Appointment reserved successfully, appointmentI (truncated)...]
+2026-01-02T17:54:17.112+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-02T17:54:38.906+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/appointments/reserve
+2026-01-02T17:54:38.907+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-02T17:54:38.908+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/appointments/reserve
+2026-01-02T17:54:38.908+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/appointments/reserve", parameters={}
+2026-01-02T17:54:38.908+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Appointment.AppointmentController#reserveAppointment(AppointmentReservationRequest)
+2026-01-02T17:54:38.909+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AppointmentReservationRequest(serviceId=1, customerId=1, appointmentDateTime=2026-01-15T12:30)]
+2026-01-02T17:54:38.910+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:54:38.912+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] org.hibernate.SQL                        : 
+    /* SELECT
+        h 
+    FROM
+        Holiday h 
+    WHERE
+        h.holidayDate = :date */ select
+            h1_0.id,
+            h1_0.holiday_date 
+        from
+            holidays h1_0 
+        where
+            h1_0.holiday_date=?
+2026-01-02T17:54:38.913+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:54:38.918+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] org.hibernate.SQL                        : 
+    /* SELECT
+        DISTINCT ws 
+    FROM
+        Working_schedule ws 
+    JOIN
+        
+    FETCH
+        ws.employees e 
+    JOIN
+        e.services serv 
+    WHERE
+        serv.id = :serviceId 
+        AND ws.day = :day */ select
+            distinct w1_0.id,
+            w1_0.day,
+            e1_0.work_time_id,
+            e1_1.id,
+            e1_1.created_at,
+            e1_1.email,
+            e1_1.password,
+            e1_1.phone_number,
+            e1_1.role,
+            e1_1.updated_at,
+            e1_1.username,
+            w1_0.end_time,
+            w1_0.start_time 
+        from
+            working_schedules w1_0 
+        join
+            emp_work e1_0 
+                on w1_0.id=e1_0.work_time_id 
+        join
+            users e1_1 
+                on e1_1.id=e1_0.user_id 
+        join
+            emp_serv s1_0 
+                on e1_1.id=s1_0.user_id 
+        where
+            s1_0.service_id=? 
+            and w1_0.day=?
+2026-01-02T17:54:38.929+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] org.hibernate.SQL                        : 
+    /* SELECT
+        a 
+    FROM
+        Appointment a 
+    LEFT JOIN
+        
+    FETCH
+        a.customer 
+    LEFT JOIN
+        
+    FETCH
+        a.employee 
+    WHERE
+        a.service.id = :serviceId 
+        AND a.from >= :startOfDay 
+        AND a.from < :endOfDay */ select
+            a1_0.id,
+            a1_0.customer_id,
+            c1_0.id,
+            c1_0.created_at,
+            c1_0.email,
+            c1_0.password,
+            c1_0.phone_number,
+            c1_0.role,
+            c1_0.updated_at,
+            c1_0.username,
+            a1_0.employee_id,
+            e1_0.id,
+            e1_0.created_at,
+            e1_0.email,
+            e1_0.password,
+            e1_0.phone_number,
+            e1_0.role,
+            e1_0.updated_at,
+            e1_0.username,
+            a1_0.start_time,
+            a1_0.service_id,
+            a1_0.status,
+            a1_0.end_time 
+        from
+            appointments a1_0 
+        left join
+            users c1_0 
+                on c1_0.id=a1_0.customer_id 
+        left join
+            users e1_0 
+                on e1_0.id=a1_0.employee_id 
+        where
+            a1_0.service_id=? 
+            and a1_0.start_time>=? 
+            and a1_0.start_time<?
+2026-01-02T17:54:38.933+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.cost,
+        s1_0.description,
+        s1_0.duration,
+        s1_0.name 
+    from
+        services s1_0 
+    where
+        s1_0.id=?
+2026-01-02T17:54:38.945+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-02T17:54:38.946+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AppointmentReservationResponse(success=false, message=Requested time slot is not available or does n (truncated)...]
+2026-01-02T17:54:38.948+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2026-01-02T17:55:08.575+03:00  INFO %PARSER_ERROR[pid] --- [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-02T17:55:08.578+03:00  INFO %PARSER_ERROR[pid] --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-01-02T17:55:08.601+03:00  INFO %PARSER_ERROR[pid] --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-02T17:55:08.604+03:00  INFO %PARSER_ERROR[pid] --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-02T17:55:08.606+03:00  INFO %PARSER_ERROR[pid] --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-02T17:55:28.310+03:00  INFO %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : Starting AppointmentApplication using Java 17.0.17 with PID 168914 (/home/aehamalhaeak/projects/appointment-system/target/classes started by aehamalhaeak in /home/aehamalhaeak/projects/appointment-system)
+2026-01-02T17:55:28.312+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-01-02T17:55:28.312+03:00  INFO %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-02T17:55:28.766+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-02T17:55:28.767+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-02T17:55:28.838+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 6 JPA repository interfaces.
+2026-01-02T17:55:28.860+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-02T17:55:28.861+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-02T17:55:28.869+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Appointment.AppointmentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T17:55:28.870+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Auth.UserSessionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T17:55:28.870+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Holiday.HolidayRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T17:55:28.870+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.Services.ServiceRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T17:55:28.870+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.User.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T17:55:28.870+03:00  INFO %PARSER_ERROR[pid] --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.appointment.WorkingSchedule.Working_scheduleRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-02T17:55:28.870+03:00  INFO %PARSER_ERROR[pid] --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2026-01-02T17:55:29.244+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-01-02T17:55:29.250+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-02T17:55:29.251+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-02T17:55:29.274+03:00  INFO %PARSER_ERROR[pid] --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 929 ms
+2026-01-02T17:55:29.716+03:00  INFO %PARSER_ERROR[pid] --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-02T17:55:29.792+03:00  INFO %PARSER_ERROR[pid] --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6fe243a
+2026-01-02T17:55:29.793+03:00  INFO %PARSER_ERROR[pid] --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-02T17:55:29.811+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:7777/appointment (PostgreSQL 17.7)
+2026-01-02T17:55:29.852+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 10 migrations (execution time 00:00.025s)
+2026-01-02T17:55:29.881+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 10
+2026-01-02T17:55:29.884+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-01-02T17:55:29.933+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-02T17:55:29.961+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-01-02T17:55:30.180+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-02T17:55:30.216+03:00  WARN %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-02T17:55:30.229+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:7777/appointment]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.7
+	Default catalog/schema: appointment/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-02T17:55:30.780+03:00  INFO %PARSER_ERROR[pid] --- [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-02T17:55:30.803+03:00  INFO %PARSER_ERROR[pid] --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-02T17:55:30.845+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-02T17:55:30.982+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] c.e.a.Auth.JwtAuthenticationFilter       : Filter 'jwtAuthenticationFilter' configured for use
+2026-01-02T17:55:30.983+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2026-01-02T17:55:31.513+03:00  WARN %PARSER_ERROR[pid] --- [           main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b4ae1c7d-ed5f-4dbd-aef5-f1d8972bd553
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-01-02T17:55:31.517+03:00  INFO %PARSER_ERROR[pid] --- [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-01-02T17:55:31.617+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-01-02T17:55:31.715+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 72 mappings in 'requestMappingHandlerMapping'
+2026-01-02T17:55:31.744+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-01-02T17:55:31.768+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-01-02T17:55:31.806+03:00 DEBUG %PARSER_ERROR[pid] --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-01-02T17:55:32.020+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoints beneath base path '/actuator'
+2026-01-02T17:55:32.080+03:00  INFO %PARSER_ERROR[pid] --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-01-02T17:55:32.088+03:00  INFO %PARSER_ERROR[pid] --- [           main] c.e.appointment.AppointmentApplication   : Started AppointmentApplication in 4.023 seconds (process running for 4.192)

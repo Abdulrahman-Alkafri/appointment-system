@@ -218,68 +218,57 @@ public class AppointmentService {
             return AppointmentReservationResponse.failure("Cannot book appointment on a holiday");
         }
 
-        // Get the day of week for the requested date
-        DayOfWeek dayOfWeek = appointmentDate.getDayOfWeek();
+        // Get available slots for the requested service and date
+        List<AvailableSlotDTO> availableSlots = getAvailableSlots(serviceId, appointmentDate);
 
-        // Get working schedules for employees who provide this service on the requested day
-        List<Working_schedule> workingSchedules = workingScheduleRepository.findByServiceIdAndDayWithEmployees(serviceId, dayOfWeek);
-        if (workingSchedules.isEmpty()) {
-            return AppointmentReservationResponse.failure("No employees available for this service on the requested date");
+        // Check if the requested time slot exactly matches an available slot
+        AvailableSlotDTO matchingSlot = availableSlots.stream()
+            .filter(slot -> slot.getStartTime().equals(appointmentDateTime))
+            .findFirst()
+            .orElse(null);
+
+        if (matchingSlot == null) {
+            return AppointmentReservationResponse.failure("Requested time slot is not available or does not match an exact available slot");
         }
 
-        // Calculate the end time of the appointment based on service duration
-        LocalDateTime appointmentEndDateTime = appointmentDateTime.plusMinutes(service.getDuration());
+        // Use the employee from the matching slot
+        Long employeeId = matchingSlot.getEmployeeId();
+        if (employeeId == null) {
+            return AppointmentReservationResponse.failure("No employee assigned to the requested time slot");
+        }
 
-        // Find an available employee for the requested time slot
-        UserModel availableEmployee = null;
-        for (Working_schedule schedule : workingSchedules) {
-            // Check if the requested time slot falls within the employee's working hours
-            LocalTime requestedStart = appointmentDateTime.toLocalTime();
-            LocalTime requestedEnd = appointmentEndDateTime.toLocalTime();
-            LocalTime workingStart = schedule.getStartTime();
-            LocalTime workingEnd = schedule.getEndTime();
+        // Double-check: ensure no appointment (including pending) exists for this employee at this time
+        LocalDateTime startOfDay = appointmentDate.atStartOfDay();
+        LocalDateTime endOfDay = startOfDay.plusDays(1);
+        List<Appointment> existingAppointments = appointmentRepository
+            .findByEmployeeIdAndDate(employeeId, startOfDay, endOfDay);
 
-            if ((requestedStart.isAfter(workingStart) || requestedStart.equals(workingStart)) &&
-                (requestedEnd.isBefore(workingEnd) || requestedEnd.equals(workingEnd))) {
+        LocalDateTime requestedEndDateTime = appointmentDateTime.plusMinutes(service.getDuration());
+        for (Appointment existingAppointment : existingAppointments) {
+            // Check for overlap regardless of status (including PENDING)
+            LocalDateTime existingStart = existingAppointment.getFrom();
+            LocalDateTime existingEnd = existingAppointment.getTo();
 
-                // Check if the employee has any conflicting appointments
-                Long employeeId = schedule.getEmployees().stream()
-                    .findFirst()
-                    .map(UserModel::getId)
-                    .orElse(null);
-
-                if (employeeId != null) {
-                    UserModel employee = new UserModel();
-                    employee.setId(employeeId);
-
-                    // Check for conflicts with existing appointments for this employee
-                    boolean hasConflict = hasAppointmentConflict(employeeId, appointmentDateTime, appointmentEndDateTime);
-
-                    if (!hasConflict) {
-                        availableEmployee = employee;
-                        break; // Found an available employee
-                    }
-                }
+            // Check if there's an overlap
+            if (appointmentDateTime.isBefore(existingEnd) && requestedEndDateTime.isAfter(existingStart)) {
+                return AppointmentReservationResponse.failure("Requested time slot conflicts with an existing appointment (including pending ones)");
             }
-        }
-
-        if (availableEmployee == null) {
-            return AppointmentReservationResponse.failure("No available employee for the requested time slot");
         }
 
         // Create and save the new appointment
         Appointment appointment = new Appointment();
         appointment.setCustomer(new UserModel());
         appointment.getCustomer().setId(customerId);
-        appointment.setEmployee(availableEmployee);
+        appointment.setEmployee(new UserModel());
+        appointment.getEmployee().setId(employeeId);
         appointment.setFrom(appointmentDateTime);
-        appointment.setTo(appointmentEndDateTime);
+        appointment.setTo(requestedEndDateTime);
         appointment.setService(service);
         appointment.setStatus(Appointment.AppointmentStatus.PENDING);
 
         Appointment savedAppointment = appointmentRepository.save(appointment);
 
-        return AppointmentReservationResponse.success(savedAppointment.getId(), availableEmployee.getId());
+        return AppointmentReservationResponse.success(savedAppointment.getId(), employeeId);
     }
 
     // Helper method to check for appointment conflicts
