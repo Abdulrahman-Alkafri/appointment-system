@@ -1,5 +1,8 @@
 package com.example.appointment.User;
 
+import com.example.appointment.Appointment.Appointment;
+import com.example.appointment.Appointment.AppointmentDTO;
+import com.example.appointment.Appointment.AppointmentService;
 import com.example.appointment.Holiday.DTOs.CreateHolidayRequest;
 import com.example.appointment.Holiday.DTOs.HolidayDTO;
 import com.example.appointment.Holiday.DTOs.UpdateHolidayRequest;
@@ -37,7 +40,8 @@ public class AdminController {
     private final UserService userService;
     private final Working_scheduleService workingScheduleService;
     private final ServicesServ servicesServ;
-    private  final HolidayService holidayService;
+    private final HolidayService holidayService;
+    private final AppointmentService appointmentService;
     // User endpoints
 
     // User Management Endpoints
@@ -218,7 +222,7 @@ public class AdminController {
         }
     }
 
-    @DeleteMapping("/holidays/update/{id}")
+    @DeleteMapping("/holidays/delete/{id}")
     public ResponseEntity<?> deleteHoliday(@PathVariable Long id){
      try{
       boolean res=holidayService.deleteHoliday(id);
@@ -235,4 +239,83 @@ public class AdminController {
       return ResponseEntity.ok(holidays);
     }
 
+    // Admin Appointment Management Endpoints
+    @GetMapping("/appointments/show_all")
+    public ResponseEntity<List<AppointmentDTO>> getAllAppointments() {
+        List<Appointment> appointments = appointmentService.getAllAppointments();
+        List<AppointmentDTO> appointmentDTOs = appointments.stream()
+                .map(this::convertAppointmentToDTO)
+                .toList();
+        return ResponseEntity.ok(appointmentDTOs);
+    }
+
+    @GetMapping("/appointments/by_status/{status}")
+    public ResponseEntity<List<AppointmentDTO>> getAppointmentsByStatus(@PathVariable Appointment.AppointmentStatus status) {
+        List<Appointment> appointments = appointmentService.getAppointmentsByStatus(status);
+        List<AppointmentDTO> appointmentDTOs = appointments.stream()
+                .map(this::convertAppointmentToDTO)
+                .toList();
+        return ResponseEntity.ok(appointmentDTOs);
+    }
+
+    @GetMapping("/appointments/pending")
+    public ResponseEntity<List<AppointmentDTO>> getPendingAppointments() {
+        List<Appointment> appointments = appointmentService.getPendingAppointments();
+        List<AppointmentDTO> appointmentDTOs = appointments.stream()
+                .map(this::convertAppointmentToDTO)
+                .toList();
+        return ResponseEntity.ok(appointmentDTOs);
+    }
+
+    @PutMapping("/appointments/{id}/accept")
+    public ResponseEntity<AppointmentDTO> acceptAppointment(@PathVariable Long id) {
+        Appointment updatedAppointment = appointmentService.updateAppointmentStatus(id, Appointment.AppointmentStatus.SCHEDULED);
+        if (updatedAppointment != null) {
+            AppointmentDTO dto = convertAppointmentToDTO(updatedAppointment);
+            return ResponseEntity.ok(dto);
+        }
+        return ResponseEntity.notFound().build();
+    }
+
+    @PutMapping("/appointments/{id}/reject")
+    public ResponseEntity<AppointmentDTO> rejectAppointment(@PathVariable Long id) {
+        Appointment updatedAppointment = appointmentService.updateAppointmentStatus(id, Appointment.AppointmentStatus.REJECTED);
+        if (updatedAppointment != null) {
+            AppointmentDTO dto = convertAppointmentToDTO(updatedAppointment);
+            return ResponseEntity.ok(dto);
+        }
+        return ResponseEntity.notFound().build();
+    }
+
+    @PutMapping("/appointments/{id}/cancel")
+    public ResponseEntity<AppointmentDTO> cancelAppointment(@PathVariable Long id) {
+        Appointment updatedAppointment = appointmentService.updateAppointmentStatus(id, Appointment.AppointmentStatus.CANCELLED);
+        if (updatedAppointment != null) {
+            AppointmentDTO dto = convertAppointmentToDTO(updatedAppointment);
+            return ResponseEntity.ok(dto);
+        }
+        return ResponseEntity.notFound().build();
+    }
+
+    @PutMapping("/appointments/{id}/complete")
+    public ResponseEntity<AppointmentDTO> completeAppointment(@PathVariable Long id) {
+        Appointment updatedAppointment = appointmentService.updateAppointmentStatus(id, Appointment.AppointmentStatus.COMPLETED);
+        if (updatedAppointment != null) {
+            AppointmentDTO dto = convertAppointmentToDTO(updatedAppointment);
+            return ResponseEntity.ok(dto);
+        }
+        return ResponseEntity.notFound().build();
+    }
+
+    private AppointmentDTO convertAppointmentToDTO(Appointment appointment) {
+        AppointmentDTO dto = new AppointmentDTO();
+        dto.setId(appointment.getId());
+        dto.setCustomer(appointment.getCustomer());
+        dto.setEmployee(appointment.getEmployee());
+        dto.setService(appointment.getService());
+        dto.setFrom(appointment.getFrom());
+        dto.setTo(appointment.getTo());
+        dto.setStatus(appointment.getStatus());
+        return dto;
+    }
 }

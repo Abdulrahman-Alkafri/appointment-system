@@ -17,45 +17,45 @@ public class Working_scheduleController {
     private final Working_scheduleService workingScheduleService;
 
     // Public endpoint to get all working schedules
-    @GetMapping
+    @GetMapping("/get")
     public List<Working_scheduleDTO> getAllWorkingSchedules() {
         return workingScheduleService.getAllWorkingSchedules();
     }
 
     // Public endpoint to get a specific working schedule
-    @GetMapping("/{id}")
+    @GetMapping("/get_by/{id}")
     public Working_scheduleDTO getWorkingSchedule(@PathVariable Long id) {
         return workingScheduleService.getWorkingScheduleById(id);
     }
 
     // Admin and Staff endpoints for managing working schedules
-    @PostMapping
-    @PreAuthorize("hasRole('ADMIN') or hasRole('STAFF')")
+    @PostMapping("/create")
+    @PreAuthorize("hasRole('ADMIN')")
     public Working_scheduleDTO createWorkingSchedule(@RequestBody Working_scheduleDTO dto) {
         return workingScheduleService.createWorkingSchedule(dto);
     }
 
-    @PutMapping("/{id}")
-    @PreAuthorize("hasRole('ADMIN') or hasRole('STAFF')")
+    @PutMapping("update/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
     public Working_scheduleDTO updateWorkingSchedule(@PathVariable Long id,
                                                      @RequestBody Working_scheduleDTO dto) {
         return workingScheduleService.updateWorkingSchedule(id, dto);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("delete/{id}")
     @PreAuthorize("hasRole('ADMIN') or hasRole('STAFF')")
     public void deleteWorkingSchedule(@PathVariable Long id) {
         workingScheduleService.deleteWorkingSchedule(id);
     }
 
     // Employee-schedule association endpoints
-    @PostMapping("/{scheduleId}/employees/{employeeId}")
+    @PostMapping("/{scheduleId}/link/employees/{employeeId}")
     @PreAuthorize("hasRole('ADMIN')")
     public Working_scheduleDTO assignEmployeeToWorkingSchedule(@PathVariable Long scheduleId, @PathVariable Long employeeId) {
         return workingScheduleService.assignEmployeeToWorkingSchedule(employeeId, scheduleId);
     }
 
-    @DeleteMapping("/{scheduleId}/employees/{employeeId}")
+    @DeleteMapping("/{scheduleId}/unlink/employees/{employeeId}")
     @PreAuthorize("hasRole('ADMIN')")
     public Working_scheduleDTO removeEmployeeFromWorkingSchedule(@PathVariable Long scheduleId, @PathVariable Long employeeId) {
         return workingScheduleService.removeEmployeeFromWorkingSchedule(employeeId, scheduleId);
@@ -74,7 +74,7 @@ public class Working_scheduleController {
     }
 
     // New endpoints for staff-specific working schedule management
-    @GetMapping("/staff")
+    @GetMapping("/get/staff_in_working/")
     @PreAuthorize("hasRole('ADMIN')")
     public List<Map<String, Object>> getAllStaffWithWorkingSchedules() {
         return workingScheduleService.getAllStaffWithWorkingSchedules();

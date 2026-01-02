@@ -997,6 +997,860 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Admin - Appointment Management",
+			"item": [
+				{
+					"name": "Get All Appointments (ADMIN)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/admin/appointments/show_all",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"appointments",
+								"show_all"
+							]
+						},
+						"description": "Get all appointments in the system. Requires ADMIN role."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Appointments by Status (ADMIN)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/admin/appointments/by_status/SCHEDULED",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"appointments",
+								"by_status",
+								"SCHEDULED"
+							],
+							"variable": [
+								{
+									"key": "status",
+									"value": "SCHEDULED",
+									"description": "Status to filter by: SCHEDULED, CANCELLED, COMPLETED, REJECTED, PENDING"
+								}
+							]
+						},
+						"description": "Get appointments filtered by status. Requires ADMIN role."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pending Appointments (ADMIN)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/admin/appointments/pending",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"appointments",
+								"pending"
+							]
+						},
+						"description": "Get all pending appointments that require admin approval. Requires ADMIN role."
+					},
+					"response": []
+				},
+				{
+					"name": "Accept Appointment (ADMIN)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/admin/appointments/1/accept",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"appointments",
+								"1",
+								"accept"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "Appointment ID to accept"
+								}
+							]
+						},
+						"description": "Accept an appointment by changing its status to SCHEDULED. Requires ADMIN role."
+					},
+					"response": []
+				},
+				{
+					"name": "Reject Appointment (ADMIN)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/admin/appointments/1/reject",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"appointments",
+								"1",
+								"reject"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "Appointment ID to reject"
+								}
+							]
+						},
+						"description": "Reject an appointment by changing its status to REJECTED. Requires ADMIN role."
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Appointment (ADMIN)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/admin/appointments/1/cancel",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"appointments",
+								"1",
+								"cancel"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "Appointment ID to cancel"
+								}
+							]
+						},
+						"description": "Cancel an appointment by changing its status to CANCELLED. Requires ADMIN role."
+					},
+					"response": []
+				},
+				{
+					"name": "Complete Appointment (ADMIN)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/admin/appointments/1/complete",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"appointments",
+								"1",
+								"complete"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "Appointment ID to complete"
+								}
+							]
+						},
+						"description": "Complete an appointment by changing its status to COMPLETED. Requires ADMIN role."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Appointment Management",
+			"item": [
+				{
+					"name": "Get Available Slots (Public)",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/appointments/available-slots?serviceId=1&date=2026-01-15",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"appointments",
+								"available-slots"
+							],
+							"query": [
+								{
+									"key": "serviceId",
+									"value": "1",
+									"description": "Service ID to check availability for"
+								},
+								{
+									"key": "date",
+									"value": "2026-01-15",
+									"description": "Date to check availability (format: YYYY-MM-DD)"
+								}
+							]
+						},
+						"description": "Get available time slots for a specific service on a specific date. No authentication required."
+					},
+					"response": []
+				},
+				{
+					"name": "Reserve Appointment (Public)",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"serviceId\": 1,\n    \"customerId\": 1,\n    \"appointmentDateTime\": \"2026-01-15T10:00:00\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/appointments/reserve",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"appointments",
+								"reserve"
+							]
+						},
+						"description": "Reserve an appointment for a specific service at a specific date and time. No authentication required. The system will automatically assign an available employee."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer - Appointment Management",
+			"item": [
+				{
+					"name": "Get Customer Active Appointments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/customer/appointments/show_active_appointments",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"customer",
+								"appointments",
+								"show_active_appointments"
+							]
+						},
+						"description": "Get all active appointments for the current customer (excluding cancelled). Requires CUSTOMER role."
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Customer Appointments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/customer/appointments/show_all_appointments",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"customer",
+								"appointments",
+								"show_all_appointments"
+							]
+						},
+						"description": "Get all appointments for the current customer (including cancelled). Requires CUSTOMER role."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer Appointment by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/customer/appointments/show_appointment/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"customer",
+								"appointments",
+								"show_appointment",
+								"1"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "Appointment ID"
+								}
+							]
+						},
+						"description": "Get a specific appointment by ID for the current customer. Requires CUSTOMER role."
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Customer Appointment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/customer/appointments/cancel_appointment/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"customer",
+								"appointments",
+								"cancel_appointment",
+								"1"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "Appointment ID to cancel"
+								}
+							]
+						},
+						"description": "Cancel an appointment by ID for the current customer. Requires CUSTOMER role."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Available Slots for Customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/customer/appointments/available_slots?serviceId=1&date=2026-01-15",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"customer",
+								"appointments",
+								"available_slots"
+							],
+							"query": [
+								{
+									"key": "serviceId",
+									"value": "1",
+									"description": "Service ID to check availability for"
+								},
+								{
+									"key": "date",
+									"value": "2026-01-15",
+									"description": "Date to check availability (format: YYYY-MM-DD)"
+								}
+							]
+						},
+						"description": "Get available time slots for a specific service on a specific date. Requires CUSTOMER role."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Working Schedule Management",
+			"item": [
+				{
+					"name": "Get All Working Schedules (Public)",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/working-schedules/get",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"working-schedules",
+								"get"
+							]
+						},
+						"description": "Get all working schedules. No authentication required."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Working Schedule by ID (Public)",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/working-schedules/get_by/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"working-schedules",
+								"get_by",
+								"1"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "Working schedule ID"
+								}
+							]
+						},
+						"description": "Get a specific working schedule by ID. No authentication required."
+					},
+					"response": []
+				},
+				{
+					"name": "Create Working Schedule (ADMIN)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"day\": \"MONDAY\",\n    \"startTime\": \"09:00:00\",\n    \"endTime\": \"17:00:00\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/working-schedules/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"working-schedules",
+								"create"
+							]
+						},
+						"description": "Create a new working schedule. Requires ADMIN role."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Working Schedule (ADMIN)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"day\": \"TUESDAY\",\n    \"startTime\": \"10:00:00\",\n    \"endTime\": \"18:00:00\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/working-schedules/update/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"working-schedules",
+								"update",
+								"1"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "Working schedule ID to update"
+								}
+							]
+						},
+						"description": "Update an existing working schedule. Requires ADMIN role."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Working Schedule (ADMIN/STAFF)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/working-schedules/delete/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"working-schedules",
+								"delete",
+								"1"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "Working schedule ID to delete"
+								}
+							]
+						},
+						"description": "Delete a working schedule. Requires ADMIN or STAFF role."
+					},
+					"response": []
+				},
+				{
+					"name": "Assign Employee to Working Schedule (ADMIN)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/working-schedules/1/link/employees/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"working-schedules",
+								"1",
+								"link",
+								"employees",
+								"2"
+							],
+							"variable": [
+								{
+									"key": "scheduleId",
+									"value": "1",
+									"description": "Working schedule ID"
+								},
+								{
+									"key": "employeeId",
+									"value": "2",
+									"description": "Employee ID"
+								}
+							]
+						},
+						"description": "Assign an employee to a working schedule. Requires ADMIN role."
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Employee from Working Schedule (ADMIN)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/working-schedules/1/unlink/employees/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"working-schedules",
+								"1",
+								"unlink",
+								"employees",
+								"2"
+							],
+							"variable": [
+								{
+									"key": "scheduleId",
+									"value": "1",
+									"description": "Working schedule ID"
+								},
+								{
+									"key": "employeeId",
+									"value": "2",
+									"description": "Employee ID"
+								}
+							]
+						},
+						"description": "Remove an employee from a working schedule. Requires ADMIN role."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Working Schedules for Employee (ADMIN/STAFF)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/working-schedules/employees/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"working-schedules",
+								"employees",
+								"1"
+							],
+							"variable": [
+								{
+									"key": "employeeId",
+									"value": "1",
+									"description": "Employee ID"
+								}
+							]
+						},
+						"description": "Get all working schedules for a specific employee. Requires ADMIN or STAFF role."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Employees for Working Schedule (ADMIN/STAFF)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/working-schedules/1/employees",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"working-schedules",
+								"1",
+								"employees"
+							],
+							"variable": [
+								{
+									"key": "scheduleId",
+									"value": "1",
+									"description": "Working schedule ID"
+								}
+							]
+						},
+						"description": "Get all employees for a specific working schedule. Requires ADMIN or STAFF role."
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Staff with Working Schedules (ADMIN)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/working-schedules/get/staff_in_working/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"working-schedules",
+								"get",
+								"staff_in_working",
+								""
+							]
+						},
+						"description": "Get all staff with their working schedules. Requires ADMIN role."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Staff for Working Schedule (ADMIN/STAFF)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/working-schedules/1/staff",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"working-schedules",
+								"1",
+								"staff"
+							],
+							"variable": [
+								{
+									"key": "scheduleId",
+									"value": "1",
+									"description": "Working schedule ID"
+								}
+							]
+						},
+						"description": "Get all staff for a specific working schedule. Requires ADMIN or STAFF role."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Holiday Management",
+			"item": [
+				{
+					"name": "Create Holiday (ADMIN)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"holidayDate\": \"2026-01-01\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/admin/holidays/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"holidays",
+								"create"
+							]
+						},
+						"description": "Create a new holiday. Requires ADMIN role."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Holiday (ADMIN)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"holidayDate\": \"2026-02-14\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/admin/holidays/update/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"holidays",
+								"update",
+								"1"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "Holiday ID to update"
+								}
+							]
+						},
+						"description": "Update an existing holiday. Requires ADMIN role."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Holiday (ADMIN)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/admin/holidays/delete/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"holidays",
+								"delete",
+								"1"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "Holiday ID to delete"
+								}
+							]
+						},
+						"description": "Delete a holiday. Requires ADMIN role."
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Holidays (ADMIN)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/admin/holidays/showAll",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"holidays",
+								"showAll"
+							]
+						},
+						"description": "Get all holidays. Requires ADMIN role."
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }

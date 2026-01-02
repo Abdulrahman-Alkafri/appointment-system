@@ -27,4 +27,8 @@ public interface Working_scheduleRepository extends JpaRepository<Working_schedu
     // Query to find working schedules by service ID - from jalal
     @Query("SELECT ws FROM Working_schedule ws JOIN ws.employees e JOIN e.services serv WHERE serv.id = :serviceId")
     List<Working_schedule> findByServiceId(@Param("serviceId") Long serviceId);
+
+    // Query to find working schedules by service ID and day with employees fetched - to fix lazy loading issue
+    @Query("SELECT DISTINCT ws FROM Working_schedule ws JOIN FETCH ws.employees e JOIN e.services serv WHERE serv.id = :serviceId AND ws.day = :day")
+    List<Working_schedule> findByServiceIdAndDayWithEmployees(@Param("serviceId") Long serviceId, @Param("day") DayOfWeek day);
 }

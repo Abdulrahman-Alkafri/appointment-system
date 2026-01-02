@@ -101,7 +101,7 @@ class AppointmentServiceTest {
         when(holidayRepository.findAll()).thenReturn(List.of());
 
         // Mock appointment repository
-        when(appointmentRepository.findByEmployeeIdAndDateRange(any(Long.class), any(LocalDateTime.class), any(LocalDateTime.class)))
+        when(appointmentRepository.findByEmployeeIdAndDate(any(Long.class), any(LocalDateTime.class), any(LocalDateTime.class)))
                 .thenReturn(List.of()); // No conflicts
 
         when(appointmentRepository.save(any(Appointment.class))).thenAnswer(invocation -> {
@@ -111,23 +111,20 @@ class AppointmentServiceTest {
         });
 
         // Execute
-        Appointment result = appointmentService.reserveAppointment(customerId, serviceId, appointmentDateTime);
+        AppointmentReservationResponse result = appointmentService.reserveAppointment(customerId, serviceId, appointmentDateTime);
 
         // Verify
         assertNotNull(result);
-        assertEquals(customer, result.getCustomer());
-        assertEquals(employee, result.getEmployee());
-        assertEquals(service, result.getService());
-        assertEquals(appointmentDateTime, result.getFrom());
-        assertEquals(appointmentDateTime.plusMinutes(service.getDuration()), result.getTo());
-        assertEquals(Appointment.AppointmentStatus.SCHEDULED, result.getStatus());
+        assertTrue(result.isSuccess());
+        assertNotNull(result.getAppointmentId());
+        assertNotNull(result.getEmployeeId());
 
         // Verify interactions
         verify(serviceRepository).findById(serviceId);
         verify(workingScheduleRepository).findByServiceIdAndDay(serviceId, DayOfWeek.FRIDAY);
         verify(userRepository).findById(customerId);
         verify(holidayRepository).findAll();
-        verify(appointmentRepository).findByEmployeeIdAndDateRange(eq(employee.getId()), any(LocalDateTime.class), any(LocalDateTime.class));
+        verify(appointmentRepository).findByEmployeeIdAndDate(eq(employee.getId()), any(LocalDateTime.class), any(LocalDateTime.class));
         verify(appointmentRepository).save(any(Appointment.class));
     }
 
@@ -229,7 +226,7 @@ class AppointmentServiceTest {
         when(holidayRepository.findAll()).thenReturn(List.of());
 
         // Mock appointment repository - return a conflicting appointment
-        when(appointmentRepository.findByEmployeeIdAndDateRange(any(Long.class), any(LocalDateTime.class), any(LocalDateTime.class)))
+        when(appointmentRepository.findByEmployeeIdAndDate(any(Long.class), any(LocalDateTime.class), any(LocalDateTime.class)))
                 .thenReturn(List.of(new Appointment())); // Conflict exists
 
         // Execute and verify exception
@@ -244,7 +241,7 @@ class AppointmentServiceTest {
         verify(workingScheduleRepository).findByServiceIdAndDay(serviceId, DayOfWeek.FRIDAY);
         verify(userRepository).findById(customerId);
         verify(holidayRepository).findAll();
-        verify(appointmentRepository).findByEmployeeIdAndDateRange(eq(employee.getId()), any(LocalDateTime.class), any(LocalDateTime.class));
+        verify(appointmentRepository).findByEmployeeIdAndDate(eq(employee.getId()), any(LocalDateTime.class), any(LocalDateTime.class));
     }
 
     @Test
@@ -267,7 +264,7 @@ class AppointmentServiceTest {
         when(holidayRepository.findAll()).thenReturn(List.of());
 
         // Mock appointment repository
-        when(appointmentRepository.findByEmployeeIdAndDateRange(any(Long.class), any(LocalDateTime.class), any(LocalDateTime.class)))
+        when(appointmentRepository.findByEmployeeIdAndDate(any(Long.class), any(LocalDateTime.class), any(LocalDateTime.class)))
                 .thenReturn(List.of()); // No conflicts
 
         // Execute and verify exception
@@ -282,6 +279,6 @@ class AppointmentServiceTest {
         verify(workingScheduleRepository).findByServiceIdAndDay(serviceId, DayOfWeek.FRIDAY);
         verify(userRepository).findById(customerId);
         verify(holidayRepository).findAll();
-        verify(appointmentRepository).findByEmployeeIdAndDateRange(eq(employee.getId()), any(LocalDateTime.class), any(LocalDateTime.class));
+        verify(appointmentRepository).findByEmployeeIdAndDate(eq(employee.getId()), any(LocalDateTime.class), any(LocalDateTime.class));
     }
 }

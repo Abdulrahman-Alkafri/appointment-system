@@ -28,9 +28,9 @@ public class Appointment {
     @ManyToOne(optional = false)
     @JoinColumn(name = "employee_id")
     private UserModel employee;
-
+    @Column(name = "start_time")
     private LocalDateTime from;
-
+    @Column(name = "end_time")
     private LocalDateTime to;
 
     @ManyToOne
@@ -42,6 +42,6 @@ public class Appointment {
     private AppointmentStatus status = AppointmentStatus.SCHEDULED;
 
     public enum AppointmentStatus {
-        SCHEDULED, CANCELLED, COMPLETED
+        PENDING, SCHEDULED, CANCELLED, COMPLETED, REJECTED
     }
 }

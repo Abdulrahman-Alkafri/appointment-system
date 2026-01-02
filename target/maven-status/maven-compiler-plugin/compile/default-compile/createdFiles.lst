@@ -7,6 +7,7 @@ com/example/appointment/User/StaffController.class
 com/example/appointment/Holiday/HolidayService.class
 com/example/appointment/WorkingSchedule/Working_scheduleRepository.class
 com/example/appointment/Auth/AuthService.class
+com/example/appointment/Appointment/AppointmentReservationRequest.class
 com/example/appointment/WorkingSchedule/Working_scheduleService.class
 com/example/appointment/config/RedisConfig.class
 com/example/appointment/Appointment/Appointment$AppointmentStatus.class
@@ -26,6 +27,7 @@ com/example/appointment/Auth/dto/TokenResponse.class
 com/example/appointment/Auth/UserSessionRepository.class
 com/example/appointment/User/CustomerController.class
 com/example/appointment/Services/ServiceDTOs/updateServiceRequest.class
+com/example/appointment/Appointment/AppointmentReservationResponse.class
 com/example/appointment/User/UserService.class
 com/example/appointment/Holiday/DTOs/HolidayDTO$HolidayDTOBuilder.class
 com/example/appointment/Appointment/AppointmentController.class

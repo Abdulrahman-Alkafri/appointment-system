@@ -11,17 +11,47 @@ import java.util.Optional;
 
 @Repository
 public interface AppointmentRepository extends JpaRepository<Appointment, Long> {
-    List<Appointment> findByCustomerIdAndStatusNot(Long customerId, Appointment.AppointmentStatus status);
+    @Query("SELECT a FROM Appointment a LEFT JOIN FETCH a.customer LEFT JOIN FETCH a.employee WHERE a.customer.id = :customerId AND a.status != :status")
+    List<Appointment> findByCustomerIdAndStatusNot(@Param("customerId") Long customerId, @Param("status") Appointment.AppointmentStatus status);
 
-    @Query("SELECT a FROM Appointment a WHERE a.id = :id AND a.customer.id = :customerId")
+    @Query("SELECT a FROM Appointment a LEFT JOIN FETCH a.customer LEFT JOIN FETCH a.employee WHERE a.id = :id AND a.customer.id = :customerId")
     Optional<Appointment> findByIdAndCustomerId(@Param("id") Long id, @Param("customerId") Long customerId);
 
+    // Methods for staff/appointment operations
+    @Query("SELECT a FROM Appointment a LEFT JOIN FETCH a.customer LEFT JOIN FETCH a.employee WHERE a.employee.id = :employeeId AND a.status != :status")
+    List<Appointment> findByEmployeeIdAndStatusNot(@Param("employeeId") Long employeeId, @Param("status") Appointment.AppointmentStatus status);
+
+    @Query("SELECT a FROM Appointment a LEFT JOIN FETCH a.customer LEFT JOIN FETCH a.employee WHERE a.employee.id = :employeeId")
+    List<Appointment> findByEmployeeId(@Param("employeeId") Long employeeId);
+
+    @Query("SELECT a FROM Appointment a LEFT JOIN FETCH a.customer LEFT JOIN FETCH a.employee WHERE a.id = :id AND a.employee.id = :employeeId")
+    Optional<Appointment> findByIdAndEmployeeId(@Param("id") Long id, @Param("employeeId") Long employeeId);
+
     // Method to get all appointments including cancelled ones
-    List<Appointment> findByCustomerId(Long customerId);
+    @Query("SELECT a FROM Appointment a LEFT JOIN FETCH a.customer LEFT JOIN FETCH a.employee WHERE a.customer.id = :customerId")
+    List<Appointment> findByCustomerId(@Param("customerId") Long customerId);
 
     // Method to find appointments by service ID and date range - from jalal
-    @Query("SELECT a FROM Appointment a WHERE a.service.id = :serviceId AND a.from >= :startOfDay AND a.from < :endOfDay")
+    @Query("SELECT a FROM Appointment a LEFT JOIN FETCH a.customer LEFT JOIN FETCH a.employee WHERE a.service.id = :serviceId AND a.from >= :startOfDay AND a.from < :endOfDay")
     List<Appointment> findByServiceIdAndDate(@Param("serviceId") Long serviceId,
                                            @Param("startOfDay") LocalDateTime startOfDay,
                                            @Param("endOfDay") LocalDateTime endOfDay);
+
+    // Method to find appointments by employee ID and date range
+    @Query("SELECT a FROM Appointment a LEFT JOIN FETCH a.customer LEFT JOIN FETCH a.employee WHERE a.employee.id = :employeeId AND a.from >= :startOfDay AND a.from < :endOfDay AND a.status != 'CANCELLED'")
+    List<Appointment> findByEmployeeIdAndDate(@Param("employeeId") Long employeeId,
+                                           @Param("startOfDay") LocalDateTime startOfDay,
+                                           @Param("endOfDay") LocalDateTime endOfDay);
+
+    // Admin methods - get all appointments
+    @Query("SELECT a FROM Appointment a LEFT JOIN FETCH a.customer LEFT JOIN FETCH a.employee")
+    List<Appointment> findAllAppointments();
+
+    // Admin methods - get appointments by status
+    @Query("SELECT a FROM Appointment a LEFT JOIN FETCH a.customer LEFT JOIN FETCH a.employee WHERE a.status = :status")
+    List<Appointment> findByStatus(@Param("status") Appointment.AppointmentStatus status);
+
+    // Admin method - get pending appointments
+    @Query("SELECT a FROM Appointment a LEFT JOIN FETCH a.customer LEFT JOIN FETCH a.employee WHERE a.status = :status")
+    List<Appointment> findByStatusOnly(@Param("status") Appointment.AppointmentStatus status);
 }

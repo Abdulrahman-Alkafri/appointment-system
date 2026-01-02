@@ -1,6 +1,7 @@
 package com.example.appointment.Appointment;
 
 
+import com.example.appointment.Holiday.HolidayRepository;
 import com.example.appointment.Services.ServiceRepository;
 import com.example.appointment.User.UserModel;
 import com.example.appointment.WorkingSchedule.Working_schedule;
@@ -24,6 +25,7 @@ public class AppointmentService {
     private final AppointmentRepository appointmentRepository;
     private final ServiceRepository serviceRepository;
     private final Working_scheduleRepository workingScheduleRepository;
+    private final HolidayRepository holidayRepository;
 
     public List<Appointment> getAppointmentsByCustomerId(Long customerId) {
         return appointmentRepository.findByCustomerIdAndStatusNot(customerId, Appointment.AppointmentStatus.CANCELLED);
@@ -35,6 +37,41 @@ public class AppointmentService {
 
     public Optional<Appointment> getAppointmentByIdAndCustomerId(Long appointmentId, Long customerId) {
         return appointmentRepository.findByIdAndCustomerId(appointmentId, customerId);
+    }
+
+    public List<Appointment> getAppointmentsByEmployeeId(Long employeeId) {
+        return appointmentRepository.findByEmployeeIdAndStatusNot(employeeId, Appointment.AppointmentStatus.CANCELLED);
+    }
+
+    public List<Appointment> getAllAppointmentsByEmployeeId(Long employeeId) {
+        return appointmentRepository.findByEmployeeId(employeeId);
+    }
+
+    public Optional<Appointment> getAppointmentByIdAndEmployeeId(Long appointmentId, Long employeeId) {
+        return appointmentRepository.findByIdAndEmployeeId(appointmentId, employeeId);
+    }
+
+    // Admin methods
+    public List<Appointment> getAllAppointments() {
+        return appointmentRepository.findAllAppointments();
+    }
+
+    public List<Appointment> getAppointmentsByStatus(Appointment.AppointmentStatus status) {
+        return appointmentRepository.findByStatus(status);
+    }
+
+    public List<Appointment> getPendingAppointments() {
+        return appointmentRepository.findByStatus(Appointment.AppointmentStatus.PENDING);
+    }
+
+    public Appointment updateAppointmentStatus(Long appointmentId, Appointment.AppointmentStatus newStatus) {
+        Optional<Appointment> appointmentOpt = appointmentRepository.findById(appointmentId);
+        if (appointmentOpt.isPresent()) {
+            Appointment appointment = appointmentOpt.get();
+            appointment.setStatus(newStatus);
+            return appointmentRepository.save(appointment);
+        }
+        return null;
     }
 
     public Appointment cancelAppointment(Long appointmentId, Long customerId) {
@@ -59,7 +96,7 @@ public class AppointmentService {
         DayOfWeek dayOfWeek = date.getDayOfWeek();
 
         // Get all working schedules for employees who provide this service on the requested day
-        List<Working_schedule> workingSchedules = workingScheduleRepository.findByServiceIdAndDay(serviceId, dayOfWeek);
+        List<Working_schedule> workingSchedules = workingScheduleRepository.findByServiceIdAndDayWithEmployees(serviceId, dayOfWeek);
 
         // Get all existing appointments for this service on the requested date
         LocalDateTime startOfDay = date.atStartOfDay();
@@ -161,5 +198,107 @@ public class AppointmentService {
         }
 
         return availableSlots;
+    }
+
+    public AppointmentReservationResponse reserveAppointment(Long serviceId, Long customerId, LocalDateTime appointmentDateTime) {
+        // Get the service to check its duration
+        com.example.appointment.Services.Service service = serviceRepository.findById(serviceId).orElse(null);
+        if (service == null) {
+            return AppointmentReservationResponse.failure("Service not found");
+        }
+
+        // Check if the appointment date is a holiday
+        LocalDate appointmentDate = appointmentDateTime.toLocalDate();
+        List<com.example.appointment.Holiday.Holiday> holidays = holidayRepository.findByHolidayDate(appointmentDate);
+        if (!holidays.isEmpty()) {
+            return AppointmentReservationResponse.failure("Cannot book appointment on a holiday");
+        }
+
+        // Get the day of week for the requested date
+        DayOfWeek dayOfWeek = appointmentDate.getDayOfWeek();
+
+        // Get working schedules for employees who provide this service on the requested day
+        List<Working_schedule> workingSchedules = workingScheduleRepository.findByServiceIdAndDayWithEmployees(serviceId, dayOfWeek);
+        if (workingSchedules.isEmpty()) {
+            return AppointmentReservationResponse.failure("No employees available for this service on the requested date");
+        }
+
+        // Calculate the end time of the appointment based on service duration
+        LocalDateTime appointmentEndDateTime = appointmentDateTime.plusMinutes(service.getDuration());
+
+        // Find an available employee for the requested time slot
+        UserModel availableEmployee = null;
+        for (Working_schedule schedule : workingSchedules) {
+            // Check if the requested time slot falls within the employee's working hours
+            LocalTime requestedStart = appointmentDateTime.toLocalTime();
+            LocalTime requestedEnd = appointmentEndDateTime.toLocalTime();
+            LocalTime workingStart = schedule.getStartTime();
+            LocalTime workingEnd = schedule.getEndTime();
+
+            if ((requestedStart.isAfter(workingStart) || requestedStart.equals(workingStart)) &&
+                (requestedEnd.isBefore(workingEnd) || requestedEnd.equals(workingEnd))) {
+
+                // Check if the employee has any conflicting appointments
+                Long employeeId = schedule.getEmployees().stream()
+                    .findFirst()
+                    .map(UserModel::getId)
+                    .orElse(null);
+
+                if (employeeId != null) {
+                    UserModel employee = new UserModel();
+                    employee.setId(employeeId);
+
+                    // Check for conflicts with existing appointments for this employee
+                    boolean hasConflict = hasAppointmentConflict(employeeId, appointmentDateTime, appointmentEndDateTime);
+
+                    if (!hasConflict) {
+                        availableEmployee = employee;
+                        break; // Found an available employee
+                    }
+                }
+            }
+        }
+
+        if (availableEmployee == null) {
+            return AppointmentReservationResponse.failure("No available employee for the requested time slot");
+        }
+
+        // Create and save the new appointment
+        Appointment appointment = new Appointment();
+        appointment.setCustomer(new UserModel());
+        appointment.getCustomer().setId(customerId);
+        appointment.setEmployee(availableEmployee);
+        appointment.setFrom(appointmentDateTime);
+        appointment.setTo(appointmentEndDateTime);
+        appointment.setService(service);
+        appointment.setStatus(Appointment.AppointmentStatus.PENDING);
+
+        Appointment savedAppointment = appointmentRepository.save(appointment);
+
+        return AppointmentReservationResponse.success(savedAppointment.getId(), availableEmployee.getId());
+    }
+
+    // Helper method to check for appointment conflicts
+    private boolean hasAppointmentConflict(Long employeeId, LocalDateTime requestedStart, LocalDateTime requestedEnd) {
+        // Find all appointments for this employee on the same date
+        LocalDate appointmentDate = requestedStart.toLocalDate();
+        LocalDateTime startOfDay = appointmentDate.atStartOfDay();
+        LocalDateTime endOfDay = startOfDay.plusDays(1);
+
+        List<Appointment> existingAppointments = appointmentRepository
+            .findByEmployeeIdAndDate(employeeId, startOfDay, endOfDay);
+
+        // Check for any overlapping appointments
+        for (Appointment existingAppointment : existingAppointments) {
+            LocalDateTime existingStart = existingAppointment.getFrom();
+            LocalDateTime existingEnd = existingAppointment.getTo();
+
+            // Check if there's an overlap
+            if (requestedStart.isBefore(existingEnd) && requestedEnd.isAfter(existingStart)) {
+                return true; // Conflict found
+            }
+        }
+
+        return false; // No conflict
     }
 }
