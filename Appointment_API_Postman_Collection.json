@@ -899,7 +899,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Haircut\",\n    \"description\": \"Professional haircut service\",\n    \"cost\": 50,\n    \"duration\": \"PT30M\"\n}"
+							"raw": "{\n    \"name\": \"Haircut\",\n    \"description\": \"Professional haircut service\",\n    \"cost\": 50,\n    \"duration\": 30\n}"
 						},
 						"url": {
 							"raw": "{{baseUrl}}/api/admin/services/create",
