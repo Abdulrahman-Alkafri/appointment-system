@@ -109,4 +109,8 @@ public class UserService {
                 user.getRole()
         );
     }
+
+    public java.util.Optional<UserModel> findByEmail(String email) {
+        return userRepository.findByEmail(email);
+    }
 }

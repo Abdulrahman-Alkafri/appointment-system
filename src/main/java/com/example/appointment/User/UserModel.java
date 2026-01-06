@@ -2,6 +2,7 @@ package com.example.appointment.User;
 
 import com.example.appointment.Appointment.Appointment;
 import com.example.appointment.Common.enums.UserRole;
+import com.example.appointment.Notifications.NotificationEntity;
 import com.example.appointment.Services.Service;
 import com.example.appointment.WorkingSchedule.Working_schedule;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -102,4 +103,7 @@ public class UserModel {
         UserModel userModel = (UserModel) o;
         return Objects.equals(id, userModel.id);
     }
+
+    @OneToMany(mappedBy = "user")
+    private List<NotificationEntity> notifications;
 }
