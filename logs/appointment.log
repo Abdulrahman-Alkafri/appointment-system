@@ -3306,3 +3306,904 @@ This generated password is for development use only. Your security configuration
 2026-01-07T01:00:38.067+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
 2026-01-07T01:00:38.068+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[NotificationResponse(id=1, data=Your appointment has been accepted., readedAt=null, createdAt=2026- (truncated)...]
 2026-01-07T01:00:38.069+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-07T01:02:55.312+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-01-07T01:02:55.313+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-07T01:02:55.313+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-01-07T01:02:55.313+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2026-01-07T01:02:55.313+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Auth.AuthController#login(LoginRequest)
+2026-01-07T01:02:55.328+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest(email=staff@example.com, password=staff123)]
+2026-01-07T01:02:55.332+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:02:55.429+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] c.e.a.Auth.TokenBlacklistService         : Tracking access token adc90d10-5b1b-424f-a857-bc9ec52c8f0f for user 2
+2026-01-07T01:02:55.430+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] org.hibernate.SQL                        : 
+    /* insert 
+    for
+        com.example.appointment.Auth.UserSessionModel
+        */insert 
+    into
+        user_sessions (created_at, expires_at, refresh_token, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-01-07T01:02:55.433+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-07T01:02:55.434+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [TokenResponse(accessToken=eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiU1RBRkYiLCJ1c2VySWQiOjIsImp0aSI6ImFkYzkwZ (truncated)...]
+2026-01-07T01:02:55.435+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-07T01:03:02.097+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/user/notifications
+2026-01-07T01:03:02.099+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:03:02.108+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/user/notifications
+2026-01-07T01:03:02.108+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/user/notifications", parameters={}
+2026-01-07T01:03:02.109+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Notifications.UserNotificationController#getUserNotifications()
+2026-01-07T01:03:02.110+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:03:02.112+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-07T01:03:02.112+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2026-01-07T01:03:02.112+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
+2026-01-07T01:03:14.782+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-01-07T01:03:14.783+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-07T01:03:14.783+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-01-07T01:03:14.783+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2026-01-07T01:03:14.783+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Auth.AuthController#login(LoginRequest)
+2026-01-07T01:03:14.784+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest(email=staff@example.com, password=staff123)]
+2026-01-07T01:03:14.785+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:03:14.870+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] c.e.a.Auth.TokenBlacklistService         : Tracking access token 1f8c6e67-c9ab-49d5-a2ec-462903353293 for user 2
+2026-01-07T01:03:14.871+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* insert 
+    for
+        com.example.appointment.Auth.UserSessionModel
+        */insert 
+    into
+        user_sessions (created_at, expires_at, refresh_token, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-01-07T01:03:14.874+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-07T01:03:14.874+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [TokenResponse(accessToken=eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiU1RBRkYiLCJ1c2VySWQiOjIsImp0aSI6IjFmOGM2Z (truncated)...]
+2026-01-07T01:03:14.875+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-07T01:03:19.105+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/user/notifications
+2026-01-07T01:03:19.107+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:03:19.113+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/user/notifications
+2026-01-07T01:03:19.113+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/user/notifications", parameters={}
+2026-01-07T01:03:19.113+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Notifications.UserNotificationController#getUserNotifications()
+2026-01-07T01:03:19.114+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:03:19.115+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-07T01:03:19.115+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2026-01-07T01:03:19.115+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
+2026-01-07T01:03:23.276+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/user/notifications/unread
+2026-01-07T01:03:23.277+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:03:23.281+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/user/notifications/unread
+2026-01-07T01:03:23.281+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/user/notifications/unread", parameters={}
+2026-01-07T01:03:23.282+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Notifications.UserNotificationController#getUnreadUserNotifications()
+2026-01-07T01:03:23.282+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:03:23.284+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-07T01:03:23.284+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2026-01-07T01:03:23.284+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
+2026-01-07T01:03:28.264+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing PUT /api/user/notifications/1/read
+2026-01-07T01:03:28.265+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:03:28.270+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured PUT /api/user/notifications/1/read
+2026-01-07T01:03:28.270+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : PUT "/api/user/notifications/1/read", parameters={}
+2026-01-07T01:03:28.271+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Notifications.UserNotificationController#markNotificationAsRead(Long)
+2026-01-07T01:03:28.272+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:03:28.273+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-07T01:03:28.273+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2026-01-07T01:03:28.273+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
+2026-01-07T01:03:52.346+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/user/notifications
+2026-01-07T01:03:52.347+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:03:52.355+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/user/notifications
+2026-01-07T01:03:52.356+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/user/notifications", parameters={}
+2026-01-07T01:03:52.356+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Notifications.UserNotificationController#getUserNotifications()
+2026-01-07T01:03:52.357+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:03:52.358+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-07T01:03:52.359+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2026-01-07T01:03:52.359+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
+2026-01-07T01:04:04.685+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/user/notifications
+2026-01-07T01:04:04.689+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:04:04.695+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/user/notifications
+2026-01-07T01:04:04.695+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/user/notifications", parameters={}
+2026-01-07T01:04:04.696+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Notifications.UserNotificationController#getUserNotifications()
+2026-01-07T01:04:04.696+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:04:04.697+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-07T01:04:04.697+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2026-01-07T01:04:04.698+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
+2026-01-07T01:04:41.000+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/user/notifications
+2026-01-07T01:04:41.001+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:04:41.007+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/user/notifications
+2026-01-07T01:04:41.007+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/user/notifications", parameters={}
+2026-01-07T01:04:41.007+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Notifications.UserNotificationController#getUserNotifications()
+2026-01-07T01:04:41.008+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:04:41.009+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-07T01:04:41.009+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2026-01-07T01:04:41.009+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
+2026-01-07T01:04:50.757+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/user/notifications/unread
+2026-01-07T01:04:50.758+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:04:50.763+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/user/notifications/unread
+2026-01-07T01:04:50.763+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/user/notifications/unread", parameters={}
+2026-01-07T01:04:50.764+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Notifications.UserNotificationController#getUnreadUserNotifications()
+2026-01-07T01:04:50.764+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:04:50.765+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-07T01:04:50.765+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2026-01-07T01:04:50.766+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
+2026-01-07T01:05:01.295+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/user/notifications/unread
+2026-01-07T01:05:01.297+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:05:01.302+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/user/notifications/unread
+2026-01-07T01:05:01.302+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/user/notifications/unread", parameters={}
+2026-01-07T01:05:01.303+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Notifications.UserNotificationController#getUnreadUserNotifications()
+2026-01-07T01:05:01.304+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:05:01.305+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-07T01:05:01.305+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2026-01-07T01:05:01.305+03:00 DEBUG %PARSER_ERROR[pid] --- [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
+2026-01-07T01:05:40.130+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/user/notifications/unread
+2026-01-07T01:05:40.131+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:05:40.137+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/user/notifications/unread
+2026-01-07T01:05:40.137+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/user/notifications/unread", parameters={}
+2026-01-07T01:05:40.137+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Notifications.UserNotificationController#getUnreadUserNotifications()
+2026-01-07T01:05:40.138+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:05:40.139+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-07T01:05:40.139+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2026-01-07T01:05:40.139+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
+2026-01-07T01:05:43.133+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/user/notifications
+2026-01-07T01:05:43.134+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:05:43.139+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/user/notifications
+2026-01-07T01:05:43.139+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/user/notifications", parameters={}
+2026-01-07T01:05:43.140+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Notifications.UserNotificationController#getUserNotifications()
+2026-01-07T01:05:43.140+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:05:43.141+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-07T01:05:43.141+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2026-01-07T01:05:43.141+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
+2026-01-07T01:05:50.303+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/user/notifications
+2026-01-07T01:05:50.305+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:05:50.310+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/user/notifications
+2026-01-07T01:05:50.310+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/user/notifications", parameters={}
+2026-01-07T01:05:50.310+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Notifications.UserNotificationController#getUserNotifications()
+2026-01-07T01:05:50.311+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:05:50.312+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-07T01:05:50.312+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2026-01-07T01:05:50.313+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
+2026-01-07T01:07:49.425+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
+2026-01-07T01:07:49.426+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-07T01:07:49.426+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
+2026-01-07T01:07:49.426+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/register", parameters={}
+2026-01-07T01:07:49.426+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Auth.AuthController#register(RegisterRequest)
+2026-01-07T01:07:49.427+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [RegisterRequest(username=admin_user, email=admin@example.com, phoneNumber=1234567890, password=admin (truncated)...]
+2026-01-07T01:07:49.429+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] org.hibernate.SQL                        : 
+    /* SELECT
+        u.id id 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id 
+        from
+            users um1_0 
+        where
+            um1_0.email=? 
+        fetch
+            first ? rows only
+2026-01-07T01:07:49.432+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-07T01:07:49.432+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2026-01-07T01:07:49.432+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2026-01-07T01:07:56.202+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-01-07T01:07:56.202+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-07T01:07:56.202+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-01-07T01:07:56.203+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2026-01-07T01:07:56.203+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Auth.AuthController#login(LoginRequest)
+2026-01-07T01:07:56.203+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest(email=admin@example.com, password=admin123)]
+2026-01-07T01:07:56.204+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:07:56.288+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] c.e.a.Auth.TokenBlacklistService         : Tracking access token 14f19e8a-f7d6-4512-9240-d58771fd47c3 for user 1
+2026-01-07T01:07:56.289+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] org.hibernate.SQL                        : 
+    /* insert 
+    for
+        com.example.appointment.Auth.UserSessionModel
+        */insert 
+    into
+        user_sessions (created_at, expires_at, refresh_token, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-01-07T01:07:56.292+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-07T01:07:56.292+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [TokenResponse(accessToken=eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJ1c2VySWQiOjEsImp0aSI6IjE0ZjE5Z (truncated)...]
+2026-01-07T01:07:56.293+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-07T01:07:59.955+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/user/notifications
+2026-01-07T01:07:59.956+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:07:59.961+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/user/notifications
+2026-01-07T01:07:59.961+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/user/notifications", parameters={}
+2026-01-07T01:07:59.961+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Notifications.UserNotificationController#getUserNotifications()
+2026-01-07T01:07:59.962+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:07:59.963+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-07T01:07:59.963+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2026-01-07T01:07:59.963+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
+2026-01-07T01:10:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-07T01:10:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-07T01:10:00.007+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-07T01:17:36.307+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/user/notifications
+2026-01-07T01:17:36.308+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:17:36.312+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/user/notifications
+2026-01-07T01:17:36.312+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/user/notifications", parameters={}
+2026-01-07T01:17:36.313+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Notifications.UserNotificationController#getUserNotifications()
+2026-01-07T01:17:36.313+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:17:36.314+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-07T01:17:36.314+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2026-01-07T01:17:36.314+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
+2026-01-07T01:17:47.320+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/user/notifications
+2026-01-07T01:17:47.321+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:17:47.325+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/user/notifications
+2026-01-07T01:17:47.325+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/user/notifications", parameters={}
+2026-01-07T01:17:47.326+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Notifications.UserNotificationController#getUserNotifications()
+2026-01-07T01:17:47.327+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:17:47.328+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-07T01:17:47.328+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2026-01-07T01:17:47.328+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
+2026-01-07T01:20:00.000+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Starting scheduled blacklist cleanup task
+2026-01-07T01:20:00.005+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.TokenBlacklistService         : Cleanup completed. Total entries removed: 0
+2026-01-07T01:20:00.006+03:00  INFO %PARSER_ERROR[pid] --- [   scheduling-1] c.e.a.Auth.BlacklistCleanupScheduler     : Blacklist cleanup completed. Removed 0 expired entries
+2026-01-07T01:25:51.970+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-01-07T01:25:51.971+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-07T01:25:51.971+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-01-07T01:25:51.971+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2026-01-07T01:25:51.971+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Auth.AuthController#login(LoginRequest)
+2026-01-07T01:25:51.971+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest(email=staff@example.com, password=staff123)]
+2026-01-07T01:25:51.972+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:25:52.058+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] c.e.a.Auth.TokenBlacklistService         : Tracking access token d59fe593-3141-4349-80c6-eca9aca6116a for user 2
+2026-01-07T01:25:52.059+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] org.hibernate.SQL                        : 
+    /* insert 
+    for
+        com.example.appointment.Auth.UserSessionModel
+        */insert 
+    into
+        user_sessions (created_at, expires_at, refresh_token, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-01-07T01:25:52.062+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-07T01:25:52.062+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [TokenResponse(accessToken=eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiU1RBRkYiLCJ1c2VySWQiOjIsImp0aSI6ImQ1OWZlN (truncated)...]
+2026-01-07T01:25:52.062+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-07T01:26:00.507+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/user/notifications
+2026-01-07T01:26:00.509+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:26:00.513+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/user/notifications
+2026-01-07T01:26:00.513+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/user/notifications", parameters={}
+2026-01-07T01:26:00.514+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.appointment.Notifications.UserNotificationController#getUserNotifications()
+2026-01-07T01:26:00.515+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] org.hibernate.SQL                        : 
+    /* SELECT
+        u 
+    FROM
+        UserModel u 
+    WHERE
+        u.email = :email */ select
+            um1_0.id,
+            um1_0.created_at,
+            um1_0.email,
+            um1_0.password,
+            um1_0.phone_number,
+            um1_0.role,
+            um1_0.updated_at,
+            um1_0.username 
+        from
+            users um1_0 
+        where
+            um1_0.email=?
+2026-01-07T01:26:00.516+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-07T01:26:00.516+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2026-01-07T01:26:00.516+03:00 DEBUG %PARSER_ERROR[pid] --- [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
