@@ -1,7 +1,7 @@
 -- Create notifications table
 CREATE TABLE notifications (
     id BIGSERIAL PRIMARY KEY,
-    data JSONB,
+    data varchar(256),
     readed_at TIMESTAMP NULL,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     user_id BIGINT NOT NULL,

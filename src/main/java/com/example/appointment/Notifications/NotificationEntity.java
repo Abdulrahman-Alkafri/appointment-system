@@ -8,6 +8,8 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.boot.jackson.autoconfigure.JacksonProperties;
+
 
 import java.time.LocalDateTime;
 
@@ -21,13 +23,13 @@ public class NotificationEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
-    @Column(columnDefinition = "jsonb")
+    @Column(nullable = false)
     private String data;
 
     @Column(nullable = true , name = "readed_at")
     private LocalDateTime readedAt;
 
-    @Column(nullable = false , name = "created_at")
+    @Column(nullable = false ,name = "created_at")
     private  LocalDateTime createdAt;
 
     @ManyToOne
