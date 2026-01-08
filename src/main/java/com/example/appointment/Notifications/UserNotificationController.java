@@ -3,8 +3,11 @@ package com.example.appointment.Notifications;
 import com.example.appointment.Notifications.dto.NotificationResponse;
 import com.example.appointment.User.UserModel;
 import com.example.appointment.User.UserService;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +17,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/user/notifications")
+@PreAuthorize("hasAnyRole('ADMIN','CUSTOMER','STAFF')")
 public class UserNotificationController {
 
     @Autowired
@@ -24,6 +28,7 @@ public class UserNotificationController {
 
     @Autowired
     private UserService userService;
+
 
     @GetMapping
     public ResponseEntity<List<NotificationResponse>> getUserNotifications() {
@@ -91,14 +96,17 @@ public class UserNotificationController {
         return ResponseEntity.ok().build();
     }
 
+
     private UserModel getCurrentUser() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if (authentication == null || !authentication.isAuthenticated() || "anonymousUser".equals(authentication.getPrincipal())) {
+        if (authentication == null || !authentication.isAuthenticated()) {
+
+
             return null;
         }
-        
-        String email = authentication.getName();
-        return userService.findByEmail(email).orElse(null);
+
+        UserModel user = (UserModel) authentication.getPrincipal();
+        return user;
     }
 
     private NotificationResponse convertToResponse(NotificationEntity entity) {

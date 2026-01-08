@@ -20,6 +20,7 @@ com/example/appointment/WorkingSchedule/Working_scheduleController.class
 com/example/appointment/Auth/dto/LoginRequest.class
 com/example/appointment/User/UserModel.class
 com/example/appointment/AppointmentApplication.class
+com/example/appointment/Notifications/dto/WebSocketNotificationDTO.class
 com/example/appointment/Auth/JwtUtil.class
 com/example/appointment/Holiday/Holiday.class
 com/example/appointment/Common/enums/UserRole.class
@@ -44,6 +45,7 @@ com/example/appointment/WorkingSchedule/Working_scheduleDTO.class
 com/example/appointment/WorkingSchedule/Working_schedule.class
 com/example/appointment/User/AdminController.class
 com/example/appointment/Services/ServiceRepository.class
+com/example/appointment/config/CorsConfig.class
 com/example/appointment/Appointment/Appointment.class
 com/example/appointment/Auth/JwtAuthenticationFilter.class
 com/example/appointment/User/UserRepository.class

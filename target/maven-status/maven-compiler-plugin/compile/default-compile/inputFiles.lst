@@ -35,6 +35,7 @@
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Notifications/UserNotificationController.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Notifications/dto/NotificationRequest.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Notifications/dto/NotificationResponse.java
+/home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Notifications/dto/WebSocketNotificationDTO.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Services/LinkServiceToStaffRequest.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Services/Service.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Services/ServiceController.java
@@ -58,6 +59,7 @@
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/WorkingSchedule/Working_scheduleDTO.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/WorkingSchedule/Working_scheduleRepository.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/WorkingSchedule/Working_scheduleService.java
+/home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/config/CorsConfig.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/config/RedisConfig.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/config/SecurityConfig.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/config/WebSocketConfig.java

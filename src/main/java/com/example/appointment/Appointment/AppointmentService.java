@@ -1,7 +1,9 @@
 package com.example.appointment.Appointment;
 
 
+import com.example.appointment.Common.enums.NotificationType;
 import com.example.appointment.Holiday.HolidayRepository;
+import com.example.appointment.Notifications.NotificationService;
 import com.example.appointment.Services.ServiceRepository;
 import com.example.appointment.User.UserModel;
 import com.example.appointment.WorkingSchedule.Working_schedule;
@@ -26,6 +28,7 @@ public class AppointmentService {
     private final ServiceRepository serviceRepository;
     private final Working_scheduleRepository workingScheduleRepository;
     private final HolidayRepository holidayRepository;
+    private final NotificationService notificationService;
 
     public List<Appointment> getAppointmentsByCustomerId(Long customerId) {
         return appointmentRepository.findByCustomerIdAndStatusNot(customerId, Appointment.AppointmentStatus.CANCELLED);
@@ -72,8 +75,26 @@ public class AppointmentService {
         Optional<Appointment> appointmentOpt = appointmentRepository.findById(appointmentId);
         if (appointmentOpt.isPresent()) {
             Appointment appointment = appointmentOpt.get();
+            Appointment.AppointmentStatus oldStatus = appointment.getStatus();
             appointment.setStatus(newStatus);
-            return appointmentRepository.save(appointment);
+            Appointment savedAppointment = appointmentRepository.save(appointment);
+
+
+            if (newStatus == Appointment.AppointmentStatus.SCHEDULED && oldStatus != Appointment.AppointmentStatus.SCHEDULED) {
+
+                String message = "Your appointment has been accepted.";
+                notificationService.createNotification(appointment.getCustomer(), NotificationType.ACCEPT, message);
+            } else if (newStatus == Appointment.AppointmentStatus.REJECTED && oldStatus != Appointment.AppointmentStatus.REJECTED) {
+
+                String message = "Your appointment has been rejected.";
+                notificationService.createNotification(appointment.getCustomer(), NotificationType.REJECT, message);
+            } else if (newStatus == Appointment.AppointmentStatus.CANCELLED && oldStatus != Appointment.AppointmentStatus.CANCELLED) {
+
+                String message = "Your appointment has been cancelled.";
+                notificationService.createNotification(appointment.getCustomer(), NotificationType.CANCELLED, message);
+            }
+
+            return savedAppointment;
         }
         return null;
     }

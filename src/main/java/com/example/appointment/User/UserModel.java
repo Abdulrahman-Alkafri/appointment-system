@@ -104,6 +104,7 @@ public class UserModel {
         return Objects.equals(id, userModel.id);
     }
 
+    @JsonIgnore
     @OneToMany(mappedBy = "user")
     private List<NotificationEntity> notifications;
 }

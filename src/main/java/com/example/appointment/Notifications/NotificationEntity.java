@@ -2,13 +2,12 @@ package com.example.appointment.Notifications;
 
 
 import com.example.appointment.Common.enums.NotificationType;
-
 import com.example.appointment.User.UserModel;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.boot.jackson.autoconfigure.JacksonProperties;
 
 
 import java.time.LocalDateTime;
@@ -32,8 +31,9 @@ public class NotificationEntity {
     @Column(nullable = false ,name = "created_at")
     private  LocalDateTime createdAt;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
+    @JsonIgnore  // Prevent circular reference during WebSocket serialization
     private UserModel user;
 
     @Enumerated(EnumType.STRING)

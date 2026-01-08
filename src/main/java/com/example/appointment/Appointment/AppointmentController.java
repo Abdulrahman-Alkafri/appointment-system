@@ -1,5 +1,11 @@
 package com.example.appointment.Appointment;
 
+import com.example.appointment.Common.enums.NotificationType;
+import com.example.appointment.Common.enums.UserRole;
+import com.example.appointment.Notifications.NotificationEntity;
+import com.example.appointment.Notifications.NotificationService;
+import com.example.appointment.User.UserModel;
+import com.example.appointment.User.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -17,7 +23,8 @@ import java.util.List;
 public class AppointmentController {
 
     private final AppointmentService appointmentService;
-
+    private final UserService userService;
+    private final NotificationService notificationService;
     @GetMapping("/available-slots")
     public ResponseEntity<List<AvailableSlotDTO>> getAvailableSlots(
             @RequestParam Long serviceId,
@@ -46,7 +53,7 @@ public class AppointmentController {
         log.debug("Debug log: Processing request to reserve appointment");
 
         try {
-            // Check if appointmentDateTime is null
+
             if (request.getAppointmentDateTime() == null) {
                 log.warn("Appointment date and time is required but was null");
                 AppointmentReservationResponse errorResponse = AppointmentReservationResponse.failure("Appointment date and time is required");
@@ -65,11 +72,22 @@ public class AppointmentController {
             if (response.isSuccess()) {
                 log.info("Successfully reserved appointment - Appointment ID: {}, Employee ID: {}",
                         response.getAppointmentId(), response.getEmployeeId());
+
+                List<UserModel> admins=userService.findByRole(UserRole.ADMIN);
+
+                for(UserModel admin : admins){
+                    notificationService.createNotification(admin, NotificationType.ORDERED, "order to reserve new appointment in service : " + request.getServiceId());
+                }
                 return ResponseEntity.ok(response);
             } else {
                 log.warn("Failed to reserve appointment: {}", response.getMessage());
                 return ResponseEntity.badRequest().body(response);
             }
+
+
+
+
+
         } catch (Exception e) {
             log.error("Error reserving appointment: {}", e.getMessage(), e);
             AppointmentReservationResponse errorResponse = AppointmentReservationResponse.failure("Internal server error occurred while reserving appointment");

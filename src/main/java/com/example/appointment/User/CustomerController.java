@@ -4,6 +4,9 @@ import com.example.appointment.Appointment.Appointment;
 import com.example.appointment.Appointment.AppointmentDTO;
 import com.example.appointment.Appointment.AppointmentService;
 import com.example.appointment.Appointment.AvailableSlotDTO;
+import com.example.appointment.Common.enums.NotificationType;
+import com.example.appointment.Common.enums.UserRole;
+import com.example.appointment.Notifications.NotificationService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -27,7 +30,8 @@ import java.util.stream.Collectors;
 public class CustomerController {
 
     private final AppointmentService appointmentService;
-
+    private final UserService userService;
+    private final NotificationService notificationService;
     // Get all active appointments for the current customer (excluding cancelled)
     @GetMapping("/appointments/show_active_appointments")
     public ResponseEntity<List<AppointmentDTO>> getActiveAppointments() {
@@ -122,10 +126,16 @@ public class CustomerController {
             UserModel currentUser = (UserModel) authentication.getPrincipal();
             Long customerId = currentUser.getId();
             log.debug("Customer ID: {}, Appointment ID: {}", customerId, id);
+            List<UserModel> admins=userService.findByRole(UserRole.ADMIN);
+
 
             Appointment cancelledAppointment = appointmentService.cancelAppointment(id, customerId);
             if (cancelledAppointment != null) {
                 log.info("Successfully cancelled appointment ID: {} for customer ID: {}", id, customerId);
+                for(UserModel admin : admins){
+                    notificationService.createNotification(admin, NotificationType.CANCELLED, " the appointment number : "+cancelledAppointment.getId()+" is Cancelled by user");
+                }
+
                 return ResponseEntity.ok("Appointment cancelled successfully");
             } else {
                 log.warn("Failed to cancel appointment ID: {} for customer ID: {} - appointment not found", id, customerId);

@@ -4,6 +4,7 @@ import com.example.appointment.User.dto.CreateUserRequest;
 import com.example.appointment.User.dto.UpdateUserRequest;
 import com.example.appointment.User.dto.UserResponse;
 import lombok.RequiredArgsConstructor;
+import org.apache.catalina.User;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -113,4 +115,13 @@ public class UserService {
     public java.util.Optional<UserModel> findByEmail(String email) {
         return userRepository.findByEmail(email);
     }
+
+    public List<UserModel> findByRole(UserRole role){
+
+        return userRepository.findUserModelByRole(role);
+
+
+    }
+
+
 }

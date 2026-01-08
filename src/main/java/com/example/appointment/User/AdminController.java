@@ -3,6 +3,8 @@ package com.example.appointment.User;
 import com.example.appointment.Appointment.Appointment;
 import com.example.appointment.Appointment.AppointmentDTO;
 import com.example.appointment.Appointment.AppointmentService;
+import com.example.appointment.Common.enums.NotificationType;
+import com.example.appointment.Notifications.NotificationService;
 import lombok.extern.slf4j.Slf4j;
 import com.example.appointment.Holiday.DTOs.CreateHolidayRequest;
 import com.example.appointment.Holiday.DTOs.HolidayDTO;
@@ -44,6 +46,8 @@ public class AdminController {
     private final ServicesServ servicesServ;
     private final HolidayService holidayService;
     private final AppointmentService appointmentService;
+    private final NotificationService notificationService;
+
     // User endpoints
 
     // User Management Endpoints
@@ -546,6 +550,9 @@ public class AdminController {
             if (updatedAppointment != null) {
                 log.info("Successfully accepted appointment ID: {} - status changed to SCHEDULED", id);
                 AppointmentDTO dto = convertAppointmentToDTO(updatedAppointment);
+                UserModel costomer=updatedAppointment.getCustomer();
+                notificationService.createNotification(costomer , NotificationType.ACCEPT , "the  appointment " + updatedAppointment.getId() + " is accepted");
+
                 return ResponseEntity.ok(dto);
             } else {
                 log.warn("Failed to accept appointment ID: {} - appointment not found", id);
@@ -567,6 +574,8 @@ public class AdminController {
             if (updatedAppointment != null) {
                 log.info("Successfully rejected appointment ID: {} - status changed to REJECTED", id);
                 AppointmentDTO dto = convertAppointmentToDTO(updatedAppointment);
+                UserModel costomer=updatedAppointment.getCustomer();
+                notificationService.createNotification(costomer , NotificationType.REJECT , "the  appointment " + updatedAppointment.getId() + " is rejected");
                 return ResponseEntity.ok(dto);
             } else {
                 log.warn("Failed to reject appointment ID: {} - appointment not found", id);
