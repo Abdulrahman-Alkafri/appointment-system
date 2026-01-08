@@ -35,6 +35,7 @@ com/example/appointment/Services/ServiceDTOs/updateServiceRequest.class
 com/example/appointment/Appointment/AppointmentReservationResponse.class
 com/example/appointment/User/UserService.class
 com/example/appointment/Notifications/NotificationRepository.class
+com/example/appointment/Appointment/AppointmentSchedulerService.class
 com/example/appointment/Holiday/DTOs/HolidayDTO$HolidayDTOBuilder.class
 com/example/appointment/Appointment/AppointmentController.class
 com/example/appointment/Auth/TokenBlacklistService.class

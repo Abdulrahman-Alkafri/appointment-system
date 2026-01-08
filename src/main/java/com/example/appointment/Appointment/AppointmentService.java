@@ -8,7 +8,7 @@ import com.example.appointment.Services.ServiceRepository;
 import com.example.appointment.User.UserModel;
 import com.example.appointment.WorkingSchedule.Working_schedule;
 import com.example.appointment.WorkingSchedule.Working_scheduleRepository;
-import lombok.RequiredArgsConstructor;
+
 import org.springframework.stereotype.Service;
 
 import java.time.DayOfWeek;
@@ -21,7 +21,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-@RequiredArgsConstructor
+
 public class AppointmentService {
 
     private final AppointmentRepository appointmentRepository;
@@ -29,6 +29,21 @@ public class AppointmentService {
     private final Working_scheduleRepository workingScheduleRepository;
     private final HolidayRepository holidayRepository;
     private final NotificationService notificationService;
+    private final AppointmentSchedulerService appointmentSchedulerService;
+
+    public AppointmentService(AppointmentRepository appointmentRepository,
+                            ServiceRepository serviceRepository,
+                            Working_scheduleRepository workingScheduleRepository,
+                            HolidayRepository holidayRepository,
+                            NotificationService notificationService,
+                            @org.springframework.context.annotation.Lazy AppointmentSchedulerService appointmentSchedulerService) {
+        this.appointmentRepository = appointmentRepository;
+        this.serviceRepository = serviceRepository;
+        this.workingScheduleRepository = workingScheduleRepository;
+        this.holidayRepository = holidayRepository;
+        this.notificationService = notificationService;
+        this.appointmentSchedulerService = appointmentSchedulerService;
+    }
 
     public List<Appointment> getAppointmentsByCustomerId(Long customerId) {
         return appointmentRepository.findByCustomerIdAndStatusNot(customerId, Appointment.AppointmentStatus.CANCELLED);
@@ -76,20 +91,26 @@ public class AppointmentService {
         if (appointmentOpt.isPresent()) {
             Appointment appointment = appointmentOpt.get();
             Appointment.AppointmentStatus oldStatus = appointment.getStatus();
+
+            // Handle scheduling/cancellation of appointment jobs
+            if (newStatus == Appointment.AppointmentStatus.SCHEDULED && oldStatus != Appointment.AppointmentStatus.SCHEDULED) {
+                // When accepting an appointment, schedule the completion job
+                appointmentSchedulerService.scheduleAppointmentJob(appointment);
+            } else if (newStatus == Appointment.AppointmentStatus.CANCELLED && oldStatus != Appointment.AppointmentStatus.CANCELLED) {
+                // When cancelling an appointment, cancel the scheduled job
+                appointmentSchedulerService.cancelScheduledJob(appointmentId);
+            }
+
             appointment.setStatus(newStatus);
             Appointment savedAppointment = appointmentRepository.save(appointment);
 
-
             if (newStatus == Appointment.AppointmentStatus.SCHEDULED && oldStatus != Appointment.AppointmentStatus.SCHEDULED) {
-
                 String message = "Your appointment has been accepted.";
                 notificationService.createNotification(appointment.getCustomer(), NotificationType.ACCEPT, message);
             } else if (newStatus == Appointment.AppointmentStatus.REJECTED && oldStatus != Appointment.AppointmentStatus.REJECTED) {
-
                 String message = "Your appointment has been rejected.";
                 notificationService.createNotification(appointment.getCustomer(), NotificationType.REJECT, message);
             } else if (newStatus == Appointment.AppointmentStatus.CANCELLED && oldStatus != Appointment.AppointmentStatus.CANCELLED) {
-
                 String message = "Your appointment has been cancelled.";
                 notificationService.createNotification(appointment.getCustomer(), NotificationType.CANCELLED, message);
             }
@@ -103,6 +124,8 @@ public class AppointmentService {
         Optional<Appointment> appointmentOpt = appointmentRepository.findByIdAndCustomerId(appointmentId, customerId);
         if (appointmentOpt.isPresent()) {
             Appointment appointment = appointmentOpt.get();
+            // Cancel the scheduled job if it exists
+            appointmentSchedulerService.cancelScheduledJob(appointmentId);
             appointment.setStatus(Appointment.AppointmentStatus.CANCELLED);
             return appointmentRepository.save(appointment);
         }
@@ -314,5 +337,41 @@ public class AppointmentService {
         }
 
         return false; // No conflict
+    }
+
+    /**
+     * Create a new appointment with the specified status
+     * @param customerId The ID of the customer
+     * @param employeeId The ID of the employee
+     * @param appointmentDateTime The date and time of the appointment
+     * @param service The service for the appointment
+     * @param status The initial status of the appointment
+     * @return The created appointment
+     */
+    public Appointment createAppointment(Long customerId, Long employeeId, LocalDateTime appointmentDateTime,
+                                       com.example.appointment.Services.Service service, Appointment.AppointmentStatus status) {
+        Appointment appointment = new Appointment();
+        appointment.setCustomer(new UserModel());
+        appointment.getCustomer().setId(customerId);
+        appointment.setEmployee(new UserModel());
+        appointment.getEmployee().setId(employeeId);
+        appointment.setFrom(appointmentDateTime);
+        appointment.setTo(appointmentDateTime.plusMinutes(service.getDuration()));
+        appointment.setService(service);
+        appointment.setStatus(status);
+
+        Appointment savedAppointment = appointmentRepository.save(appointment);
+
+        // If the appointment is created with SCHEDULED status, schedule the completion job
+        if (status == Appointment.AppointmentStatus.SCHEDULED) {
+            appointmentSchedulerService.scheduleAppointmentJob(savedAppointment);
+        }
+
+        return savedAppointment;
+    }
+
+    // Getter for repository to be used by scheduler service to avoid circular dependency
+    public AppointmentRepository getAppointmentRepository() {
+        return appointmentRepository;
     }
 }

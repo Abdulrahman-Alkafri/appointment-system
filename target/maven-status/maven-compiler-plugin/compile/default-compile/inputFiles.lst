@@ -4,6 +4,7 @@
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Appointment/AppointmentRepository.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Appointment/AppointmentReservationRequest.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Appointment/AppointmentReservationResponse.java
+/home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Appointment/AppointmentSchedulerService.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Appointment/AppointmentService.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/Appointment/AvailableSlotDTO.java
 /home/aehamalhaeak/projects/appointment-system/src/main/java/com/example/appointment/AppointmentApplication.java
