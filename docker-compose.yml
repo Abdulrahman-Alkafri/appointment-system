@@ -171,6 +171,28 @@ services:
       timeout: 5s
       retries: 3
 
+  # Nginx - Reverse Proxy with HTTPS
+  nginx:
+    image: nginx:alpine
+    container_name: appointment_nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./nginx/ssl:/etc/nginx/ssl:ro
+      - nginx_logs:/var/log/nginx
+    networks:
+      - appointment-network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
 volumes:
   postgres_data:
     driver: local
@@ -181,6 +203,8 @@ volumes:
   loki_data:
     driver: local
   grafana_data:
+    driver: local
+  nginx_logs:
     driver: local
 
 networks:
